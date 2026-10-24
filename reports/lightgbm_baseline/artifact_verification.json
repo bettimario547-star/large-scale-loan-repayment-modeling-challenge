@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "training_signature": "6d23cdf8e1e593d9b49b409020dca6d1720b4a98ec2d3c8b3ff3890849010b4e",
+  "train_rows": 688998,
+  "test_rows": 36324,
+  "fold_file_unchanged": true,
+  "inner_splits_reproduced_and_disjoint_from_outer_validation": true,
+  "binning_raw_cache_checks_passed": true,
+  "best_rounds_match_inner_learning_curves": true,
+  "saved_models_reproduce_oof": true,
+  "saved_models_reproduce_test_ensemble": true,
+  "max_oof_probability_difference": 0.0,
+  "max_test_probability_difference": 0.0,
+  "all_comparison_metrics_recomputed": true,
+  "submission_ids_and_probabilities_match": true,
+  "feature_importance_has_exact_whitelist_and_normalized_gain": true,
+  "oof_coverage_min": 1,
+  "oof_coverage_max": 1,
+  "test_probability_quantiles_0_1_50_99_100_percent": [
+    0.13862832895133853,
+    0.3292575821398589,
+    0.7884972712390629,
+    0.9801770630895712,
+    0.9921901615748951
+  ]
+}

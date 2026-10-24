@@ -1,0 +1,32 @@
+{
+  "strategy": "stratified_kfold",
+  "n_splits": 5,
+  "shuffle": true,
+  "random_state": 42,
+  "row_order_status": "not_verified_as_time",
+  "fold_path": "C:\\Users\\ASUS\\Desktop\\large-scale-loan-repayment-modeling-challenge\\data\\interim\\validation_folds.parquet",
+  "selected_drift_features": [
+    "feature_492",
+    "feature_903",
+    "feature_586",
+    "feature_96",
+    "feature_1018",
+    "feature_134",
+    "feature_1045",
+    "feature_313",
+    "feature_1039",
+    "feature_218",
+    "feature_561",
+    "feature_1009"
+  ],
+  "test_all_null_features": [
+    "feature_1009",
+    "feature_1031",
+    "feature_364",
+    "feature_614",
+    "feature_648",
+    "feature_660",
+    "feature_805"
+  ],
+  "elapsed_seconds": 5.001547899970319
+}

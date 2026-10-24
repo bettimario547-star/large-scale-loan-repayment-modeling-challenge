@@ -1,0 +1,34 @@
+# Python environments and caches
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Local settings and secrets
+.env
+.env.*
+!.env.example
+
+# Raw and generated data
+*.csv
+*.parquet
+*.duckdb
+*.db
+data/raw/
+data/interim/
+data/processed/
+data/samples/
+
+# Generated artifacts
+artifacts/
+logs/
+reports/figures/
+reports/tables/
+submissions/
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

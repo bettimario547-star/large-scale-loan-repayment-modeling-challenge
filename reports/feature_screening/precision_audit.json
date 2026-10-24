@@ -1,0 +1,55 @@
+{
+  "note": "Screening uses the same float32 cache as the baseline; casting can merge very close values.",
+  "records": [
+    {
+      "feature": "feature_118",
+      "original_float64": {
+        "fit_rows": 688998,
+        "missing_rate": 0.0035936243646570816,
+        "default_missing_rate": 0.001463440129618983,
+        "repay_missing_rate": 0.0037872130893177474,
+        "abs_missing_label_gap": 0.0023237729596987645,
+        "observed_unique": 3049,
+        "observed_variance": 6.225454210155233e-06,
+        "observed_modal_share": 0.028009299046498147,
+        "dominant_state_share": 0.027908644147007684
+      },
+      "model_float32": {
+        "fit_rows": 688998,
+        "missing_rate": 0.0035936243646570816,
+        "default_missing_rate": 0.001463440129618983,
+        "repay_missing_rate": 0.0037872130893177474,
+        "abs_missing_label_gap": 0.0023237729596987645,
+        "observed_unique": 51,
+        "observed_variance": 6.225454290540967e-06,
+        "observed_modal_share": 0.9999242558869199,
+        "dominant_state_share": 0.996330903718153
+      }
+    },
+    {
+      "feature": "feature_51",
+      "original_float64": {
+        "fit_rows": 688998,
+        "missing_rate": 0.0036066868118630243,
+        "default_missing_rate": 0.0014111744107040193,
+        "repay_missing_rate": 0.0038062124860869,
+        "abs_missing_label_gap": 0.002395038075382881,
+        "observed_unique": 494,
+        "observed_variance": 0.00033439105085389354,
+        "observed_modal_share": 0.9783223332988596,
+        "dominant_state_share": 0.9747938310415996
+      },
+      "model_float32": {
+        "fit_rows": 688998,
+        "missing_rate": 0.0036066868118630243,
+        "default_missing_rate": 0.0014111744107040193,
+        "repay_missing_rate": 0.0038062124860869,
+        "abs_missing_label_gap": 0.002395038075382881,
+        "observed_unique": 25,
+        "observed_variance": 0.0003343910446151603,
+        "observed_modal_share": 0.9987589455698581,
+        "dominant_state_share": 0.9951567348526411
+      }
+    }
+  ]
+}

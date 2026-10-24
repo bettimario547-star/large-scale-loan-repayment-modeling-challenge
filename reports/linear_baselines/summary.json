@@ -1,0 +1,93 @@
+{
+  "groups": [
+    {
+      "model": "constant",
+      "group": "overall",
+      "rows": 688998,
+      "default_rows": 57399,
+      "default_rate": 0.08330793413043289,
+      "repay_roc_auc": 0.49999239791597727,
+      "default_pr_auc_ap": 0.08330657351999443,
+      "log_loss": 0.2867750742320792,
+      "brier_score": 0.07636772224554907,
+      "accuracy_at_0_5": 0.9166920658695671
+    },
+    {
+      "model": "constant",
+      "group": "feature_492_upper_tail",
+      "rows": 70711,
+      "default_rows": 6714,
+      "default_rate": 0.09494986635742671,
+      "repay_roc_auc": 0.4989155057438671,
+      "default_pr_auc_ap": 0.09477155956348926,
+      "log_loss": 0.3146950812088094,
+      "brier_score": 0.08606992401872192,
+      "accuracy_at_0_5": 0.9050501336425733
+    },
+    {
+      "model": "constant",
+      "group": "feature_1039_observed",
+      "rows": 123163,
+      "default_rows": 11515,
+      "default_rate": 0.0934939876423926,
+      "repay_roc_auc": 0.5010058040019579,
+      "default_pr_auc_ap": 0.09370219400418989,
+      "log_loss": 0.31120354719240817,
+      "brier_score": 0.08485661700824255,
+      "accuracy_at_0_5": 0.9065060123576074
+    },
+    {
+      "model": "logistic_regression",
+      "group": "overall",
+      "rows": 688998,
+      "default_rows": 57399,
+      "default_rate": 0.08330793413043289,
+      "repay_roc_auc": 0.755960289982629,
+      "default_pr_auc_ap": 0.30017741624032906,
+      "log_loss": 0.2475930287046021,
+      "brier_score": 0.06734522395992387,
+      "accuracy_at_0_5": 0.919139097646147
+    },
+    {
+      "model": "logistic_regression",
+      "group": "feature_492_upper_tail",
+      "rows": 70711,
+      "default_rows": 6714,
+      "default_rate": 0.09494986635742671,
+      "repay_roc_auc": 0.7101033332899053,
+      "default_pr_auc_ap": 0.23461796289294293,
+      "log_loss": 0.2890662032530082,
+      "brier_score": 0.08019103364265248,
+      "accuracy_at_0_5": 0.9046965818613795
+    },
+    {
+      "model": "logistic_regression",
+      "group": "feature_1039_observed",
+      "rows": 123163,
+      "default_rows": 11515,
+      "default_rate": 0.0934939876423926,
+      "repay_roc_auc": 0.7287937318228731,
+      "default_pr_auc_ap": 0.25929960011138786,
+      "log_loss": 0.2796170173834145,
+      "brier_score": 0.07756446701425003,
+      "accuracy_at_0_5": 0.9068145465764881
+    }
+  ],
+  "fold_aggregates": [
+    {
+      "model": "constant",
+      "repay_auc_mean": 0.5,
+      "repay_auc_std_ddof1": 0.0,
+      "default_ap_mean": 0.08330793412516628
+    },
+    {
+      "model": "logistic_regression",
+      "repay_auc_mean": 0.7559638201205328,
+      "repay_auc_std_ddof1": 0.0016094657439526506,
+      "default_ap_mean": 0.30039695940948563
+    }
+  ],
+  "oof_coverage_min": 1,
+  "oof_coverage_max": 1,
+  "submissions_uploaded": false
+}

@@ -1,0 +1,10 @@
+{
+  "seed": 20261018,
+  "folds": 3,
+  "threads": 4,
+  "sample_per_source": 36324,
+  "feature_count_all": 1105,
+  "feature_count_excluding_test_all_null": 1098,
+  "lightgbm_version": "4.7.0",
+  "elapsed_seconds": 102.7032760999864
+}

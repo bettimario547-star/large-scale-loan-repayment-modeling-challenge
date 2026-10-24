@@ -1,0 +1,48 @@
+{
+  "status": "passed",
+  "training_signature": "c7dfd317d8411ca162d3e414d41c701e25c61cbe0d7dcd6606f807c4a1beb5c5",
+  "raw_inputs_and_folds_unchanged": true,
+  "full_fold_profiles_recomputed": true,
+  "all_feature_plans_refitted_and_reproduced": true,
+  "fixed_tree_counts_match_baseline": true,
+  "outer_validation_not_used_in_rule_fit": true,
+  "saved_models_reproduce_all_predictions": true,
+  "all_metrics_recomputed": true,
+  "all_submissions_aligned": true,
+  "max_oof_difference": 0.0,
+  "max_test_difference": 0.0,
+  "variants": [
+    {
+      "variant": "missing_patterns",
+      "models_verified": 5,
+      "oof_coverage_exactly_once": true,
+      "max_oof_difference": 0.0,
+      "max_test_difference": 0.0,
+      "submission_aligned": true
+    },
+    {
+      "variant": "availability_filter",
+      "models_verified": 5,
+      "oof_coverage_exactly_once": true,
+      "max_oof_difference": 0.0,
+      "max_test_difference": 0.0,
+      "submission_aligned": true
+    },
+    {
+      "variant": "drift_core_filter",
+      "models_verified": 5,
+      "oof_coverage_exactly_once": true,
+      "max_oof_difference": 0.0,
+      "max_test_difference": 0.0,
+      "submission_aligned": true
+    },
+    {
+      "variant": "low_information_filter",
+      "models_verified": 5,
+      "oof_coverage_exactly_once": true,
+      "max_oof_difference": 0.0,
+      "max_test_difference": 0.0,
+      "submission_aligned": true
+    }
+  ]
+}

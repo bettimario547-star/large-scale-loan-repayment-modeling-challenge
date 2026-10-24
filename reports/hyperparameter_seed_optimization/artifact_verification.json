@@ -1,0 +1,61 @@
+{
+  "status": "passed",
+  "training_signature": "6b569b3dcd6c2fc727eb243f962de1531bff42361b2a24987b1616721e4f7070",
+  "inner_models_reloaded": 20,
+  "refit_models_reloaded": 15,
+  "all_splits_reproduced_and_disjoint": true,
+  "all_early_stopping_choices_replayed": true,
+  "all_inner_selections_reproduced": true,
+  "all_model_and_prediction_checksums_verified": true,
+  "all_1105_features_and_native_missing_preserved": true,
+  "all_metrics_and_seed_spreads_recomputed": true,
+  "all_four_submissions_aligned": true,
+  "equal_weight_ensemble_reproduced": true,
+  "max_inner_prediction_difference": 0.0,
+  "max_oof_difference": 0.0,
+  "max_test_difference": 0.0,
+  "seeds": [
+    {
+      "seed": 42,
+      "refit_models": 5,
+      "oof_coverage_exactly_once": true
+    },
+    {
+      "seed": 2026,
+      "refit_models": 5,
+      "oof_coverage_exactly_once": true
+    },
+    {
+      "seed": 3407,
+      "refit_models": 5,
+      "oof_coverage_exactly_once": true
+    }
+  ],
+  "baseline_reference_common_learning_curves": [
+    {
+      "fold": 0,
+      "common_rounds": 578,
+      "max_auc_difference": 0.0
+    },
+    {
+      "fold": 1,
+      "common_rounds": 562,
+      "max_auc_difference": 0.0
+    },
+    {
+      "fold": 2,
+      "common_rounds": 600,
+      "max_auc_difference": 0.0
+    },
+    {
+      "fold": 3,
+      "common_rounds": 555,
+      "max_auc_difference": 0.0
+    },
+    {
+      "fold": 4,
+      "common_rounds": 563,
+      "max_auc_difference": 0.0
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "fold": 0,
+  "tree_index": 0,
+  "num_leaves": 31,
+  "root": {
+    "feature": "feature_644",
+    "threshold": 3.40702760219574,
+    "default_left": false,
+    "missing_type": "NaN"
+  },
+  "left_child": {
+    "feature": "feature_96",
+    "threshold": 0.29307334125041967,
+    "default_left": true,
+    "missing_type": "NaN"
+  },
+  "right_child": {
+    "feature": "feature_760",
+    "threshold": 5.000528573989869,
+    "default_left": true,
+    "missing_type": "NaN"
+  }
+}

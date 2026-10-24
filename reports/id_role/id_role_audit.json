@@ -1,0 +1,51 @@
+{
+  "feature_count": 1105,
+  "feature_first": "feature_1",
+  "feature_last": "feature_1105",
+  "id_stats": {
+    "train": {
+      "rows": 688998,
+      "non_null_ids": 688998,
+      "unique_ids": 688998,
+      "min_id": 0,
+      "max_id": 688997
+    },
+    "test": {
+      "rows": 36324,
+      "non_null_ids": 36324,
+      "unique_ids": 36324,
+      "min_id": 0,
+      "max_id": 36323
+    },
+    "template": {
+      "rows": 36324,
+      "non_null_ids": 36324,
+      "unique_ids": 36324,
+      "min_id": 0,
+      "max_id": 36323
+    },
+    "folds": {
+      "rows": 688998,
+      "non_null_ids": 688998,
+      "unique_ids": 688998,
+      "min_id": 0,
+      "max_id": 688997
+    }
+  },
+  "checks": {
+    "train_test_shared_ids": 36324,
+    "test_not_in_template": 0,
+    "template_not_in_test": 0,
+    "train_not_in_folds": 0,
+    "folds_not_in_train": 0,
+    "invalid_fold_values": 0
+  },
+  "fold_counts": {
+    "0": 137800,
+    "1": 137800,
+    "2": 137800,
+    "3": 137799,
+    "4": 137799
+  },
+  "policy": "id is a key for within-dataset alignment and submission, never a model predictor"
+}

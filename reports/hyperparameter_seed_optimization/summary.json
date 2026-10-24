@@ -1,0 +1,93 @@
+{
+  "training_signature": "6b569b3dcd6c2fc727eb243f962de1531bff42361b2a24987b1616721e4f7070",
+  "overall": [
+    {
+      "model": "baseline",
+      "group": "overall",
+      "rows": 688998,
+      "default_rows": 57399,
+      "default_rate": 0.08330793413043289,
+      "repay_roc_auc": 0.8165694476373497,
+      "default_pr_auc_ap": 0.38891243006242,
+      "log_loss": 0.22584982479259288,
+      "brier_score": 0.06250003730588433,
+      "accuracy_at_0_5": 0.9232755392613622
+    },
+    {
+      "model": "tuned_seed_42",
+      "group": "overall",
+      "rows": 688998,
+      "default_rows": 57399,
+      "default_rate": 0.08330793413043289,
+      "repay_roc_auc": 0.8181827719797878,
+      "default_pr_auc_ap": 0.39205740530233196,
+      "log_loss": 0.2250438532844651,
+      "brier_score": 0.062303343191119,
+      "accuracy_at_0_5": 0.9233843929880784
+    },
+    {
+      "model": "tuned_seed_2026",
+      "group": "overall",
+      "rows": 688998,
+      "default_rows": 57399,
+      "default_rate": 0.08330793413043289,
+      "repay_roc_auc": 0.8184423239012123,
+      "default_pr_auc_ap": 0.3920830124606979,
+      "log_loss": 0.22495637693595733,
+      "brier_score": 0.062286721831993436,
+      "accuracy_at_0_5": 0.9235135660771149
+    },
+    {
+      "model": "tuned_seed_3407",
+      "group": "overall",
+      "rows": 688998,
+      "default_rows": 57399,
+      "default_rate": 0.08330793413043289,
+      "repay_roc_auc": 0.8182870751615967,
+      "default_pr_auc_ap": 0.39200026189550363,
+      "log_loss": 0.22500775497204284,
+      "brier_score": 0.06229985748037416,
+      "accuracy_at_0_5": 0.9233553653276206
+    },
+    {
+      "model": "tuned_seed_ensemble",
+      "group": "overall",
+      "rows": 688998,
+      "default_rows": 57399,
+      "default_rate": 0.08330793413043289,
+      "repay_roc_auc": 0.8203947878125024,
+      "default_pr_auc_ap": 0.39536674796325805,
+      "log_loss": 0.22422558840600554,
+      "brier_score": 0.062113541826531886,
+      "accuracy_at_0_5": 0.9234787328845657
+    }
+  ],
+  "ensemble_minus_baseline": {
+    "repay_roc_auc": 0.0038253401751526805,
+    "default_pr_auc_ap": 0.006454317900838058,
+    "log_loss": -0.0016242363865873466,
+    "brier_score": -0.0003864954793524403
+  },
+  "chosen_candidates_by_fold": [
+    "wider",
+    "regularized",
+    "wider",
+    "regularized",
+    "regularized"
+  ],
+  "chosen_rounds_by_fold": [
+    595,
+    794,
+    667,
+    646,
+    602
+  ],
+  "search_hit_cap_count": 0,
+  "chosen_hit_cap_count": 0,
+  "ensemble_folds_with_positive_auc_delta": 5,
+  "recommended_development_model": "tuned_seed_ensemble",
+  "no_seed_selected_by_outer_auc": true,
+  "official_test_score": null,
+  "submissions_uploaded": false,
+  "total_recorded_training_seconds": 17364.15324839999
+}

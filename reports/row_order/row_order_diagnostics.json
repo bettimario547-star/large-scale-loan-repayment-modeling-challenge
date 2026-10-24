@@ -1,0 +1,24 @@
+{
+  "train_rows": 688998,
+  "test_rows": 36324,
+  "sample_per_side": 36324,
+  "id_feature_492_spearman": 0.00021877557327181497,
+  "test_feature_492_median": 8.867043847241867,
+  "parquet_order_mismatches": 0,
+  "csv_checks": [
+    {
+      "file": "train.csv",
+      "rows": 688998,
+      "id_vs_zero_based_physical_row_mismatches": 0,
+      "first_bad_data_line": -1
+    },
+    {
+      "file": "test.csv",
+      "rows": 36324,
+      "id_vs_zero_based_physical_row_mismatches": 0,
+      "first_bad_data_line": -1
+    }
+  ],
+  "seed": 20261018,
+  "folds": 3
+}

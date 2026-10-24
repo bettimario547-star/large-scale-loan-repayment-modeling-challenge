@@ -1,0 +1,61 @@
+{
+  "training_signature": "6b569b3dcd6c2fc727eb243f962de1531bff42361b2a24987b1616721e4f7070",
+  "records": [
+    {
+      "fold": 1,
+      "candidate": "baseline_extended",
+      "inner_auc": 0.8174845179618674,
+      "selected_rounds": 786,
+      "evaluated_rounds": 846,
+      "hit_round_cap": false,
+      "inner_fit_rows": 468518,
+      "early_stop_rows": 82680,
+      "elapsed_seconds": 598.2167918999985
+    },
+    {
+      "fold": 1,
+      "candidate": "regularized",
+      "inner_auc": 0.8182844600430986,
+      "selected_rounds": 794,
+      "evaluated_rounds": 854,
+      "hit_round_cap": false,
+      "inner_fit_rows": 468518,
+      "early_stop_rows": 82680,
+      "elapsed_seconds": 595.056783299995
+    },
+    {
+      "fold": 1,
+      "candidate": "wider",
+      "inner_auc": 0.8169419451689653,
+      "selected_rounds": 438,
+      "evaluated_rounds": 498,
+      "hit_round_cap": false,
+      "inner_fit_rows": 468518,
+      "early_stop_rows": 82680,
+      "elapsed_seconds": 508.09245089999604
+    },
+    {
+      "fold": 1,
+      "candidate": "faster_rate",
+      "inner_auc": 0.8161289546615383,
+      "selected_rounds": 441,
+      "evaluated_rounds": 501,
+      "hit_round_cap": false,
+      "inner_fit_rows": 468518,
+      "early_stop_rows": 82680,
+      "elapsed_seconds": 334.2574192000029
+    }
+  ],
+  "chosen": {
+    "fold": 1,
+    "candidate": "regularized",
+    "inner_auc": 0.8182844600430986,
+    "selected_rounds": 794,
+    "evaluated_rounds": 854,
+    "hit_round_cap": false,
+    "inner_fit_rows": 468518,
+    "early_stop_rows": 82680,
+    "elapsed_seconds": 595.056783299995
+  },
+  "rule": "inner_AUC_then_predeclared_candidate_priority_within_tolerance"
+}

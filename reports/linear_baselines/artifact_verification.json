@@ -1,0 +1,30 @@
+{
+  "status": "passed",
+  "train_rows": 688998,
+  "test_rows": 36324,
+  "fold_file_unchanged": true,
+  "oof_ids_labels_and_folds_match": true,
+  "representative_cache_columns_match_parquet_sources": true,
+  "constant_probabilities_use_fit_only_labels": true,
+  "summary_metrics_recomputed": true,
+  "saved_models_all_converged": true,
+  "saved_models_reproduce_test_predictions": true,
+  "maximum_reloaded_test_probability_difference": 0.0,
+  "both_submissions_match_template_ids_and_saved_probabilities": true,
+  "test_probability_quantiles": {
+    "p_repay_constant": [
+      0.9166920658695671,
+      0.9166920658695671,
+      0.9166920658695671,
+      0.9166920658695671,
+      0.9166920658695671
+    ],
+    "p_repay_logistic": [
+      0.001788253800546644,
+      0.4224093846498574,
+      0.8513817687025544,
+      0.9829478476553982,
+      0.9999999999999984
+    ]
+  }
+}

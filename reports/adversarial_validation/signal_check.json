@@ -1,0 +1,12 @@
+{
+  "feature": "feature_492",
+  "observed_only_auc": 0.9971091369097101,
+  "sample_train_median": 8.114568710327148,
+  "sample_test_median": 8.867043495178223,
+  "sample_train_max": 8.841584205627441,
+  "test_observed_fraction_above_train_max": 0.7647885383661661,
+  "full_train_max": 8.841584158415841,
+  "full_test_observed_fraction_above_train_max": 0.7647885383661661,
+  "sample_train_observed_rows": 36250,
+  "sample_test_observed_rows": 36295
+}
