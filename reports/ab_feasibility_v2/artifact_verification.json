@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "randomized_disagreements": 12614,
+  "full_eligible_target_rows": 210856,
+  "locked_development_only_plan_verified": true,
+  "unchanged_frozen_models_thresholds_and_risk_margins": true,
+  "label_blind_gate_strata_and_stable_hash_verified": true,
+  "full_population_weights_itt_and_sql_verified": true,
+  "same_champion_aa_and_profit_ni_boundary_calibration_verified": true,
+  "independent_stratified_standard_errors_verified": true,
+  "all_repeated_samples_reproduced": true,
+  "frozen_checksums_verified": true,
+  "champion_retained": true,
+  "challenger_promoted": false,
+  "live_experiment_completed": false
+}

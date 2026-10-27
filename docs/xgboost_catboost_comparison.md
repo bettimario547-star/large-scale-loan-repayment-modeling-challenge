@@ -76,7 +76,8 @@ XGBoost 的深度 6 树也最多有 64 个叶子，但各节点可以使用不�
 
 固定原有五折、内部 85%/15% 分层划分、全部原始特征、标签方向和评价指标。
 每套新库提前指定一组配置、一个基础种子 42，实际每折种子为 `42 + fold`。
-最多 900 轮，60 轮没有超过 0.0001 的有效内部 AUC 改善就停止，使用 CPU 4 线程。
+最多 900 轮，60 轮没有超过 0.0001 的有效内部 AUC 改善就停止。
+默认单进程使用 init 固定的 CPU 线程数（默认 4）；可选多进程使用 10 个逻辑 CPU 的总预算。
 候选配置不根据外层分数追加或修改。
 
 比较表包含原 LightGBM 基线、调参后的 LightGBM 种子 42、三种子 LightGBM 集成，
@@ -232,7 +233,9 @@ stop_pool = quantize(
 
 完整四折重训的边界重新由完整四折估计，测试与外层验证不参与。
 `used_ram_limit=3gb` 是库的资源请求，不是整个 Python 进程的硬内存上限。
-为降低内存竞争，本轮使用一个训练进程顺序运行。
+默认使用一个训练进程顺序运行。可选多进程最多同时训练两个独立的模型/折任务，
+每个进程 5 线程；只有一个未完成任务时使用 1 进程、10 线程。
+进程共享磁盘上的只读 float32 缓存，各自仍要建立量化数据，因此并发会增加内存需求。
 
 ## 9. CatBoost 早停为什么写了回调
 
@@ -300,9 +303,50 @@ AP 使用 average precision，不是梯形积分的 PR 曲线面积。
 ```
 
 训练可以指定 `--engines xgboost` 或 `--engines catboost`，也可以指定 `--folds 0 1`。
-不同时启动多个大矩阵量化任务；两个库五折全部完成后再 collect。
+两个库五折全部完成后再 collect。
 已完成模型校验签名、文件 SHA256 后自动复用，参数或代码变化时拒绝混用。
-预算、线程和批大小在 init 固定，train 从已签名配置读取。
+轮数预算、批大小、模型参数及单进程线程数在 init 固定，train 从已签名配置读取。
+
+### 可选的多进程训练（10 个逻辑 CPU）
+
+`--parallel` 是 **train 阶段的开关**，省略时始终使用单进程。正常情况下调度为
+**2 个独立 Python 进程 × 每进程 5 个原生模型线程**，不是创建 10 个完整数据副本。
+XGBoost 和 CatBoost 的独立模型/折任务可以并发；同一模型内部的早停和完整四折重训仍依次执行。
+进程通过 Windows `spawn` 启动，只传文件路径和配置；主进程先准备缓存与共享折划分，
+子进程检查并只读打开缓存。每个任务的训练日志分别保存在
+`logs/<run-name>/parallel_<时间戳>/<engine>_fold_<fold>.log`。
+OMP、BLAS 和模型线程共同限制为每进程的线程预算，避免每个进程各自占满 16 个逻辑 CPU。
+
+本次代码增加了多进程功能，历史 run_config 绑定的代码 SHA256 已不同；当前目录还迁移过，
+历史配置的路径和 NumPy 版本与当前环境不同。保留旧目录，用新实验名初始化和训练：
+
+```powershell
+.\.venv\Scripts\python.exe scripts/run_tree_model_comparison.py --stage init --run-name tree_model_comparison_parallel10
+.\.venv\Scripts\python.exe -u scripts/run_tree_model_comparison.py --stage train --run-name tree_model_comparison_parallel10 --parallel
+.\.venv\Scripts\python.exe scripts/run_tree_model_comparison.py --stage collect --run-name tree_model_comparison_parallel10
+.\.venv\Scripts\python.exe scripts/verify_tree_model_comparison.py --run-name tree_model_comparison_parallel10
+.\.venv\Scripts\python.exe scripts/report_tree_model_comparison.py --run-name tree_model_comparison_parallel10
+```
+
+新目录为 `reports/tree_model_comparison_parallel10` 和 `artifacts/tree_model_comparison_parallel10`；
+提交文件也附加实验名，不覆盖旧提交。新实验不会混入旧签名的 XGBoost checkpoint；
+它重新训练两个库。**同一个新实验内**重复执行 train 会复用已完成阶段和折，
+可以在单进程与多进程之间切换；每个模型的实际线程数、运行模式和进程 PID 都单独记录，
+核查按该模型的实际参数进行。并发运行方式保存在 run_config 的 `execution` 字段，
+不修改已签名的模型选择规则。不同线程数可能带来浮点或早停结果的小差异，
+多进程只改变资源调度，不保证与历史 4 线程模型逐位一致。
+
+启动前检查至少有 10 个逻辑 CPU，并估算两份量化数据、库开销和主进程预留的内存。
+当前数据的两进程估算约需 **8.7 GiB 可用内存**；这是规划估算，不是操作系统硬限制。
+内存不足时在启动子进程前明确报错，可关闭占用内存的程序后重试，或省略 `--parallel`。
+16GB 内存的电脑需要特别关注可用量；单折耗时和总加速比仍受内存带宽、磁盘和量化开销影响。
+不要同时手动启动两套训练调度器写入同一实验目录。
+
+查看新实验进度：
+
+```powershell
+.\.venv\Scripts\python.exe scripts/show_tree_model_progress.py --run-name tree_model_comparison_parallel10
+```
 
 模型目录 `artifacts/tree_model_comparison/inner_models`、`models`；
 分割与概率目录 `inner_splits`、`inner_predictions`、`fold_predictions`；

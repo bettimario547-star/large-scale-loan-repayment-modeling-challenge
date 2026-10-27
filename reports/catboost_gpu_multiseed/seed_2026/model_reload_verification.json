@@ -1,0 +1,42 @@
+{
+  "status": "passed",
+  "models_reloaded": 5,
+  "prediction_check_scope": "sampled OOF/test rows; full saved OOF metrics",
+  "checks": [
+    {
+      "fold": 0,
+      "sampled_valid_rows": 512,
+      "sampled_test_rows": 512,
+      "all_oof_metrics_recomputed": true,
+      "max_prediction_difference": 0.0
+    },
+    {
+      "fold": 1,
+      "sampled_valid_rows": 512,
+      "sampled_test_rows": 512,
+      "all_oof_metrics_recomputed": true,
+      "max_prediction_difference": 0.0
+    },
+    {
+      "fold": 2,
+      "sampled_valid_rows": 512,
+      "sampled_test_rows": 512,
+      "all_oof_metrics_recomputed": true,
+      "max_prediction_difference": 0.0
+    },
+    {
+      "fold": 3,
+      "sampled_valid_rows": 512,
+      "sampled_test_rows": 512,
+      "all_oof_metrics_recomputed": true,
+      "max_prediction_difference": 0.0
+    },
+    {
+      "fold": 4,
+      "sampled_valid_rows": 512,
+      "sampled_test_rows": 512,
+      "all_oof_metrics_recomputed": true,
+      "max_prediction_difference": 0.0
+    }
+  ]
+}

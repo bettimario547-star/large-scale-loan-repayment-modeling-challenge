@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "backend": "GPU",
+  "folds_completed": 5,
+  "small_fixture": true,
+  "rows": 500,
+  "features": 1101,
+  "models_reloaded": 5,
+  "max_prediction_difference": 0.0
+}

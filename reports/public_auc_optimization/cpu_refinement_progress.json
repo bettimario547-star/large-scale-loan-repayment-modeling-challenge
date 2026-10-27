@@ -1,0 +1,31 @@
+{
+  "family": "bins",
+  "saved_this_session": [
+    [
+      "lgbm_drift_bins255",
+      42,
+      0
+    ],
+    [
+      "lgbm_drift_bins255",
+      42,
+      1
+    ],
+    [
+      "lgbm_drift_bins255",
+      42,
+      2
+    ],
+    [
+      "lgbm_drift_bins255",
+      42,
+      3
+    ],
+    [
+      "lgbm_drift_bins255",
+      42,
+      4
+    ]
+  ],
+  "failures": []
+}

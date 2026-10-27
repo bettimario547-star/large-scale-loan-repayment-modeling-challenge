@@ -1,0 +1,8 @@
+{
+  "minutes_budget": 94.999269115,
+  "threads": 2,
+  "complete_candidate": true,
+  "failures": [],
+  "stopped_at_deadline": [],
+  "log_directory": "D:\\large-scale-loan-repayment-modeling-challenge\\logs\\catboost_fast_gpu\\1792921752973930700"
+}

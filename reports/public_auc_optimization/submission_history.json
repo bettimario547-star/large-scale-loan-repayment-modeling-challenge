@@ -1,0 +1,68 @@
+[
+  {
+    "filename": "lightgbm_baseline.csv",
+    "sha256": "6876ff995709a4a6120649437ec8fd377d7a813d03725c6d77596b63a9cf176b",
+    "public_auc": 0.73212,
+    "evidence": "用户提供的 Kaggle 公榜截图；观察日期 2026-10-25"
+  },
+  {
+    "filename": "lightgbm_tuned_ensemble.csv",
+    "sha256": "e603145e0c2b5df421c99807a77921801728405a664636c01006e117e2c97a28",
+    "public_auc": 0.73453,
+    "evidence": "用户提供的 Kaggle 公榜截图；观察日期 2026-10-25"
+  },
+  {
+    "filename": "feature_screening_drift_core_filter.csv",
+    "sha256": "67ebf1bcfdb81ef6c86f3d268a03407b1f514e65e6f81e98d0139a0fa21ba785",
+    "public_auc": 0.73501,
+    "evidence": "用户提供的 Kaggle 公榜截图；观察日期 2026-10-25"
+  },
+  {
+    "filename": "public_auc/blend_lgbm50_catboost30_xgb20_1db9ccc3c6.csv",
+    "sha256": "1db9ccc3c632d3008dab54f8004e7c4d08f35bf34a4c40f963b7dddc57ea7bac",
+    "public_auc": 0.73949,
+    "evidence": "用户提供的 Kaggle 提交和公榜截图，2026-10-25；排名第二，截图第一名 0.74111"
+  },
+  {
+    "filename": "public_auc/blend_catboost50_xgb50_ff52e6ca3a.csv",
+    "sha256": "ff52e6ca3a3a101402ee90b06892984aee3dcf46a166169015bbea9aa9cd33d9",
+    "public_auc": 0.74009,
+    "evidence": "用户明确回复该确切文件的实际 Kaggle 公榜 AUC，2026-10-25"
+  },
+  {
+    "filename": "public_auc/blend_catboost_diverse50_xgb50_8a04935d6a.csv",
+    "sha256": "8a04935d6a98d96f21a04709c7d493cfb70f66155301d459ae4e3595f18e5617",
+    "public_auc": 0.7404,
+    "evidence": "用户录入的 Kaggle 公榜结果"
+  },
+  {
+    "filename": "public_auc/blend_catboost_diverse50_xgb_mix50_cd021d6746.csv",
+    "sha256": "cd021d67467c79f6fc16779f7f37dd6d60b08361c3c456f4096b4333bfcbc2f0",
+    "public_auc": 0.73979,
+    "evidence": "用户提供的 Kaggle 提交截图，2026-10-25；文件名及公榜分数清晰可见"
+  },
+  {
+    "filename": "public_auc/rank_catboost_diverse50_xgb_mix50_c3e98956e7.csv",
+    "sha256": "c3e98956e727ca8e0e04632a51e27e5dbb0e5234c961a5da93e06d005b6fc1c3",
+    "public_auc": 0.7397,
+    "evidence": "用户提供的 Kaggle 提交截图，2026-10-25；文件名及公榜分数清晰可见"
+  },
+  {
+    "filename": "public_auc/blend_catboost_diverse25_xgb75_01c3571821.csv",
+    "sha256": "01c35718217aaa322852f3f18981a86f6901fe3d4ff6dc9aa282494f79651539",
+    "public_auc": 0.74065,
+    "evidence": "用户最新 Kaggle 提交截图，2026-10-25；文件名与公榜分数清晰可见"
+  },
+  {
+    "filename": "public_auc/blend_catboost_diverse75_xgb25_3512bfa7dc.csv",
+    "sha256": "3512bfa7dcfaeaeca37c0efc2bbb3d542c589015e3799ecdfc70bf67d9d54bf5",
+    "public_auc": 0.73892,
+    "evidence": "用户最新 Kaggle 提交截图，2026-10-25；文件名与公榜分数清晰可见"
+  },
+  {
+    "filename": "public_auc/rank_catboost_diverse50_xgb50_45ad60ebac.csv",
+    "sha256": "45ad60ebac95ce6ef919a99206a3d298b5f2280ecac796c152c3f920a2e83b79",
+    "public_auc": 0.74042,
+    "evidence": "用户最新 Kaggle 提交截图，2026-10-25；文件名与公榜分数清晰可见"
+  }
+]

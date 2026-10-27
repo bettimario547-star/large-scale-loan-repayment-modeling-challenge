@@ -1,5 +1,6 @@
 """Plot completed controls and generate a Chinese beginner-readable report."""
 
+import argparse
 import json
 
 import matplotlib
@@ -110,6 +111,14 @@ def report():
                           "model_stage_seconds_sum": float(selection.query("engine == @engine").elapsed_seconds.sum() + records.query("engine == @engine").elapsed_seconds.sum()),
                           "final_model_bytes": sum(study.model_paths(engine, fold, "refit")[0].stat().st_size for fold in range(5))}
                          for engine in study.ENGINES])
+    execution_rows = [{"engine": row["engine"], "stage": stage,
+                       "mode": row.get("execution_mode", "single"),
+                       "threads": row.get("training_threads", experiment["threads"])}
+                      for stage, frame in (("inner", selection), ("refit", records))
+                      for row in frame.to_dict(orient="records")]
+    execution_table = pd.DataFrame(execution_rows).groupby(
+        ["engine", "stage", "mode", "threads"], sort=True
+    ).size().reset_index(name="model_count")
     pressure = comparison.query("group != 'overall'")[["model", "group", "rows", "default_rate", *study.METRICS]].copy()
     pressure.default_rate = pressure.default_rate.map(lambda value: f"{value:.4%}")
     recommendations = {"lightgbm_tuned_ensemble": "继续使用已有 LightGBM 三种子集成作为下一步开发候选。",
@@ -195,7 +204,10 @@ CatBoost **{summary['folds_above_tuned_single_auc']['catboost']}/5**。
 
 上表耗时是内部选择与重训阶段之和，包含数据构建、CatBoost TSV 导出、量化和预测，
 不是只计 boosting，也不是全项目历时或部署延迟。最终模型字节数不等于运行内存。
-使用一个训练进程、{experiment['threads']} 线程；量化仍需内存，资源请求不等于进程硬上限。
+实际模型阶段的执行模式与线程数如下；多进程调度最多两个进程、合计 10 个逻辑 CPU。
+只有一个未完成任务时为一个进程、10 线程。量化仍需内存，资源请求不等于进程硬上限。
+
+{table(execution_table)}
 
 XGBoost 的 DataIter / QuantileDMatrix 分批量化，早停使用 ref。
 原始特征由 BatchedFeatureFile 每批打开、复制后关闭只读映射，降低原始缓存与量化数据同时驻留的压力。
@@ -205,10 +217,10 @@ CatBoost 从分批输出的临时 TSV 直接量化，早停使用内部训练 bo
 9 位有效数字保持 float32 往返一致，NaN 和真实零保留。
 原始 DOUBLE 已经发生的 float32 舍入不会由文本或 float64 转换恢复。
 
-模型保存于 `artifacts/tree_model_comparison/inner_models`、`models`；
+模型保存于 `{study.ARTIFACTS.as_posix()}/inner_models`、`models`；
 原始行索引与保存概率在 `inner_splits`、`inner_predictions`、`fold_predictions`。
 OOF 和测试汇总为 Parquet；两个本地提交是
-`submissions/xgboost_baseline.csv`、`submissions/catboost_baseline.csv`，按官方模板 id 对齐。
+`{study.submission_path('xgboost').as_posix()}`、`{study.submission_path('catboost').as_posix()}`，按官方模板 id 对齐。
 
 ## 七、核查与开发结论
 
@@ -234,4 +246,8 @@ CatBoost 训练/早停边界一致，已核查 {audit['catboost_border_files_ver
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--run-name", default="tree_model_comparison")
+    args = parser.parse_args()
+    study.configure_run(args.run_name)
     report()

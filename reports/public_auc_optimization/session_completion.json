@@ -1,0 +1,56 @@
+{
+  "training_completed": true,
+  "active_training_processes_at_final_check": 0,
+  "requested_budget_minutes_approx": 120,
+  "first_training_session_unix": 1792914008.4342172,
+  "completed_unix": 1792920980.9634085,
+  "total_elapsed_minutes_including_verification": 116.20881985425949,
+  "model_reload_count": 30,
+  "candidate_files_verified": 28,
+  "public_scores_for_new_candidates": "unsubmitted per user",
+  "observed_best_public_auc": 0.73501,
+  "recommended_submissions": [
+    {
+      "candidate": "blend_lgbm50_catboost30_xgb20",
+      "submission": "submissions\\public_auc\\blend_lgbm50_catboost30_xgb20_1db9ccc3c6.csv",
+      "public_auc": null,
+      "blend_method": "probability_average",
+      "overall_oof_auc": 0.8218362944004003,
+      "feature_492_upper_tail_oof_auc": 0.7703740362345421,
+      "feature_1039_observed_oof_auc": 0.7874410194274741,
+      "default_ap": 0.3981044823760418,
+      "test_rank_correlation_to_public_best": 0.9886827231841481,
+      "fold_auc_mean": 0.8218471088775055,
+      "fold_auc_min": 0.8201268093255776,
+      "fold_auc_std": 0.0017203881718430365
+    },
+    {
+      "candidate": "blend_drift_lgbm70_catboost30",
+      "submission": "submissions\\public_auc\\blend_drift_lgbm70_catboost30_fa80c9bb4c.csv",
+      "public_auc": null,
+      "blend_method": "probability_average",
+      "overall_oof_auc": 0.8211321094593644,
+      "feature_492_upper_tail_oof_auc": 0.7691774970517427,
+      "feature_1039_observed_oof_auc": 0.7865112962182366,
+      "default_ap": 0.3968349617680936,
+      "test_rank_correlation_to_public_best": 0.9912707559786008,
+      "fold_auc_mean": 0.8211468004348221,
+      "fold_auc_min": 0.819658023951108,
+      "fold_auc_std": 0.001740957507101243
+    },
+    {
+      "candidate": "lgbm_drift_tuned_ensemble",
+      "submission": "submissions\\public_auc\\lgbm_drift_tuned_ensemble_87bcc2f428.csv",
+      "public_auc": null,
+      "blend_method": "probability_average",
+      "overall_oof_auc": 0.8200324600247842,
+      "feature_492_upper_tail_oof_auc": 0.7674288765835199,
+      "feature_1039_observed_oof_auc": 0.7850931754125334,
+      "default_ap": 0.3939694128630371,
+      "test_rank_correlation_to_public_best": 0.9937743060396568,
+      "fold_auc_mean": 0.8200629228157738,
+      "fold_auc_min": 0.8185533932405504,
+      "fold_auc_std": 0.0017263774935651374
+    }
+  ]
+}

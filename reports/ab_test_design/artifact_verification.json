@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "offline_randomized_rows": 210856,
+  "required_randomized_total": 3721531,
+  "common_gate_and_shared_evaluation_scope_verified": true,
+  "stable_hash_allocation_verified": true,
+  "sql_metrics_match_independent_row_calculations": true,
+  "planning_uses_development_marginal_variances_only": true,
+  "normal_power_minimum_integer_boundary_verified": true,
+  "bootstrap_and_monte_carlo_reproducible": true,
+  "unavailable_test_and_dpd_outcomes_not_invented": true,
+  "live_experiment_completed": false,
+  "frozen_input_protocol_and_output_hashes_verified": true,
+  "csv_and_parquet_exports_verified": true,
+  "policy_threshold_full_precision_preserved": true,
+  "production_rollout_ready": false
+}

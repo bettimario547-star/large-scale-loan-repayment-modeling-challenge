@@ -1,0 +1,37 @@
+{
+  "family": "bins",
+  "minutes_budget": 95.0,
+  "elapsed_seconds": 2254.6313587000004,
+  "workers": 1,
+  "threads_per_worker": 8,
+  "completed": [
+    [
+      "lgbm_drift_bins255",
+      42,
+      0
+    ],
+    [
+      "lgbm_drift_bins255",
+      42,
+      1
+    ],
+    [
+      "lgbm_drift_bins255",
+      42,
+      2
+    ],
+    [
+      "lgbm_drift_bins255",
+      42,
+      3
+    ],
+    [
+      "lgbm_drift_bins255",
+      42,
+      4
+    ]
+  ],
+  "failures": [],
+  "stopped_at_deadline": [],
+  "log_directory": "D:\\large-scale-loan-repayment-modeling-challenge\\logs\\public_auc_cpu_refinements\\1792921808031132500"
+}

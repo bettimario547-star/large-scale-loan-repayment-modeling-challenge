@@ -1,0 +1,321 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 1388.8484407711899,
+            "y": 381.8252755816095
+          },
+          "nodeIndex": "ABSimulations",
+          "nodeLineageTag": "fec88b5a-0dbf-457b-aaa8-5bf84bdbf601",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1672.8484407711899,
+            "y": 479.8252755816095
+          },
+          "nodeIndex": "AlphaLevels",
+          "nodeLineageTag": "79ad4e55-fc36-4ce8-814a-6150add89d99",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1956.8484407711899,
+            "y": 381.8252755816095
+          },
+          "nodeIndex": "Calibration",
+          "nodeLineageTag": "3fa6ad99-87e2-40c8-8a18-b6e6087652ba",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2240.84844077119,
+            "y": 479.8252755816095
+          },
+          "nodeIndex": "Coverage",
+          "nodeLineageTag": "a69f6b5b-3b09-452c-91f6-ab5e5b0d1449",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2524.84844077119,
+            "y": 479.8252755816095
+          },
+          "nodeIndex": "DailyTraffic",
+          "nodeLineageTag": "df288676-c25e-41c2-974c-603cb53b22d6",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2808.84844077119,
+            "y": 381.8252755816095
+          },
+          "nodeIndex": "DashboardState",
+          "nodeLineageTag": "0e505953-f95c-4846-820a-9d855dae914c",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3092.84844077119,
+            "y": 381.8252755816095
+          },
+          "nodeIndex": "DesignComparison",
+          "nodeLineageTag": "036c1719-8360-41b9-9fcd-0f608363bc27",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3376.84844077119,
+            "y": 381.8252755816095
+          },
+          "nodeIndex": "DurationGrid",
+          "nodeLineageTag": "08620d31-cabc-42c2-800e-b3c19b021da8",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1154.8484407711899,
+            "y": -10.935747831194476
+          },
+          "nodeIndex": "EconomicAssumptions",
+          "nodeLineageTag": "bf8e1fd1-a925-4988-ac63-d12c81655d6a",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3660.84844077119,
+            "y": 479.8252755816095
+          },
+          "nodeIndex": "Exposure",
+          "nodeLineageTag": "1db82e29-328b-4bcb-9057-5c2a345d7496",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3944.84844077119,
+            "y": 419.8252755816095
+          },
+          "nodeIndex": "MissingData",
+          "nodeLineageTag": "7346827e-f3d0-48a4-887f-d66dc3abfdec",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 318.72246442144797,
+            "y": 664.54075181554026
+          },
+          "nodeIndex": "ModelMetrics",
+          "nodeLineageTag": "71d368a6-c3c8-4363-9987-262801839736",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 434.071972693872,
+            "y": 305.79253418851397
+          },
+          "nodeIndex": "Models",
+          "nodeLineageTag": "f91af2d7-cbde-4a92-b572-ac42990213ce",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 4228.8484407711894,
+            "y": 383.8252755816095
+          },
+          "nodeIndex": "Peeking",
+          "nodeLineageTag": "f6abedf0-0f35-407c-a272-b3c882be1a75",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 4512.8484407711894,
+            "y": 479.8252755816095
+          },
+          "nodeIndex": "Phase",
+          "nodeLineageTag": "94fb480c-b21a-4802-a5bf-c6229cfb4c7c",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 633.07574476086506,
+            "y": -50
+          },
+          "nodeIndex": "PolicyCurves",
+          "nodeLineageTag": "ee90edfa-f35b-4330-9554-b47adf941cbc",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 762.74489847167069,
+            "y": 837.65055116321889
+          },
+          "nodeIndex": "PolicyDefinitions",
+          "nodeLineageTag": "c7b4789e-f9c0-41fc-9eba-1ac8c88a556c",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 4796.8484407711894,
+            "y": 383.8252755816095
+          },
+          "nodeIndex": "ProfitIntervals",
+          "nodeLineageTag": "3c795594-c45b-4cfa-88f6-674bc650eef0",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 5080.8484407711894,
+            "y": 407.8252755816095
+          },
+          "nodeIndex": "PromotionGates",
+          "nodeLineageTag": "bea90baf-c819-4106-959d-6836ef38e221",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 50,
+            "y": 307.32340493638009
+          },
+          "nodeIndex": "RiskBands",
+          "nodeLineageTag": "b483e8dc-2889-462e-802f-70072a224228",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 867.81456390203357,
+            "y": 302.257946086384
+          },
+          "nodeIndex": "Scenarios",
+          "nodeLineageTag": "4f2e9303-b79a-4c38-818e-a3c3b57e27c3",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 149.79769924855805,
+            "y": 2.5888242025844193
+          },
+          "nodeIndex": "ScoreDrift",
+          "nodeLineageTag": "0107d9d5-813a-4c06-b4be-b643c3ae7a56",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 897.75112834472509,
+            "y": 481.53644302326416
+          },
+          "nodeIndex": "SelectedPolicies",
+          "nodeLineageTag": "22bf5a66-851f-440d-bced-1370960a4895",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "所有表",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "所有表",
+  "defaultDiagram": "所有表"
+}

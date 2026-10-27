@@ -1,0 +1,118 @@
+{
+  "status": "completed",
+  "offline_aa_validation_passed": true,
+  "required_regimes_calibrated": true,
+  "scope": "strict_offline_aa_validation_only",
+  "champion_definition": {
+    "prospective_arm": "A",
+    "model_role": "champion",
+    "model_version": "lightgbm_baseline",
+    "target_approval_rate": 0.7,
+    "threshold": 0.9247938423619432,
+    "decision_rule": "score_threshold"
+  },
+  "champion_retained": true,
+  "challenger_promoted": false,
+  "live_experiment_completed": false,
+  "production_rollout_ready": false,
+  "aa_snapshot_rows": 210856,
+  "snapshot_welch": {
+    "delta": -7.126015528668404,
+    "se": 6.708708747837143,
+    "df": 210784.92379583124,
+    "ci_low": -20.2749185605419,
+    "ci_high": 6.022887503205089,
+    "simulation_p_value": 0.28814441888943304
+  },
+  "snapshot_quality_familywise_passed": true,
+  "snapshot_balance_passed": true,
+  "actual_hash_repetitions": 64,
+  "actual_hash_profit_rejections": 2,
+  "actual_hash_fpr_consistency_binomial_p": 0.772065062532155,
+  "actual_hash_check_precision_is_limited": true,
+  "calibration_repetitions_per_case": 100000,
+  "required_calibration_rows": 27,
+  "stress_regimes_not_certified": [
+    {
+      "case_id": "stress_n10000_r0.1",
+      "endpoint": "profit_itt",
+      "alpha": 0.01,
+      "false_positive_rate": 0.01421,
+      "fpr_simultaneous_ci_low": 0.01298578938654871,
+      "fpr_simultaneous_ci_high": 0.015510971803592854
+    },
+    {
+      "case_id": "stress_n10000_r0.1",
+      "endpoint": "profit_itt",
+      "alpha": 0.05,
+      "false_positive_rate": 0.05536,
+      "fpr_simultaneous_ci_low": 0.0529606428507245,
+      "fpr_simultaneous_ci_high": 0.057829428765234114
+    },
+    {
+      "case_id": "stress_n10000_r0.1",
+      "endpoint": "profit_itt",
+      "alpha": 0.1,
+      "false_positive_rate": 0.10479,
+      "fpr_simultaneous_ci_low": 0.10156243382783672,
+      "fpr_simultaneous_ci_high": 0.10807980225484272
+    },
+    {
+      "case_id": "stress_n10000_r0.1",
+      "endpoint": "default_incidence_itt",
+      "alpha": 0.01,
+      "false_positive_rate": 0.01463,
+      "fpr_simultaneous_ci_low": 0.0133875848159688,
+      "fpr_simultaneous_ci_high": 0.01594910402174528
+    },
+    {
+      "case_id": "stress_n10000_r0.1",
+      "endpoint": "default_incidence_itt",
+      "alpha": 0.05,
+      "false_positive_rate": 0.05492,
+      "fpr_simultaneous_ci_low": 0.052529786785613805,
+      "fpr_simultaneous_ci_high": 0.05738035493468421
+    },
+    {
+      "case_id": "stress_n10000_r0.1",
+      "endpoint": "default_incidence_itt",
+      "alpha": 0.1,
+      "false_positive_rate": 0.10541,
+      "fpr_simultaneous_ci_low": 0.102173904563527,
+      "fpr_simultaneous_ci_high": 0.1087082335330931
+    }
+  ],
+  "snapshot_guardrails_are_not_zero_effect_equality_tests": {
+    "default_incidence_ni": {
+      "delta_b_minus_a": 0.000828013663195841,
+      "one_sided_bound": 0.0022552213432989678,
+      "margin": 0.002,
+      "passed_in_simulation": false
+    },
+    "approval_rate_ni": {
+      "delta_b_minus_a": 0.0007024431039047707,
+      "one_sided_bound": -0.0016966501654544618,
+      "margin": 0.02,
+      "passed_in_simulation": true
+    },
+    "approved_default_absolute": {
+      "wilson_upper_bound": 0.033073743756280825,
+      "limit": 0.05,
+      "passed_in_simulation": true
+    }
+  },
+  "live_analysis_readiness": {
+    "efficacy_analysis_allowed": false,
+    "blocking_reasons": [
+      "fixed_sample_not_reached",
+      "outcomes_not_complete",
+      "early_efficacy_look_not_allowed"
+    ],
+    "champion_retained": true,
+    "challenger_promoted": false,
+    "live_experiment_completed": false
+  },
+  "all_negative_controls_detected": true,
+  "paired_zero_is_identity_check_only": true,
+  "next_step": "AB_feasibility_redesign_pending_no_automatic_run"
+}

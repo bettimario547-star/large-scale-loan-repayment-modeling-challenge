@@ -1,0 +1,13 @@
+{
+  "time_unix": 1792917476.8764443,
+  "reason": "The owned PowerShell launch stalled before creating a Python GPU process; restart through cmd.exe.",
+  "gpu_shell_pids_stopped": [
+    4232,
+    1932
+  ],
+  "owned_read_shells_stopped": [
+    6860,
+    7576,
+    32740
+  ]
+}

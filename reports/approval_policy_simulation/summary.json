@@ -1,0 +1,62 @@
+{
+  "status": "completed",
+  "policy_cohort_rows": {
+    "policy_development": 413398,
+    "policy_evaluation": 275600
+  },
+  "selected_policies": [
+    {
+      "prospective_arm": "A",
+      "model_role": "champion",
+      "model_version": "lightgbm_baseline",
+      "target_approval_rate": 0.7,
+      "threshold": 0.9247938423619432,
+      "decision_rule": "score_threshold"
+    },
+    {
+      "prospective_arm": "B",
+      "model_role": "challenger",
+      "model_version": "lightgbm_tuned_seed_ensemble",
+      "target_approval_rate": 0.7,
+      "threshold": 0.9256811726550405,
+      "decision_rule": "score_threshold"
+    }
+  ],
+  "evaluation": {
+    "champion_approval_rate": 0.7005986937590711,
+    "challenger_approval_rate": 0.7003991291727141,
+    "champion_default_rate": 0.031659631768392156,
+    "challenger_default_rate": 0.03110397347562555,
+    "champion_profit_per_application": 276.3566763425254,
+    "challenger_profit_per_application": 279.855587808418,
+    "delta_profit_per_application": 3.498911465892604,
+    "point_estimate_constraints_passed": {
+      "A": true,
+      "B": true
+    }
+  },
+  "economics": {
+    "currency": "CNY_assumed",
+    "horizon_months": 12,
+    "principal": 10000.0,
+    "interest_rate_for_horizon": 0.12,
+    "loss_given_default": 0.8,
+    "funding_rate_for_horizon": 0.04,
+    "servicing_cost_per_approved": 100.0,
+    "application_cost_per_application": 10.0
+  },
+  "probability_calibrated": false,
+  "randomized_experiment_completed": false,
+  "unlabeled_test": {
+    "applications": 36324,
+    "champion_approval_rate": 0.17008038762250854,
+    "challenger_approval_rate": 0.17046580773042616,
+    "observed_default_rates_available": false,
+    "historical_simulated_profits_available": false,
+    "point_estimate_min_approval_rate_passed": {
+      "A": false,
+      "B": false
+    }
+  },
+  "evaluation_scope": "policy_evaluation_subset_of_reused_development_oof"
+}

@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "economic_result_rows": 432,
+  "sql_cash_flows_match_row_level_numpy": true,
+  "principal_repayment_excluded_from_revenue": true,
+  "rejected_applications_incur_application_cost": true,
+  "selection_uses_base_development_only": true,
+  "evaluation_and_test_use_frozen_thresholds": true,
+  "test_realized_profits_and_default_rates_are_null": true,
+  "matched_budget_comparisons_and_sensitivity_verified": true,
+  "selected_application_outcomes_verified": true,
+  "policy_input_protocol_and_output_checksums_verified": true,
+  "csv_and_parquet_exports_verified": true,
+  "evaluation_scope": "new_policy_split_of_reused_development_oof_not_independent_model_test",
+  "randomized_experiment_completed": false
+}

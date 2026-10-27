@@ -1,0 +1,3 @@
+﻿ModelVersion,ModelRole,Model
+lightgbm_tuned_seed_ensemble,challenger,Challenger
+lightgbm_baseline,champion,Champion

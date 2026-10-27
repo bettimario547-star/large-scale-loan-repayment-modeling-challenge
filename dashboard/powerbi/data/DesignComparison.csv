@@ -1,0 +1,4 @@
+﻿DesignId,Exposure,RandomizedRequired,EnrollmentDays,Feasible,ChangedDecisionFraction,Design,EvidenceCategory,EvidenceBasis,PopulationScope
+original_all_eligible,0.5,3721531,7444,0,0.014858148848803883,原全合格独立分组,模拟假设,冻结原流量；不同随机范围，样本数不能直接视为同种申请,原入组7444天 / V2入组577或289天
+disagreement_stratified,0.5,17141,577,0,0.014858148848803883,V2 分歧50%入组,模拟假设,冻结原流量；不同随机范围，样本数不能直接视为同种申请,原入组7444天 / V2入组577或289天
+disagreement_stratified,1,17141,289,1,0.029716297697607766,V2 分歧100%入组,模拟假设,冻结原流量；不同随机范围，样本数不能直接视为同种申请,原入组7444天 / V2入组577或289天

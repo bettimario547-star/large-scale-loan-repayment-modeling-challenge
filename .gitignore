@@ -27,6 +27,14 @@ reports/figures/
 reports/tables/
 submissions/
 
+# Include only the small aggregate CSV package required by the Power BI report
+!dashboard/powerbi/data/*.csv
+
+# Desktop/local rendering state and temporary repair or document files
+**/.pbi/
+dashboard/powerbi/matplotlib_cache/
+tmp/
+
 # Editors and operating systems
 .vscode/
 .idea/

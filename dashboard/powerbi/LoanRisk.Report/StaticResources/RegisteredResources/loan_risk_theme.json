@@ -1,0 +1,29 @@
+{
+  "name": "Loan Risk Evidence",
+  "dataColors": [
+    "#227B73",
+    "#D28A36",
+    "#3B71A3",
+    "#B34A55"
+  ],
+  "background": "#F1F5F9",
+  "foreground": "#17384B",
+  "tableAccent": "#227B73",
+  "visualStyles": {
+    "*": {
+      "*": {
+        "title": [
+          {
+            "fontFamily": "Microsoft YaHei",
+            "fontSize": 13
+          }
+        ],
+        "labels": [
+          {
+            "fontFamily": "Microsoft YaHei"
+          }
+        ]
+      }
+    }
+  }
+}

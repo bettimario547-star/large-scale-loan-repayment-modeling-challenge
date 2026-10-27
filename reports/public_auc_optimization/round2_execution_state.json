@@ -1,0 +1,67 @@
+{
+  "best_observed_public_auc": 0.74065,
+  "observed_leader_public_auc": 0.74111,
+  "gap_to_observed_leader": 0.00046,
+  "gpu_controller_session_id": 76588,
+  "cpu_bins_controller_session_id": 30683,
+  "cpu_bins_status": "completed five folds, collected and models reloaded",
+  "xgboost_controller_session_id": 88389,
+  "xgboost_time_budget_minutes": 54,
+  "xgboost_status": "completed five folds, collected and models reloaded",
+  "depth9_first_fold_worker_session_id": 57959,
+  "depth9_status": "completed five folds, collected and models reloaded",
+  "depth9_controller_session_id": 1809,
+  "depth9_controller_time_budget_minutes": 43,
+  "depth9_first_fold_oof_auc": 0.8213292660860201,
+  "gpu_multiseed_status": "completed seeds 42, 2026 and 3407; all ten new seed models reloaded successfully",
+  "gpu_multiseed_ensemble_oof_auc": 0.8196680011395514,
+  "original_optimizer_model_verification": "passed; 25 completed LightGBM fold models reloaded",
+  "depth9_first_fold_scheduling": "previous GPU worker PID 28396 confirmed exited; isolated worker writes only its own checkpoint; launch remaining-fold controller after this worker completes",
+  "gpu_start_unix": 1792921752.9739306,
+  "cpu_start_unix": 1792921808.0311325,
+  "overall_training_deadline_unix": 1792927452.9739306,
+  "gpu_completed_seed": 2026,
+  "gpu_active_seed": null,
+  "next_gpu_command": null,
+  "next_cpu_command": null,
+  "next_stage_budget_rule": "cap each new command by remaining time to overall training deadline",
+  "final_collect_commands": [
+    "scripts/run_public_auc_optimization.py --stage collect",
+    "scripts/run_xgboost_drift_fast.py --stage collect"
+  ],
+  "final_verify_commands": [
+    "scripts/run_catboost_gpu_multiseed.py --stage verify",
+    "scripts/run_catboost_gpu_depth9.py --stage verify",
+    "scripts/run_xgboost_drift_fast.py --stage verify",
+    "scripts/verify_public_auc_optimization.py",
+    "scripts/verify_public_auc_candidates.py"
+  ],
+  "new_xgboost_small_spawn_test": "passed",
+  "new_multiseed_gpu_small_test": "passed",
+  "new_submissions": "CatBoost25/XGB75 0.74065; CatBoost75/XGB25 0.73892; rank original50/50 0.74042",
+  "user_remaining_submission_opportunities": 1,
+  "blend_weight_controls": [
+    "CatBoost:XGBoost 25:75",
+    "50:50",
+    "75:25"
+  ],
+  "final_candidate_rebuild_required": false,
+  "early_primary_candidate": "blend_catboost_diverse50_xgb50_8a04935d6a.csv",
+  "early_primary_candidate_status": "actual public AUC confirmed: 0.74040; exact hash registered",
+  "status": "complete",
+  "completed_at": "2026-10-25T19:17:22.234596+08:00",
+  "elapsed_since_first_controller_minutes": 88.2,
+  "gpu_completed_seeds": [
+    42,
+    2026,
+    3407
+  ],
+  "new_fold_models_verified": 25,
+  "final_candidate_files_verified": 56,
+  "final_training_process_check": "no remaining training processes",
+  "last_report_updated_at": "2026-10-25T19:21:00.653041+08:00",
+  "user_stop_new_experiments": true,
+  "final_candidates": [
+    "existing_xgboost"
+  ]
+}

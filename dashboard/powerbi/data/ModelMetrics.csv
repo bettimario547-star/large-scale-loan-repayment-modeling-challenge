@@ -1,0 +1,3 @@
+﻿ModelVersion,ModelRole,ROCAUC,DefaultPRAUC,KS,Rows,HistoricalDefaultRate,LogLoss,BrierScore,Model,EvidenceCategory,EvidenceBasis,PopulationScope
+lightgbm_tuned_seed_ensemble,challenger,0.8203947878125023,0.39536674796325766,0.47946101701671506,688998,0.083307934130432887,0.22422558840600479,0.062113541826531678,Challenger,历史结果,复用开发 OOF；未获得独立未来标签,"688,998 个训练申请"
+lightgbm_baseline,champion,0.81656944763734962,0.38891243006241849,0.47215557137441222,688998,0.083307934130432887,0.22584982479259111,0.062500037305884354,Champion,历史结果,复用开发 OOF；未获得独立未来标签,"688,998 个训练申请"

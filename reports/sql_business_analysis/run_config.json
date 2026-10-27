@@ -1,0 +1,67 @@
+{
+  "status": "completed",
+  "run_name": "sql_business_analysis",
+  "duckdb_version": "2.0.0",
+  "analysis_code_sha256": {
+    "configs/sql_business_analysis.json": "63463d3e74441c23f0c7e6762966ae5d5e81b265dc48e93ac481c520e88c5a28",
+    "sql/03_analysis/01_model_predictions.sql": "33233faf994f3b865ad326aabcbe484b96d5adcb1165320a4d44451c8fd38914",
+    "sql/03_analysis/02_model_performance.sql": "263fc65b4e75c1af50cb1e9bddbaf726b3b7cc3952017d74ad02b3c49e6d3729",
+    "sql/03_analysis/03_risk_bands.sql": "62c68c3564ac7f3d4a969ad89cfef6fa1fd669a5da206a064e4ffdb6fe295a6f",
+    "sql/03_analysis/04_approval_thresholds.sql": "e6024c82859738efd2a06aed45fb089be6cefccef5f803643bf357d92327c355",
+    "sql/03_analysis/05_prediction_distribution.sql": "7e3972a1cbe28b9b36f058bb64c501adfd3ea5c90fd394fcb24f8a00c06a9ada",
+    "scripts/run_sql_business_analysis.py": "ac5e8a292eb7e22de85ce346051918c7b044bbc730233252852fda0a717bbc53",
+    "scripts/business_analysis_common.py": "6aa063add013d72364111aeba6d8fbcea754bc66ee258305e9b938e401f944a2",
+    "scripts/verify_sql_business_analysis.py": "6985afc36d0eba3a7cd07207a77bf28be7451a7235ec5b973a4c231d39c057a2"
+  },
+  "freeze_manifest_sha256": "719742a008522305afd741ab4f3c8d7bf0f6dc54e1e1ef1a74ff77a6def6869c",
+  "config": {
+    "protocol_version": 1,
+    "expected_train_rows": 688998,
+    "expected_test_rows": 36324,
+    "threads": 4,
+    "memory_limit": "1GB",
+    "approval_thresholds": [
+      0.0,
+      0.5,
+      0.6,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.925,
+      0.95,
+      0.975,
+      0.99,
+      1.0
+    ],
+    "models": [
+      {
+        "model_role": "champion",
+        "model_version": "lightgbm_baseline",
+        "artifact_directory": "artifacts/lightgbm_baseline",
+        "report_directory": "reports/lightgbm_baseline",
+        "prediction_column": "p_repay",
+        "seeds": [
+          42
+        ],
+        "expected_oof_auc": 0.816569
+      },
+      {
+        "model_role": "challenger",
+        "model_version": "lightgbm_tuned_seed_ensemble",
+        "artifact_directory": "artifacts/hyperparameter_seed_optimization",
+        "report_directory": "reports/hyperparameter_seed_optimization",
+        "prediction_column": "p_repay_ensemble",
+        "seeds": [
+          42,
+          2026,
+          3407
+        ],
+        "expected_oof_auc": 0.820395
+      }
+    ]
+  },
+  "elapsed_seconds": 12.641770900001575,
+  "database_sha256": "1555ac9b40f31c1a20bed7c826255a2f5598766856ff918f8256e0ef2e69a294"
+}

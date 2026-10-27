@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "small_fixture": true,
+  "rows": 500,
+  "seeds": [
+    2026,
+    3407
+  ],
+  "gpu_models_fitted_and_reloaded": 10,
+  "cached_binary_pools_unchanged": 15,
+  "partial_seed_export_rejected": true,
+  "ensemble_oof_matches_mean_of_complete_seeds": true,
+  "test": "tests.test_catboost_gpu_multiseed.CatBoostMultiSeedTests.test_real_gpu_seeds_preserve_pools_and_average_complete_oof_only",
+  "scope": "fixture iteration ceiling 8; production ceiling 2000"
+}

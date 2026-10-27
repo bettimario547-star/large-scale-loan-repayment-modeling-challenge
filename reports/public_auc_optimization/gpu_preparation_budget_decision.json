@@ -1,0 +1,10 @@
+{
+  "reason": "Full five-fold TSV preparation projected to exceed the session budget; redirect CPU resources to complete candidates.",
+  "time_unix": 1792915262.2368248,
+  "stopped_worker_pids": [
+    12188,
+    31832,
+    31112
+  ],
+  "complete_gpu_candidate": false
+}

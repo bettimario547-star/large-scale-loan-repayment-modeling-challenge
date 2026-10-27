@@ -1,0 +1,255 @@
+{
+  "schema_version": 1,
+  "release_date": "2026-10-25",
+  "timezone": "Asia/Shanghai",
+  "scope": "historical_Kaggle_modeling_and_offline_business_experiment_portfolio",
+  "dataset": {
+    "train_rows": 688998,
+    "test_rows": 36324,
+    "train_columns": 1107,
+    "test_columns": 1106,
+    "anonymous_numeric_features": 1105,
+    "repayment_label": 1,
+    "default_label": 0,
+    "test_labels_available": false,
+    "id_is_model_feature": false,
+    "verified_training_time_order": false
+  },
+  "models": [
+    {
+      "model_role": "champion",
+      "model_version": "lightgbm_baseline",
+      "artifact_directory": "artifacts/lightgbm_baseline",
+      "report_directory": "reports/lightgbm_baseline",
+      "prediction_column": "p_repay",
+      "seeds": [
+        42
+      ],
+      "expected_oof_auc": 0.816569,
+      "repay_roc_auc": 0.8165694476373496,
+      "default_pr_auc_ap": 0.3889124300624185,
+      "ks": 0.4721555713744122,
+      "log_loss": 0.2258498247925911,
+      "brier_score": 0.06250003730588435,
+      "feature_count": 1105,
+      "refit_models": 5,
+      "threshold": 0.9247938423619432
+    },
+    {
+      "model_role": "challenger",
+      "model_version": "lightgbm_tuned_seed_ensemble",
+      "artifact_directory": "artifacts/hyperparameter_seed_optimization",
+      "report_directory": "reports/hyperparameter_seed_optimization",
+      "prediction_column": "p_repay_ensemble",
+      "seeds": [
+        42,
+        2026,
+        3407
+      ],
+      "expected_oof_auc": 0.820395,
+      "repay_roc_auc": 0.8203947878125023,
+      "default_pr_auc_ap": 0.39536674796325766,
+      "ks": 0.47946101701671506,
+      "log_loss": 0.2242255884060048,
+      "brier_score": 0.06211354182653168,
+      "feature_count": 1105,
+      "refit_models": 15,
+      "threshold": 0.9256811726550405
+    }
+  ],
+  "auc_delta": 0.0038253401751526805,
+  "model_training_versions": {
+    "champion": {
+      "lightgbm": "4.7.0",
+      "numpy": "2.5.3"
+    },
+    "challenger": {
+      "lightgbm": "4.7.0",
+      "numpy": "2.5.3"
+    }
+  },
+  "validation": {
+    "folds": 5,
+    "split_seed": 42,
+    "method": "shuffled_stratified_with_inner_early_stopping",
+    "reused_development_oof": true,
+    "probability_calibrated": false
+  },
+  "policy": {
+    "development_rows": 413398,
+    "evaluation_rows": 275600,
+    "economics": {
+      "currency": "CNY_assumed",
+      "horizon_months": 12,
+      "principal": 10000.0,
+      "interest_rate_for_horizon": 0.12,
+      "loss_given_default": 0.8,
+      "funding_rate_for_horizon": 0.04,
+      "servicing_cost_per_approved": 100.0,
+      "application_cost_per_application": 10.0
+    },
+    "selected_evaluation": [
+      {
+        "arm": "B",
+        "model_version": "lightgbm_tuned_seed_ensemble",
+        "applications": 275600,
+        "approval_rate": 0.7003991291727141,
+        "approved_historical_default_rate": 0.03110397347562555,
+        "simulated_profit_per_application": 279.855587808418
+      },
+      {
+        "arm": "A",
+        "model_version": "lightgbm_baseline",
+        "applications": 275600,
+        "approval_rate": 0.7005986937590711,
+        "approved_historical_default_rate": 0.031659631768392156,
+        "simulated_profit_per_application": 276.3566763425254
+      }
+    ],
+    "outcome_assumption": "historical_repayment_label_unchanged_by_approval_decision_and_loan_terms"
+  },
+  "aa": {
+    "original_checks": 63,
+    "original_uncertified_checks": 6,
+    "v2_matched_checks": 20,
+    "v2_passed": true,
+    "fixed_look_fpr": 0.04934,
+    "naive_any_look_fpr": 0.142,
+    "certification_scope": "declared historical finite-population/IID settings only"
+  },
+  "experiment": {
+    "experiment_id": "loan_policy_disagreement_v2",
+    "protocol": {
+      "required_randomized_disagreements": 17141,
+      "profit_required": 17141,
+      "default_ni_required": 1266,
+      "minimum_cell_required": 6252,
+      "selected_disagreement_exposure": 1.0,
+      "planning_coefficient": 43677.485410404486,
+      "planning_safe_coefficient": 54596.856763005606,
+      "planning_disagreement_fraction": 0.05943259539521553,
+      "planning_true_gain": 10.0,
+      "business_boundary": 5.0,
+      "precision_gap": 5.0,
+      "primary_traffic_enrollment_feasible": true,
+      "planning_weights": [
+        {
+          "stratum": "S1_A_approves_B_rejects",
+          "weight": 0.027908359853973035,
+          "n": 8822
+        },
+        {
+          "stratum": "S1_A_rejects_B_approves",
+          "weight": 0.029622974571820844,
+          "n": 9364
+        },
+        {
+          "stratum": "S2_A_approves_B_rejects",
+          "weight": 0.0019012609694216496,
+          "n": 601
+        }
+      ],
+      "minimum_expected_cell_per_arm": 274.1720604673444,
+      "planning_approval_ni_feasible": true,
+      "estimand": "full_common_eligible_cohort_mean_profit_B_minus_A",
+      "standardization": "contemporaneous_full_cohort_pre_treatment_stratum_counts; agreement_effect_exactly_zero_only_under_identity_contract",
+      "decision": "retain_champion_until_business_lower_bound_guardrails_fixed_sample_maturity_and_quality_all_pass",
+      "external_preregistration": false,
+      "reused_development_oof": true,
+      "production_rollout_ready": false,
+      "selected_policies": [
+        {
+          "prospective_arm": "A",
+          "model_role": "champion",
+          "model_version": "lightgbm_baseline",
+          "target_approval_rate": 0.7,
+          "threshold": 0.9247938423619432,
+          "decision_rule": "score_threshold"
+        },
+        {
+          "prospective_arm": "B",
+          "model_role": "challenger",
+          "model_version": "lightgbm_tuned_seed_ensemble",
+          "target_approval_rate": 0.7,
+          "threshold": 0.9256811726550405,
+          "decision_rule": "score_threshold"
+        }
+      ]
+    },
+    "replay": {
+      "delta": 3.6724026857895886,
+      "se": 1.812509261037603,
+      "df": 6208.5603359388815,
+      "ci_low": 0.11925712572745484,
+      "ci_high": 7.225548245851723,
+      "p": 0.0427928223787743,
+      "default_delta": -0.0004302071291569941,
+      "default_upper": -4.407094727884093e-05,
+      "approval_delta": -0.0004078612892211009,
+      "business_threshold": 5.0,
+      "business_value_demonstrated_in_simulation": false,
+      "positive_zero_ci_in_simulation": true,
+      "default_ni_passed": true,
+      "approval_ni_passed": true,
+      "full_portfolio_approved_default_upper": 0.032222011362615294,
+      "absolute_risk_passed": true,
+      "minimum_cell_sample_reached": true
+    },
+    "full_eligible_evaluation_rows": 210856,
+    "randomized_disagreements": 12614,
+    "primary_assumed_enrollment_days": 289,
+    "primary_assumed_final_analysis_days": 684,
+    "historical_planned_joint_success": 0.00545,
+    "synthetic_10_joint_success": 0.90525,
+    "champion_retained": true,
+    "challenger_promoted": false,
+    "live_experiment_completed": false,
+    "production_rollout_ready": false,
+    "live_outcome_maturity_validated": false
+  },
+  "dashboard": {
+    "pages": 6,
+    "tables": 23,
+    "aggregate_rows": 665,
+    "format": "PBIP/PBIR with local CSV import",
+    "desktop_open_verified": true,
+    "desktop_refresh_verified": true,
+    "decision_page_render_verified": true,
+    "all_pages_render_verified": false,
+    "runtime_basis": "On 2026-10-25 the user replied '可以正常显示了' after being asked to use Home > Refresh"
+  },
+  "closeout": {
+    "one_page_pdf": true,
+    "visual_review_passed": true
+  },
+  "storage": {
+    "train_parquet_bytes": 2777426318,
+    "test_parquet_bytes": 117365026
+  },
+  "unknown_live_results": {
+    "profit": null,
+    "default_rate": null,
+    "dpd30": null
+  },
+  "sources_sha256": {
+    "configs/sql_business_analysis.json": "63463d3e74441c23f0c7e6762966ae5d5e81b265dc48e93ac481c520e88c5a28",
+    "reports/sql_business_analysis/summary.json": "bb05c881215c2e4e228da7df8fcccf40f71de73d2b876d46e5a067944b4d036b",
+    "configs/approval_policy_simulation.json": "a4e56002dac34013968236ae7d2470e159a397afb95957e26f0b51923def5015",
+    "configs/ab_feasibility_v2.json": "afc62fc1f67410ebd32509844acb1679ab2430f7a4a4b0ec9b526e2b2748bd04",
+    "reports/ab_feasibility_v2/summary.json": "737534ce8a593c0533e04d0810b2330eea1b4bf894bdab45c84a98e9acad4cc5",
+    "reports/sql_business_analysis/artifact_verification.json": "8dd771a1f576648d867c633b11745092d9157ffe0433e11123ce55dc3c775283",
+    "reports/approval_policy_simulation/artifact_verification.json": "408b168d42f7cada4abc1f774c7712a64ac1a7b02fd136b445f9efdf3b4bd86b",
+    "reports/ab_test_design/artifact_verification.json": "36b22f67d1a6019b3d4e81c0c169ceda44cb2aaf19ac75e3f8f2623118746636",
+    "reports/aa_validation/artifact_verification.json": "5ed999c5d67d87d8f1b4d0e78f51969c795ff3d9605ac23ce82632f0af0f9a05",
+    "reports/ab_feasibility_v2/artifact_verification.json": "590d235b417d04fce370a57d1c4845b13f5a56980230b0b229b7192b65f050b9",
+    "reports/aa_validation/tables/aa_calibration_results.csv": "0daa2bf0c7502ea8e539012e8b1f4d96f3caad45bae50c59b9aae4227b6373be",
+    "reports/ab_feasibility_v2/tables/matched_calibration.csv": "a04e0aa2c49b19f22ed674142973c2cc1b73ef8d640e9881ade06a97a30d9d36",
+    "reports/ab_feasibility_v2/tables/ab_simulation_results.csv": "68a58748fe78c43aaf99433d99edf472f32c03f4c937775cbbda63a3c6083afb",
+    "reports/approval_policy_simulation/tables/selected_policy_results.csv": "07106d6056f6a42e92e58d745e7e1471f2ad6ea19f26f834014c1caa93585579",
+    "reports/lightgbm_baseline/run_config.json": "54411254fb0a905304e5cc93d81a717ea81c8e5d28ae8a60d0bc9bc09601d479",
+    "reports/hyperparameter_seed_optimization/run_config.json": "d1d046d336972cc1fa804da851c395957db969d43fbcaf44cab247b29bef576d",
+    "data/processed/parquet_manifest.json": "334d7465443224a69833725dfa720f86708ee013bf0bb5fe1fee12013a7dfbfa",
+    "dashboard/powerbi/source_manifest.json": "4b8ac26f77a3ae0c9c855d7968ca26f07b1e54be586042deef0acf31f2ac0c3d",
+    "reports/experiment_closeout/closeout_provenance.json": "848212273bce705db63fb2e14b398c5f958f7b1876ad3ba9c6752d0e4f8dd82d"
+  }
+}

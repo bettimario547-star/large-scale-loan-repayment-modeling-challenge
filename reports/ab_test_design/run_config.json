@@ -1,0 +1,77 @@
+{
+  "status": "completed",
+  "elapsed_seconds": null,
+  "config": {
+    "protocol_version": 1,
+    "experiment_id": "loan_policy_ab_offline_v1",
+    "parent_run_name": "approval_policy_simulation",
+    "scope": "offline_design_and_simulation_only",
+    "threads": 4,
+    "memory_limit": "1GB",
+    "eligibility": {
+      "common_min_raw_repayment_score": 0.9,
+      "risk_stratum_edges": [
+        0.9,
+        0.925,
+        0.95,
+        0.975,
+        1.0000000000000002
+      ],
+      "production_safety_validated": false
+    },
+    "randomization": {
+      "salt": "loan-policy-20261025-design-v1",
+      "challenger_probability": 0.5,
+      "srm_alpha": 0.001
+    },
+    "inference": {
+      "alpha_two_sided": 0.05,
+      "target_power": 0.8,
+      "profit_mde_per_application": 5.0,
+      "profit_mde_grid": [
+        3.0,
+        5.0,
+        10.0,
+        20.0,
+        50.0
+      ],
+      "variance_safety_factor": 1.25,
+      "planning_challenger_probabilities": [
+        0.1,
+        0.5
+      ],
+      "default_incidence_ni_margin": 0.002,
+      "approval_rate_ni_margin": 0.02,
+      "absolute_default_rate_limit_approved": 0.05,
+      "minimum_practical_profit_gain": 5.0,
+      "bootstrap_repetitions": 2000,
+      "monte_carlo_repetitions": 1000,
+      "random_seed": 20261025
+    },
+    "traffic_assumptions": {
+      "daily_all_applications_grid": [
+        1000,
+        5000,
+        20000
+      ],
+      "eligible_fraction_grid": [
+        0.2,
+        0.75
+      ],
+      "main_experiment_fraction_of_eligible": 0.5,
+      "primary_daily_all_applications": 5000,
+      "primary_eligible_fraction": 0.2,
+      "max_enrollment_days_for_feasibility": 365,
+      "outcome_maturity_days_assumed": 365,
+      "data_grace_days": 30
+    },
+    "stopping": {
+      "efficacy_looks": "one_final_analysis_after_fixed_sample_and_complete_maturity",
+      "early_safety_pause_allowed": true,
+      "unresolved_outcomes_block_final_decision": true
+    }
+  },
+  "duckdb_version": "2.0.0",
+  "manifest_sha256": "7bed0116563e7e7b5ed37c372f06b8cde27e57f889ea2640c94008a8022b7286",
+  "finalized_by": "standalone_artifact_verification"
+}

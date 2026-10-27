@@ -1,0 +1,94 @@
+{
+  "status": "completed",
+  "scope": "offline_design_and_simulation_only",
+  "live_experiment_completed": false,
+  "production_rollout_ready": false,
+  "eligible_evaluation_rows": 210856,
+  "eligible_decision_disagreement_fraction": 0.05982281746784535,
+  "selected_policies": [
+    {
+      "prospective_arm": "A",
+      "model_role": "champion",
+      "model_version": "lightgbm_baseline",
+      "target_approval_rate": 0.7,
+      "threshold": 0.9247938423619432,
+      "decision_rule": "score_threshold"
+    },
+    {
+      "prospective_arm": "B",
+      "model_role": "challenger",
+      "model_version": "lightgbm_tuned_seed_ensemble",
+      "target_approval_rate": 0.7,
+      "threshold": 0.9256811726550405,
+      "decision_rule": "score_threshold"
+    }
+  ],
+  "planned_mde": 5.0,
+  "required_randomized_total": 3721531,
+  "planned_power_is_endpoint_marginal_not_joint": true,
+  "required_fixed_sample_reached_by_replay": false,
+  "actual_outcome_maturity_validated": false,
+  "paired_historical_bootstrap": {
+    "method": "paired_historical_policy_difference",
+    "estimate_profit_delta": 4.1649277231854915,
+    "ci_low": 1.7020027886330007,
+    "ci_high": 6.677720814204954,
+    "bootstrap_se": 1.258660751939178,
+    "repetitions": 2000,
+    "scope": "conditional_historical_iid_simulation_not_live_causal_evidence"
+  },
+  "offline_replay_diagnostics": {
+    "welch_offline_replay": {
+      "delta": 0.9936834222886546,
+      "se": 6.69269143835983,
+      "df": 210846.46947748365,
+      "ci_low": -12.123826057626042,
+      "ci_high": 14.111192902203351,
+      "simulation_p_value": 0.8819696999164016
+    },
+    "guardrails": {
+      "default_incidence_ni": {
+        "delta_b_minus_a": -7.726656157851924e-05,
+        "one_sided_bound": 0.0013464786245450193,
+        "margin": 0.002,
+        "passed_in_simulation": true
+      },
+      "approval_rate_ni": {
+        "delta_b_minus_a": 0.0004040443653804404,
+        "one_sided_bound": -0.0019922201857335508,
+        "margin": 0.02,
+        "passed_in_simulation": true
+      },
+      "approved_default_absolute": {
+        "wilson_upper_bound": 0.032405566080078885,
+        "limit": 0.05,
+        "passed_in_simulation": true
+      }
+    },
+    "srm_overall_passed": true,
+    "positive_primary_ci_in_simulation": false,
+    "practical_gain_point_estimate_screen": false,
+    "live_experiment_completed": false,
+    "production_rollout_ready": false
+  },
+  "primary_traffic_scenario": {
+    "daily_all_applications_assumed": 5000,
+    "eligible_fraction_assumed": 0.2,
+    "experiment_fraction_of_eligible": 0.5,
+    "daily_randomized_expected": 500.0,
+    "required_randomized_total": 3721531,
+    "enrollment_days": 7444,
+    "maturity_days_assumed": 365,
+    "data_grace_days": 30,
+    "days_until_final_analysis": 7839,
+    "enrollment_feasible_under_365_day_assumption": false
+  },
+  "live_blockers": [
+    "unvalidated_common_business_safety_gate",
+    "missing_persistent_borrower_identity",
+    "prospective_score_and_coverage_drift",
+    "missing_mature_actual_cashflows_and_dpd",
+    "unverified_future_traffic_and_independent_unit_variance"
+  ],
+  "parent_scope": "reused_development_oof_with_policy_development_evaluation_split"
+}

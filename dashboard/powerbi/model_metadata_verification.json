@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "validation_scope": "installed_TOM_deserialization_and_model_metadata_validation_only",
+  "desktop_library_version": "2.159.883.0",
+  "model_sha256": "cdca07e01ea4321a0262b0d531f7eb1ffefd06ffd011b4a29ee4486109194ca2",
+  "compatibility_level": 1601,
+  "declared_data_source_version": "powerBI_V3",
+  "tables": 23,
+  "errors": [],
+  "desktop_open_verified": false,
+  "dax_engine_execution_verified": false,
+  "power_query_execution_verified": false
+}

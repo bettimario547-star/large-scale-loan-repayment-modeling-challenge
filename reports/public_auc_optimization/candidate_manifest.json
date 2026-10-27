@@ -1,0 +1,2278 @@
+[
+  {
+    "candidate": "existing_blend_drift50_tuned50",
+    "submission": "submissions\\public_auc\\existing_blend_drift50_tuned50_810f7bee18.csv",
+    "public_auc": null,
+    "blend_method": "probability_average",
+    "overall_rows": 688998,
+    "overall_oof_auc": 0.819255811120549,
+    "feature_492_upper_tail_rows": 70711,
+    "feature_492_upper_tail_oof_auc": 0.7672211572100939,
+    "feature_1039_observed_rows": 123163,
+    "feature_1039_observed_oof_auc": 0.7842159884480311,
+    "joint_drift_stress_rows": 69582,
+    "joint_drift_stress_oof_auc": 0.7674337394903112,
+    "default_ap": 0.39322820808636044,
+    "test_rank_correlation_to_public_best": 0.9903384173918757,
+    "test_rank_correlation_to_best_observed_submission": 0.9868178943422992,
+    "fold_auc_mean": 0.819269170263202,
+    "fold_auc_min": 0.8176233427962389,
+    "fold_auc_std": 0.001693625612074714,
+    "sha256": "810f7bee1863c897f5d3205965b689491fcb6868a0e38d2e2e02b85bec1b0c93",
+    "weights": {
+      "drift_core": 0.5,
+      "tuned": 0.5
+    },
+    "positive_class": 1,
+    "calibrated_probability": "not_assessed",
+    "scope": "development OOF; public AUC pending submission",
+    "best_observed_submission_sha256": "01c35718217aaa322852f3f18981a86f6901fe3d4ff6dc9aa282494f79651539",
+    "source_sha256": {
+      "drift_core": {
+        "artifacts\\feature_screening\\drift_core_filter\\oof_predictions.parquet": "9e17572f71020d5d81eb98b68fcd03d7aedf1767e0a15a8edbaa5b9c01f3bc09",
+        "artifacts\\feature_screening\\drift_core_filter\\test_predictions.parquet": "aa96023620eaf0486a544fbd4d567a9204495616536a4ca4ce3dbf518d04ad0d"
+      },
+      "tuned": {
+        "artifacts\\hyperparameter_seed_optimization\\oof_predictions.parquet": "93bf65506ad02ea80531a4c522d7e2b38cadf96c50a617994dc58fa94b827314",
+        "artifacts\\hyperparameter_seed_optimization\\test_predictions.parquet": "1be1b70255946aa9cf3ee3bfac67dd6d8f4a2538ed4ab414f214897997230f1c"
+      }
+    }
+  },
+  {
+    "candidate": "existing_blend_drift70_tuned30",
+    "submission": "submissions\\public_auc\\existing_blend_drift70_tuned30_5e050b4206.csv",
+    "public_auc": null,
+    "blend_method": "probability_average",
+    "overall_rows": 688998,
+    "overall_oof_auc": 0.818216445080368,
+    "feature_492_upper_tail_rows": 70711,
+    "feature_492_upper_tail_oof_auc": 0.7657078862457289,
+    "feature_1039_observed_rows": 123163,
+    "feature_1039_observed_oof_auc": 0.782760662441739,
+    "joint_drift_stress_rows": 69582,
+    "joint_drift_stress_oof_auc": 0.7659115796213694,
+    "default_ap": 0.39133248415991756,
+    "test_rank_correlation_to_public_best": 0.9962775304627876,
+    "test_rank_correlation_to_best_observed_submission": 0.9833604617439352,
+    "fold_auc_mean": 0.8182267239901131,
+    "fold_auc_min": 0.81648312358084,
+    "fold_auc_std": 0.0016364031985883645,
+    "sha256": "5e050b4206a3f68879145c0fe60eba1be5c51efb2c14bdd078f3c2990560b7a9",
+    "weights": {
+      "drift_core": 0.7,
+      "tuned": 0.3
+    },
+    "positive_class": 1,
+    "calibrated_probability": "not_assessed",
+    "scope": "development OOF; public AUC pending submission",
+    "best_observed_submission_sha256": "01c35718217aaa322852f3f18981a86f6901fe3d4ff6dc9aa282494f79651539",
+    "source_sha256": {
+      "drift_core": {
+        "artifacts\\feature_screening\\drift_core_filter\\oof_predictions.parquet": "9e17572f71020d5d81eb98b68fcd03d7aedf1767e0a15a8edbaa5b9c01f3bc09",
+        "artifacts\\feature_screening\\drift_core_filter\\test_predictions.parquet": "aa96023620eaf0486a544fbd4d567a9204495616536a4ca4ce3dbf518d04ad0d"
+      },
+      "tuned": {
+        "artifacts\\hyperparameter_seed_optimization\\oof_predictions.parquet": "93bf65506ad02ea80531a4c522d7e2b38cadf96c50a617994dc58fa94b827314",
+        "artifacts\\hyperparameter_seed_optimization\\test_predictions.parquet": "1be1b70255946aa9cf3ee3bfac67dd6d8f4a2538ed4ab414f214897997230f1c"
+      }
+    }
+  },
+  {
+    "candidate": "existing_xgboost",
+    "submission": "submissions\\public_auc\\existing_xgboost_f133b11c17.csv",
+    "public_auc": null,
+    "blend_method": "probability_average",
+    "overall_rows": 688998,
+    "overall_oof_auc": 0.8197745424302628,
+    "feature_492_upper_tail_rows": 70711,
+    "feature_492_upper_tail_oof_auc": 0.7676195877870337,
+    "feature_1039_observed_rows": 123163,
+    "feature_1039_observed_oof_auc": 0.78467533601044,
+    "joint_drift_stress_rows": 69582,
+    "joint_drift_stress_oof_auc": 0.7677974695505867,
+    "default_ap": 0.3941794750214007,
+    "test_rank_correlation_to_public_best": 0.963085900949847,
+    "test_rank_correlation_to_best_observed_submission": 0.9975667937759328,
+    "fold_auc_mean": 0.8197790149922863,
+    "fold_auc_min": 0.8171084790604249,
+    "fold_auc_std": 0.001710070133867908,
+    "sha256": "f133b11c1732f5b8d4c51d59e836510bc861618b3121d2afcf20bb85b87355d3",
+    "weights": {
+      "xgboost": 1.0
+    },
+    "positive_class": 1,
+    "calibrated_probability": "not_assessed",
+    "scope": "development OOF; public AUC pending submission",
+    "best_observed_submission_sha256": "01c35718217aaa322852f3f18981a86f6901fe3d4ff6dc9aa282494f79651539",
+    "source_sha256": {
+      "xgboost": {
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_0.npz": "b1aaf60264fb69e3a07f4d052f3126e47415af8f0ef9e6992872a7227953acbc",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_1.npz": "02cad7e2b87c339481bc295cce4b234fa2845eeeb4cb9768537219b2bc56a586",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_2.npz": "0584f850b71dc68463383a59958c7ebc390880ed76287411879df2424759ac28",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_3.npz": "3cd507e765a4ad24d4befc3a192c2445c31be841721c88fc4ab46326121198cd",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_4.npz": "40da423dc1c8f8e4cf390a708a62634295b5bd422031c0c892e95884fb985055"
+      }
+    }
+  },
+  {
+    "candidate": "existing_blend_drift50_xgb50",
+    "submission": "submissions\\public_auc\\existing_blend_drift50_xgb50_38c84e3c2a.csv",
+    "public_auc": null,
+    "blend_method": "probability_average",
+    "overall_rows": 688998,
+    "overall_oof_auc": 0.8198551501683301,
+    "feature_492_upper_tail_rows": 70711,
+    "feature_492_upper_tail_oof_auc": 0.7678190963198123,
+    "feature_1039_observed_rows": 123163,
+    "feature_1039_observed_oof_auc": 0.7846947891686633,
+    "joint_drift_stress_rows": 69582,
+    "joint_drift_stress_oof_auc": 0.767981558911071,
+    "default_ap": 0.3942018970218719,
+    "test_rank_correlation_to_public_best": 0.989319297360791,
+    "test_rank_correlation_to_best_observed_submission": 0.9947715527433035,
+    "fold_auc_mean": 0.8198631502653251,
+    "fold_auc_min": 0.8175006378634648,
+    "fold_auc_std": 0.0016519200972314031,
+    "sha256": "38c84e3c2af31536c8a1e7566245525469334f6cdcc162277e85950080a47892",
+    "weights": {
+      "drift_core": 0.5,
+      "xgboost": 0.5
+    },
+    "positive_class": 1,
+    "calibrated_probability": "not_assessed",
+    "scope": "development OOF; public AUC pending submission",
+    "best_observed_submission_sha256": "01c35718217aaa322852f3f18981a86f6901fe3d4ff6dc9aa282494f79651539",
+    "source_sha256": {
+      "drift_core": {
+        "artifacts\\feature_screening\\drift_core_filter\\oof_predictions.parquet": "9e17572f71020d5d81eb98b68fcd03d7aedf1767e0a15a8edbaa5b9c01f3bc09",
+        "artifacts\\feature_screening\\drift_core_filter\\test_predictions.parquet": "aa96023620eaf0486a544fbd4d567a9204495616536a4ca4ce3dbf518d04ad0d"
+      },
+      "xgboost": {
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_0.npz": "b1aaf60264fb69e3a07f4d052f3126e47415af8f0ef9e6992872a7227953acbc",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_1.npz": "02cad7e2b87c339481bc295cce4b234fa2845eeeb4cb9768537219b2bc56a586",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_2.npz": "0584f850b71dc68463383a59958c7ebc390880ed76287411879df2424759ac28",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_3.npz": "3cd507e765a4ad24d4befc3a192c2445c31be841721c88fc4ab46326121198cd",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_4.npz": "40da423dc1c8f8e4cf390a708a62634295b5bd422031c0c892e95884fb985055"
+      }
+    }
+  },
+  {
+    "candidate": "existing_availability",
+    "submission": "submissions\\public_auc\\existing_availability_8156b56184.csv",
+    "public_auc": null,
+    "blend_method": "probability_average",
+    "overall_rows": 688998,
+    "overall_oof_auc": 0.8163427749544766,
+    "feature_492_upper_tail_rows": 70711,
+    "feature_492_upper_tail_oof_auc": 0.7643776090394169,
+    "feature_1039_observed_rows": 123163,
+    "feature_1039_observed_oof_auc": 0.7815791873087392,
+    "joint_drift_stress_rows": 69582,
+    "joint_drift_stress_oof_auc": 0.764433844140328,
+    "default_ap": 0.3889553835137204,
+    "test_rank_correlation_to_public_best": 0.9681132957247011,
+    "test_rank_correlation_to_best_observed_submission": 0.9783749076054944,
+    "fold_auc_mean": 0.8163508529351813,
+    "fold_auc_min": 0.8144829058108052,
+    "fold_auc_std": 0.00159844817128512,
+    "sha256": "8156b56184e2fc8241266e84f67fe72e780f94d0665dfa060a9958bc301db085",
+    "weights": {
+      "availability": 1.0
+    },
+    "positive_class": 1,
+    "calibrated_probability": "not_assessed",
+    "scope": "development OOF; public AUC pending submission",
+    "best_observed_submission_sha256": "01c35718217aaa322852f3f18981a86f6901fe3d4ff6dc9aa282494f79651539",
+    "source_sha256": {
+      "availability": {
+        "artifacts\\feature_screening\\availability_filter\\oof_predictions.parquet": "07aaaa570b3451ce9f1eb178e1797942aa562518133d278fdf8c5e55a0b91754",
+        "artifacts\\feature_screening\\availability_filter\\test_predictions.parquet": "1b6cbe0946d019248d0ec478d15179ce22fc41d8ef8c21a741bdd923065b0ca8"
+      }
+    }
+  },
+  {
+    "candidate": "catboost_fast_gpu_s42",
+    "submission": "submissions\\public_auc\\catboost_fast_gpu_s42_0f6ce3ba46.csv",
+    "public_auc": null,
+    "blend_method": "probability_average",
+    "overall_rows": 688998,
+    "overall_oof_auc": 0.815187354257422,
+    "feature_492_upper_tail_rows": 70711,
+    "feature_492_upper_tail_oof_auc": 0.7631163885404983,
+    "feature_1039_observed_rows": 123163,
+    "feature_1039_observed_oof_auc": 0.7806926881544591,
+    "joint_drift_stress_rows": 69582,
+    "joint_drift_stress_oof_auc": 0.763205391598718,
+    "default_ap": 0.3889680320889755,
+    "test_rank_correlation_to_public_best": 0.968336322897675,
+    "test_rank_correlation_to_best_observed_submission": 0.9649206176767103,
+    "fold_auc_mean": 0.8151914244002579,
+    "fold_auc_min": 0.8131161112864183,
+    "fold_auc_std": 0.0015201796370203024,
+    "sha256": "0f6ce3ba46053a488cd3609a9521c68be9161e839255dd8a999667730574507a",
+    "weights": {
+      "catboost_fast_gpu_s42": 1.0
+    },
+    "positive_class": 1,
+    "calibrated_probability": "not_assessed",
+    "scope": "development OOF; public AUC pending submission",
+    "best_observed_submission_sha256": "01c35718217aaa322852f3f18981a86f6901fe3d4ff6dc9aa282494f79651539",
+    "source_sha256": {
+      "catboost_fast_gpu_s42": {
+        "artifacts\\public_auc_optimization\\completed\\catboost_fast_gpu_s42\\oof_predictions.parquet": "f05d55c8bacdcc85046672b5b4ccb795c7d6bc815ea439747664ae85a0ea0cd3",
+        "artifacts\\public_auc_optimization\\completed\\catboost_fast_gpu_s42\\test_predictions.parquet": "1987c7c33ead7fc2228fb2c07db076a1dc301fc2c73447588dd8deec547ec3f0"
+      }
+    }
+  },
+  {
+    "candidate": "blend_catboost_fast_gpu_s42_with_public_best",
+    "submission": "submissions\\public_auc\\blend_catboost_fast_gpu_s42_with_public_best_2181913bc0.csv",
+    "public_auc": null,
+    "blend_method": "probability_average",
+    "overall_rows": 688998,
+    "overall_oof_auc": 0.8169380991236613,
+    "feature_492_upper_tail_rows": 70711,
+    "feature_492_upper_tail_oof_auc": 0.7647778153735599,
+    "feature_1039_observed_rows": 123163,
+    "feature_1039_observed_oof_auc": 0.7821276272167088,
+    "joint_drift_stress_rows": 69582,
+    "joint_drift_stress_oof_auc": 0.7648942745394676,
+    "default_ap": 0.39118923631368857,
+    "test_rank_correlation_to_public_best": 0.9839253098385118,
+    "test_rank_correlation_to_best_observed_submission": 0.9732856188304145,
+    "fold_auc_mean": 0.8169428537993311,
+    "fold_auc_min": 0.8149270904820014,
+    "fold_auc_std": 0.0015212252051891922,
+    "sha256": "2181913bc0be61c4922a4f6e7117cf365f66ea3989828ab6087a21ce4517c4b3",
+    "weights": {
+      "catboost_fast_gpu_s42": 0.7,
+      "drift_core": 0.3
+    },
+    "positive_class": 1,
+    "calibrated_probability": "not_assessed",
+    "scope": "development OOF; public AUC pending submission",
+    "best_observed_submission_sha256": "01c35718217aaa322852f3f18981a86f6901fe3d4ff6dc9aa282494f79651539",
+    "source_sha256": {
+      "catboost_fast_gpu_s42": {
+        "artifacts\\public_auc_optimization\\completed\\catboost_fast_gpu_s42\\oof_predictions.parquet": "f05d55c8bacdcc85046672b5b4ccb795c7d6bc815ea439747664ae85a0ea0cd3",
+        "artifacts\\public_auc_optimization\\completed\\catboost_fast_gpu_s42\\test_predictions.parquet": "1987c7c33ead7fc2228fb2c07db076a1dc301fc2c73447588dd8deec547ec3f0"
+      },
+      "drift_core": {
+        "artifacts\\feature_screening\\drift_core_filter\\oof_predictions.parquet": "9e17572f71020d5d81eb98b68fcd03d7aedf1767e0a15a8edbaa5b9c01f3bc09",
+        "artifacts\\feature_screening\\drift_core_filter\\test_predictions.parquet": "aa96023620eaf0486a544fbd4d567a9204495616536a4ca4ce3dbf518d04ad0d"
+      }
+    }
+  },
+  {
+    "candidate": "catboost_gpu_capacity_ensemble",
+    "submission": "submissions\\public_auc\\catboost_gpu_capacity_ensemble_4ac613c8f2.csv",
+    "public_auc": null,
+    "blend_method": "probability_average",
+    "overall_rows": 688998,
+    "overall_oof_auc": 0.8196680011395514,
+    "feature_492_upper_tail_rows": 70711,
+    "feature_492_upper_tail_oof_auc": 0.7675166799806565,
+    "feature_1039_observed_rows": 123163,
+    "feature_1039_observed_oof_auc": 0.7848180465633134,
+    "joint_drift_stress_rows": 69582,
+    "joint_drift_stress_oof_auc": 0.7675777526159232,
+    "default_ap": 0.3964059681758761,
+    "test_rank_correlation_to_public_best": 0.969135583348664,
+    "test_rank_correlation_to_best_observed_submission": 0.9741635666150306,
+    "fold_auc_mean": 0.8196782356436089,
+    "fold_auc_min": 0.8178560450424011,
+    "fold_auc_std": 0.001730477902382596,
+    "sha256": "4ac613c8f20a5d7d68baabe09f845ee96efdc0e9109bf1a52ff57c3b32d0683d",
+    "weights": {
+      "catboost_gpu_capacity_ensemble": 1.0
+    },
+    "positive_class": 1,
+    "calibrated_probability": "not_assessed",
+    "scope": "development OOF; public AUC pending submission",
+    "best_observed_submission_sha256": "01c35718217aaa322852f3f18981a86f6901fe3d4ff6dc9aa282494f79651539",
+    "source_sha256": {
+      "catboost_gpu_capacity_ensemble": {
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_capacity_ensemble\\oof_predictions.parquet": "cec46f19349dcf9a201756a3a391e12754894b3d40d64fc4e50657626c02cf52",
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_capacity_ensemble\\test_predictions.parquet": "05e79cb75d1724916790aace371b9d1c5237be595ae28b9f1228600ee9bab020"
+      }
+    }
+  },
+  {
+    "candidate": "blend_catboost_gpu_capacity_ensemble_with_public_best",
+    "submission": "submissions\\public_auc\\blend_catboost_gpu_capacity_ensemble_with_public_best_5d4ccd7855.csv",
+    "public_auc": null,
+    "blend_method": "probability_average",
+    "overall_rows": 688998,
+    "overall_oof_auc": 0.8200103127912933,
+    "feature_492_upper_tail_rows": 70711,
+    "feature_492_upper_tail_oof_auc": 0.7679078562519563,
+    "feature_1039_observed_rows": 123163,
+    "feature_1039_observed_oof_auc": 0.7850646391356895,
+    "joint_drift_stress_rows": 69582,
+    "joint_drift_stress_oof_auc": 0.7680052356452818,
+    "default_ap": 0.39657421085837957,
+    "test_rank_correlation_to_public_best": 0.984211000451277,
+    "test_rank_correlation_to_best_observed_submission": 0.9797044058536896,
+    "fold_auc_mean": 0.8200200631621251,
+    "fold_auc_min": 0.8183055746646424,
+    "fold_auc_std": 0.0016229844470725097,
+    "sha256": "5d4ccd7855fc22bc5ed6e804980099485f2468b0e416d860d36b6128a23c0703",
+    "weights": {
+      "catboost_gpu_capacity_ensemble": 0.7,
+      "drift_core": 0.3
+    },
+    "positive_class": 1,
+    "calibrated_probability": "not_assessed",
+    "scope": "development OOF; public AUC pending submission",
+    "best_observed_submission_sha256": "01c35718217aaa322852f3f18981a86f6901fe3d4ff6dc9aa282494f79651539",
+    "source_sha256": {
+      "catboost_gpu_capacity_ensemble": {
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_capacity_ensemble\\oof_predictions.parquet": "cec46f19349dcf9a201756a3a391e12754894b3d40d64fc4e50657626c02cf52",
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_capacity_ensemble\\test_predictions.parquet": "05e79cb75d1724916790aace371b9d1c5237be595ae28b9f1228600ee9bab020"
+      },
+      "drift_core": {
+        "artifacts\\feature_screening\\drift_core_filter\\oof_predictions.parquet": "9e17572f71020d5d81eb98b68fcd03d7aedf1767e0a15a8edbaa5b9c01f3bc09",
+        "artifacts\\feature_screening\\drift_core_filter\\test_predictions.parquet": "aa96023620eaf0486a544fbd4d567a9204495616536a4ca4ce3dbf518d04ad0d"
+      }
+    }
+  },
+  {
+    "candidate": "catboost_gpu_capacity_s2026",
+    "submission": "submissions\\public_auc\\catboost_gpu_capacity_s2026_622889eaff.csv",
+    "public_auc": null,
+    "blend_method": "probability_average",
+    "overall_rows": 688998,
+    "overall_oof_auc": 0.817952973720327,
+    "feature_492_upper_tail_rows": 70711,
+    "feature_492_upper_tail_oof_auc": 0.7651798021195783,
+    "feature_1039_observed_rows": 123163,
+    "feature_1039_observed_oof_auc": 0.7825617866747512,
+    "joint_drift_stress_rows": 69582,
+    "joint_drift_stress_oof_auc": 0.7652709605163607,
+    "default_ap": 0.39315942122363207,
+    "test_rank_correlation_to_public_best": 0.9673159576221944,
+    "test_rank_correlation_to_best_observed_submission": 0.971436198507838,
+    "fold_auc_mean": 0.8179805040256042,
+    "fold_auc_min": 0.8158901857017077,
+    "fold_auc_std": 0.0015743851961202704,
+    "sha256": "622889eaffa218095807b3bee71c2dfe494f36d8bc7ceaa2da815f915251c178",
+    "weights": {
+      "catboost_gpu_capacity_s2026": 1.0
+    },
+    "positive_class": 1,
+    "calibrated_probability": "not_assessed",
+    "scope": "development OOF; public AUC pending submission",
+    "best_observed_submission_sha256": "01c35718217aaa322852f3f18981a86f6901fe3d4ff6dc9aa282494f79651539",
+    "source_sha256": {
+      "catboost_gpu_capacity_s2026": {
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_capacity_s2026\\oof_predictions.parquet": "fa6e8ced513c2dc7c7849a1bd3f51cc7eb6feff2ebed08f66996c93852ae35a0",
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_capacity_s2026\\test_predictions.parquet": "4c9d216c271cd27d622153d3393b8fe6475ab5c54d81aa241c86c2cc38cb5f4f"
+      }
+    }
+  },
+  {
+    "candidate": "blend_catboost_gpu_capacity_s2026_with_public_best",
+    "submission": "submissions\\public_auc\\blend_catboost_gpu_capacity_s2026_with_public_best_87f886fdf2.csv",
+    "public_auc": null,
+    "blend_method": "probability_average",
+    "overall_rows": 688998,
+    "overall_oof_auc": 0.819031742956108,
+    "feature_492_upper_tail_rows": 70711,
+    "feature_492_upper_tail_oof_auc": 0.766609766099542,
+    "feature_1039_observed_rows": 123163,
+    "feature_1039_observed_oof_auc": 0.7838099957972249,
+    "joint_drift_stress_rows": 69582,
+    "joint_drift_stress_oof_auc": 0.7667234901108606,
+    "default_ap": 0.3947725667197921,
+    "test_rank_correlation_to_public_best": 0.9832975971888805,
+    "test_rank_correlation_to_best_observed_submission": 0.9781202240639523,
+    "fold_auc_mean": 0.8190482771385394,
+    "fold_auc_min": 0.8170398742588372,
+    "fold_auc_std": 0.0014612200824853767,
+    "sha256": "87f886fdf29d724934ecdc554b8a7c2e2f3666eb30d67b36c2f22fe8f1ed66a8",
+    "weights": {
+      "catboost_gpu_capacity_s2026": 0.7,
+      "drift_core": 0.3
+    },
+    "positive_class": 1,
+    "calibrated_probability": "not_assessed",
+    "scope": "development OOF; public AUC pending submission",
+    "best_observed_submission_sha256": "01c35718217aaa322852f3f18981a86f6901fe3d4ff6dc9aa282494f79651539",
+    "source_sha256": {
+      "catboost_gpu_capacity_s2026": {
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_capacity_s2026\\oof_predictions.parquet": "fa6e8ced513c2dc7c7849a1bd3f51cc7eb6feff2ebed08f66996c93852ae35a0",
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_capacity_s2026\\test_predictions.parquet": "4c9d216c271cd27d622153d3393b8fe6475ab5c54d81aa241c86c2cc38cb5f4f"
+      },
+      "drift_core": {
+        "artifacts\\feature_screening\\drift_core_filter\\oof_predictions.parquet": "9e17572f71020d5d81eb98b68fcd03d7aedf1767e0a15a8edbaa5b9c01f3bc09",
+        "artifacts\\feature_screening\\drift_core_filter\\test_predictions.parquet": "aa96023620eaf0486a544fbd4d567a9204495616536a4ca4ce3dbf518d04ad0d"
+      }
+    }
+  },
+  {
+    "candidate": "catboost_gpu_capacity_s3407",
+    "submission": "submissions\\public_auc\\catboost_gpu_capacity_s3407_14e81b38fb.csv",
+    "public_auc": null,
+    "blend_method": "probability_average",
+    "overall_rows": 688998,
+    "overall_oof_auc": 0.8185152363219816,
+    "feature_492_upper_tail_rows": 70711,
+    "feature_492_upper_tail_oof_auc": 0.765236468091256,
+    "feature_1039_observed_rows": 123163,
+    "feature_1039_observed_oof_auc": 0.7830006403413892,
+    "joint_drift_stress_rows": 69582,
+    "joint_drift_stress_oof_auc": 0.76526296058484,
+    "default_ap": 0.39372427338687704,
+    "test_rank_correlation_to_public_best": 0.9666435437531121,
+    "test_rank_correlation_to_best_observed_submission": 0.9719415431046289,
+    "fold_auc_mean": 0.818524474307111,
+    "fold_auc_min": 0.816958249801952,
+    "fold_auc_std": 0.001623748941931199,
+    "sha256": "14e81b38fbbb83d16fc7cc2c549ecbc9b98b396998f1a29d135a9f4f9d651d1b",
+    "weights": {
+      "catboost_gpu_capacity_s3407": 1.0
+    },
+    "positive_class": 1,
+    "calibrated_probability": "not_assessed",
+    "scope": "development OOF; public AUC pending submission",
+    "best_observed_submission_sha256": "01c35718217aaa322852f3f18981a86f6901fe3d4ff6dc9aa282494f79651539",
+    "source_sha256": {
+      "catboost_gpu_capacity_s3407": {
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_capacity_s3407\\oof_predictions.parquet": "4021f51e2f32088051b0e007579a78c995bd9061429f4c76eb8421f3ae6f1ee1",
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_capacity_s3407\\test_predictions.parquet": "6950b6d8bd7b92c4e74653ee8f68d9184722abdbed9abc95beecbd8ff830f7c1"
+      }
+    }
+  },
+  {
+    "candidate": "blend_catboost_gpu_capacity_s3407_with_public_best",
+    "submission": "submissions\\public_auc\\blend_catboost_gpu_capacity_s3407_with_public_best_d000452901.csv",
+    "public_auc": null,
+    "blend_method": "probability_average",
+    "overall_rows": 688998,
+    "overall_oof_auc": 0.8194849260187209,
+    "feature_492_upper_tail_rows": 70711,
+    "feature_492_upper_tail_oof_auc": 0.7667681855190478,
+    "feature_1039_observed_rows": 123163,
+    "feature_1039_observed_oof_auc": 0.7842212691410146,
+    "joint_drift_stress_rows": 69582,
+    "joint_drift_stress_oof_auc": 0.7668431181625279,
+    "default_ap": 0.39526495908555176,
+    "test_rank_correlation_to_public_best": 0.9829433913879554,
+    "test_rank_correlation_to_best_observed_submission": 0.9786272117665288,
+    "fold_auc_mean": 0.8194957384572017,
+    "fold_auc_min": 0.8180882121728347,
+    "fold_auc_std": 0.0015808283943977326,
+    "sha256": "d000452901e2815a69d09bbec01dac34433e049470bdae916c02bfdba6d97f1b",
+    "weights": {
+      "catboost_gpu_capacity_s3407": 0.7,
+      "drift_core": 0.3
+    },
+    "positive_class": 1,
+    "calibrated_probability": "not_assessed",
+    "scope": "development OOF; public AUC pending submission",
+    "best_observed_submission_sha256": "01c35718217aaa322852f3f18981a86f6901fe3d4ff6dc9aa282494f79651539",
+    "source_sha256": {
+      "catboost_gpu_capacity_s3407": {
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_capacity_s3407\\oof_predictions.parquet": "4021f51e2f32088051b0e007579a78c995bd9061429f4c76eb8421f3ae6f1ee1",
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_capacity_s3407\\test_predictions.parquet": "6950b6d8bd7b92c4e74653ee8f68d9184722abdbed9abc95beecbd8ff830f7c1"
+      },
+      "drift_core": {
+        "artifacts\\feature_screening\\drift_core_filter\\oof_predictions.parquet": "9e17572f71020d5d81eb98b68fcd03d7aedf1767e0a15a8edbaa5b9c01f3bc09",
+        "artifacts\\feature_screening\\drift_core_filter\\test_predictions.parquet": "aa96023620eaf0486a544fbd4d567a9204495616536a4ca4ce3dbf518d04ad0d"
+      }
+    }
+  },
+  {
+    "candidate": "catboost_gpu_capacity_s42",
+    "submission": "submissions\\public_auc\\catboost_gpu_capacity_s42_f66ce553a7.csv",
+    "public_auc": null,
+    "blend_method": "probability_average",
+    "overall_rows": 688998,
+    "overall_oof_auc": 0.8187570866924435,
+    "feature_492_upper_tail_rows": 70711,
+    "feature_492_upper_tail_oof_auc": 0.7660329498894025,
+    "feature_1039_observed_rows": 123163,
+    "feature_1039_observed_oof_auc": 0.7833617871601175,
+    "joint_drift_stress_rows": 69582,
+    "joint_drift_stress_oof_auc": 0.7661363482627156,
+    "default_ap": 0.3940442571229484,
+    "test_rank_correlation_to_public_best": 0.9665047263303471,
+    "test_rank_correlation_to_best_observed_submission": 0.9721522794696839,
+    "fold_auc_mean": 0.8187659228082318,
+    "fold_auc_min": 0.8170438876268005,
+    "fold_auc_std": 0.0020169879216603553,
+    "sha256": "f66ce553a74de151fbd073ca6998f20a7ede6fca0a0d01ea7f092260855c356a",
+    "weights": {
+      "catboost_gpu_capacity_s42": 1.0
+    },
+    "positive_class": 1,
+    "calibrated_probability": "not_assessed",
+    "scope": "development OOF; public AUC pending submission",
+    "best_observed_submission_sha256": "01c35718217aaa322852f3f18981a86f6901fe3d4ff6dc9aa282494f79651539",
+    "source_sha256": {
+      "catboost_gpu_capacity_s42": {
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_capacity_s42\\oof_predictions.parquet": "6b573288ddba9be437af00ceb8a4c4a84b04301d55d7d3bdbcc6f9cd2bb67001",
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_capacity_s42\\test_predictions.parquet": "7441aff8e023935cb9c08cc553b31ba44738ec811d1841026b7d26313ed938b7"
+      }
+    }
+  },
+  {
+    "candidate": "blend_catboost_gpu_capacity_s42_with_public_best",
+    "submission": "submissions\\public_auc\\blend_catboost_gpu_capacity_s42_with_public_best_3396e22d88.csv",
+    "public_auc": null,
+    "blend_method": "probability_average",
+    "overall_rows": 688998,
+    "overall_oof_auc": 0.8196842284462478,
+    "feature_492_upper_tail_rows": 70711,
+    "feature_492_upper_tail_oof_auc": 0.7674148078387034,
+    "feature_1039_observed_rows": 123163,
+    "feature_1039_observed_oof_auc": 0.7845035540331644,
+    "joint_drift_stress_rows": 69582,
+    "joint_drift_stress_oof_auc": 0.7675327347541915,
+    "default_ap": 0.3955559973745862,
+    "test_rank_correlation_to_public_best": 0.9827873840916193,
+    "test_rank_correlation_to_best_observed_submission": 0.9787670645854103,
+    "fold_auc_mean": 0.8196913747711561,
+    "fold_auc_min": 0.8179373736685549,
+    "fold_auc_std": 0.0018876753747778554,
+    "sha256": "3396e22d881e273d6421e97d802539ce1d2fd0296b540cb06dd2e1f1a5a0450a",
+    "weights": {
+      "catboost_gpu_capacity_s42": 0.7,
+      "drift_core": 0.3
+    },
+    "positive_class": 1,
+    "calibrated_probability": "not_assessed",
+    "scope": "development OOF; public AUC pending submission",
+    "best_observed_submission_sha256": "01c35718217aaa322852f3f18981a86f6901fe3d4ff6dc9aa282494f79651539",
+    "source_sha256": {
+      "catboost_gpu_capacity_s42": {
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_capacity_s42\\oof_predictions.parquet": "6b573288ddba9be437af00ceb8a4c4a84b04301d55d7d3bdbcc6f9cd2bb67001",
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_capacity_s42\\test_predictions.parquet": "7441aff8e023935cb9c08cc553b31ba44738ec811d1841026b7d26313ed938b7"
+      },
+      "drift_core": {
+        "artifacts\\feature_screening\\drift_core_filter\\oof_predictions.parquet": "9e17572f71020d5d81eb98b68fcd03d7aedf1767e0a15a8edbaa5b9c01f3bc09",
+        "artifacts\\feature_screening\\drift_core_filter\\test_predictions.parquet": "aa96023620eaf0486a544fbd4d567a9204495616536a4ca4ce3dbf518d04ad0d"
+      }
+    }
+  },
+  {
+    "candidate": "catboost_gpu_depth9_s42",
+    "submission": "submissions\\public_auc\\catboost_gpu_depth9_s42_1d8d99af07.csv",
+    "public_auc": null,
+    "blend_method": "probability_average",
+    "overall_rows": 688998,
+    "overall_oof_auc": 0.8192406565481924,
+    "feature_492_upper_tail_rows": 70711,
+    "feature_492_upper_tail_oof_auc": 0.7679155876614319,
+    "feature_1039_observed_rows": 123163,
+    "feature_1039_observed_oof_auc": 0.7851195485420527,
+    "joint_drift_stress_rows": 69582,
+    "joint_drift_stress_oof_auc": 0.768119926856169,
+    "default_ap": 0.3946465467989166,
+    "test_rank_correlation_to_public_best": 0.9646800870007319,
+    "test_rank_correlation_to_best_observed_submission": 0.9728254652971953,
+    "fold_auc_mean": 0.8192848218479316,
+    "fold_auc_min": 0.8180709574489212,
+    "fold_auc_std": 0.0012439890771851609,
+    "sha256": "1d8d99af073b41e369e8e7a32cb7019e4d26d8de20dd552ba653dbaba5198093",
+    "weights": {
+      "catboost_gpu_depth9_s42": 1.0
+    },
+    "positive_class": 1,
+    "calibrated_probability": "not_assessed",
+    "scope": "development OOF; public AUC pending submission",
+    "best_observed_submission_sha256": "01c35718217aaa322852f3f18981a86f6901fe3d4ff6dc9aa282494f79651539",
+    "source_sha256": {
+      "catboost_gpu_depth9_s42": {
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_depth9_s42\\oof_predictions.parquet": "0af8cb0b29e09966c54e575671bbc1d8634879174e760dbd969ad134a8961912",
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_depth9_s42\\test_predictions.parquet": "c7b3ed4950aeeff0492cf8d294eb56488520692bfd6202db1a69aba56d60fbfe"
+      }
+    }
+  },
+  {
+    "candidate": "blend_catboost_gpu_depth9_s42_with_public_best",
+    "submission": "submissions\\public_auc\\blend_catboost_gpu_depth9_s42_with_public_best_26c9433d1b.csv",
+    "public_auc": null,
+    "blend_method": "probability_average",
+    "overall_rows": 688998,
+    "overall_oof_auc": 0.8202091375499965,
+    "feature_492_upper_tail_rows": 70711,
+    "feature_492_upper_tail_oof_auc": 0.7689317466842644,
+    "feature_1039_observed_rows": 123163,
+    "feature_1039_observed_oof_auc": 0.7859697261114796,
+    "joint_drift_stress_rows": 69582,
+    "joint_drift_stress_oof_auc": 0.7691106644119734,
+    "default_ap": 0.3963700231576912,
+    "test_rank_correlation_to_public_best": 0.9821554507318234,
+    "test_rank_correlation_to_best_observed_submission": 0.9797166551765891,
+    "fold_auc_mean": 0.820235250473312,
+    "fold_auc_min": 0.8190033159246027,
+    "fold_auc_std": 0.0012218969621918944,
+    "sha256": "26c9433d1b2a90660a30c561a074c466b9c9607be5a93b90d5fe1bbb2b5b93e3",
+    "weights": {
+      "catboost_gpu_depth9_s42": 0.7,
+      "drift_core": 0.3
+    },
+    "positive_class": 1,
+    "calibrated_probability": "not_assessed",
+    "scope": "development OOF; public AUC pending submission",
+    "best_observed_submission_sha256": "01c35718217aaa322852f3f18981a86f6901fe3d4ff6dc9aa282494f79651539",
+    "source_sha256": {
+      "catboost_gpu_depth9_s42": {
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_depth9_s42\\oof_predictions.parquet": "0af8cb0b29e09966c54e575671bbc1d8634879174e760dbd969ad134a8961912",
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_depth9_s42\\test_predictions.parquet": "c7b3ed4950aeeff0492cf8d294eb56488520692bfd6202db1a69aba56d60fbfe"
+      },
+      "drift_core": {
+        "artifacts\\feature_screening\\drift_core_filter\\oof_predictions.parquet": "9e17572f71020d5d81eb98b68fcd03d7aedf1767e0a15a8edbaa5b9c01f3bc09",
+        "artifacts\\feature_screening\\drift_core_filter\\test_predictions.parquet": "aa96023620eaf0486a544fbd4d567a9204495616536a4ca4ce3dbf518d04ad0d"
+      }
+    }
+  },
+  {
+    "candidate": "lgbm_drift_available_s42",
+    "submission": "submissions\\public_auc\\lgbm_drift_available_s42_321294bc36.csv",
+    "public_auc": null,
+    "blend_method": "probability_average",
+    "overall_rows": 688998,
+    "overall_oof_auc": 0.8179194916376256,
+    "feature_492_upper_tail_rows": 70711,
+    "feature_492_upper_tail_oof_auc": 0.7648884033880257,
+    "feature_1039_observed_rows": 123163,
+    "feature_1039_observed_oof_auc": 0.7828021612680857,
+    "joint_drift_stress_rows": 69582,
+    "joint_drift_stress_oof_auc": 0.7649986397843027,
+    "default_ap": 0.39094874683739145,
+    "test_rank_correlation_to_public_best": 0.9915184987414326,
+    "test_rank_correlation_to_best_observed_submission": 0.9773067682951605,
+    "fold_auc_mean": 0.8179509192350212,
+    "fold_auc_min": 0.8158232948564896,
+    "fold_auc_std": 0.0017511683849362083,
+    "sha256": "321294bc3610a89409021026e5e0b5325721eb8cdc29cf2a743868f0193a9b48",
+    "weights": {
+      "lgbm_drift_available_s42": 1.0
+    },
+    "positive_class": 1,
+    "calibrated_probability": "not_assessed",
+    "scope": "development OOF; public AUC pending submission",
+    "best_observed_submission_sha256": "01c35718217aaa322852f3f18981a86f6901fe3d4ff6dc9aa282494f79651539",
+    "source_sha256": {
+      "lgbm_drift_available_s42": {
+        "artifacts\\public_auc_optimization\\completed\\lgbm_drift_available_s42\\oof_predictions.parquet": "f19f3466e154b5156837d43c4113f5b8cfc691004f224e26a93cdcac9dc937c4",
+        "artifacts\\public_auc_optimization\\completed\\lgbm_drift_available_s42\\test_predictions.parquet": "f9f5e3a14422f7755b8e7364d35f6d49e242b21a91c05b55772be435c5f60737"
+      }
+    }
+  },
+  {
+    "candidate": "blend_lgbm_drift_available_s42_with_public_best",
+    "submission": "submissions\\public_auc\\blend_lgbm_drift_available_s42_with_public_best_6b16599f18.csv",
+    "public_auc": null,
+    "blend_method": "probability_average",
+    "overall_rows": 688998,
+    "overall_oof_auc": 0.8185864787913584,
+    "feature_492_upper_tail_rows": 70711,
+    "feature_492_upper_tail_oof_auc": 0.765757016304137,
+    "feature_1039_observed_rows": 123163,
+    "feature_1039_observed_oof_auc": 0.783333725360033,
+    "joint_drift_stress_rows": 69582,
+    "joint_drift_stress_oof_auc": 0.7658863833069863,
+    "default_ap": 0.391888669368672,
+    "test_rank_correlation_to_public_best": 0.9957903475410778,
+    "test_rank_correlation_to_best_observed_submission": 0.9774233832770327,
+    "fold_auc_mean": 0.8186004492206329,
+    "fold_auc_min": 0.8168050281018507,
+    "fold_auc_std": 0.0017284708831623726,
+    "sha256": "6b16599f186b752dd05011fad3c3a010ccabb3f6a13fc7c9e407779bc4ec874d",
+    "weights": {
+      "lgbm_drift_available_s42": 0.7,
+      "drift_core": 0.3
+    },
+    "positive_class": 1,
+    "calibrated_probability": "not_assessed",
+    "scope": "development OOF; public AUC pending submission",
+    "best_observed_submission_sha256": "01c35718217aaa322852f3f18981a86f6901fe3d4ff6dc9aa282494f79651539",
+    "source_sha256": {
+      "lgbm_drift_available_s42": {
+        "artifacts\\public_auc_optimization\\completed\\lgbm_drift_available_s42\\oof_predictions.parquet": "f19f3466e154b5156837d43c4113f5b8cfc691004f224e26a93cdcac9dc937c4",
+        "artifacts\\public_auc_optimization\\completed\\lgbm_drift_available_s42\\test_predictions.parquet": "f9f5e3a14422f7755b8e7364d35f6d49e242b21a91c05b55772be435c5f60737"
+      },
+      "drift_core": {
+        "artifacts\\feature_screening\\drift_core_filter\\oof_predictions.parquet": "9e17572f71020d5d81eb98b68fcd03d7aedf1767e0a15a8edbaa5b9c01f3bc09",
+        "artifacts\\feature_screening\\drift_core_filter\\test_predictions.parquet": "aa96023620eaf0486a544fbd4d567a9204495616536a4ca4ce3dbf518d04ad0d"
+      }
+    }
+  },
+  {
+    "candidate": "lgbm_drift_bins255_s42",
+    "submission": "submissions\\public_auc\\lgbm_drift_bins255_s42_3a9f404fe3.csv",
+    "public_auc": null,
+    "blend_method": "probability_average",
+    "overall_rows": 688998,
+    "overall_oof_auc": 0.8179626727944844,
+    "feature_492_upper_tail_rows": 70711,
+    "feature_492_upper_tail_oof_auc": 0.7645598952873913,
+    "feature_1039_observed_rows": 123163,
+    "feature_1039_observed_oof_auc": 0.7821473195578885,
+    "joint_drift_stress_rows": 69582,
+    "joint_drift_stress_oof_auc": 0.7646668568032384,
+    "default_ap": 0.39104013398180937,
+    "test_rank_correlation_to_public_best": 0.985980886578512,
+    "test_rank_correlation_to_best_observed_submission": 0.970073683834518,
+    "fold_auc_mean": 0.8180153865658613,
+    "fold_auc_min": 0.8149011663316217,
+    "fold_auc_std": 0.001923984615892886,
+    "sha256": "3a9f404fe3d679640d5f67923b878adbb3ced7938d8c93246b531f7c27ed6f5f",
+    "weights": {
+      "lgbm_drift_bins255_s42": 1.0
+    },
+    "positive_class": 1,
+    "calibrated_probability": "not_assessed",
+    "scope": "development OOF; public AUC pending submission",
+    "best_observed_submission_sha256": "01c35718217aaa322852f3f18981a86f6901fe3d4ff6dc9aa282494f79651539",
+    "source_sha256": {
+      "lgbm_drift_bins255_s42": {
+        "artifacts\\public_auc_optimization\\completed\\lgbm_drift_bins255_s42\\oof_predictions.parquet": "30a1ed08f62b1ef355834cb425541cc3a72aa7a85888ea1cf1a6f208edc5a61b",
+        "artifacts\\public_auc_optimization\\completed\\lgbm_drift_bins255_s42\\test_predictions.parquet": "8f51441ba0da47953f4f78b638520f6bfc7160f400eb04490aabb9b1235dfbd1"
+      }
+    }
+  },
+  {
+    "candidate": "blend_lgbm_drift_bins255_s42_with_public_best",
+    "submission": "submissions\\public_auc\\blend_lgbm_drift_bins255_s42_with_public_best_3f668704e0.csv",
+    "public_auc": null,
+    "blend_method": "probability_average",
+    "overall_rows": 688998,
+    "overall_oof_auc": 0.8186519742568404,
+    "feature_492_upper_tail_rows": 70711,
+    "feature_492_upper_tail_oof_auc": 0.7655391357826764,
+    "feature_1039_observed_rows": 123163,
+    "feature_1039_observed_oof_auc": 0.7829364840830315,
+    "joint_drift_stress_rows": 69582,
+    "joint_drift_stress_oof_auc": 0.7656779375890332,
+    "default_ap": 0.3920216143150191,
+    "test_rank_correlation_to_public_best": 0.9928555735829517,
+    "test_rank_correlation_to_best_observed_submission": 0.9733548681387735,
+    "fold_auc_mean": 0.8186792336700593,
+    "fold_auc_min": 0.8161711924860925,
+    "fold_auc_std": 0.001813735313664041,
+    "sha256": "3f668704e0c07169d815e8ef305ff180ec05fe13ca283d220b111f3049ce6d8e",
+    "weights": {
+      "lgbm_drift_bins255_s42": 0.7,
+      "drift_core": 0.3
+    },
+    "positive_class": 1,
+    "calibrated_probability": "not_assessed",
+    "scope": "development OOF; public AUC pending submission",
+    "best_observed_submission_sha256": "01c35718217aaa322852f3f18981a86f6901fe3d4ff6dc9aa282494f79651539",
+    "source_sha256": {
+      "lgbm_drift_bins255_s42": {
+        "artifacts\\public_auc_optimization\\completed\\lgbm_drift_bins255_s42\\oof_predictions.parquet": "30a1ed08f62b1ef355834cb425541cc3a72aa7a85888ea1cf1a6f208edc5a61b",
+        "artifacts\\public_auc_optimization\\completed\\lgbm_drift_bins255_s42\\test_predictions.parquet": "8f51441ba0da47953f4f78b638520f6bfc7160f400eb04490aabb9b1235dfbd1"
+      },
+      "drift_core": {
+        "artifacts\\feature_screening\\drift_core_filter\\oof_predictions.parquet": "9e17572f71020d5d81eb98b68fcd03d7aedf1767e0a15a8edbaa5b9c01f3bc09",
+        "artifacts\\feature_screening\\drift_core_filter\\test_predictions.parquet": "aa96023620eaf0486a544fbd4d567a9204495616536a4ca4ce3dbf518d04ad0d"
+      }
+    }
+  },
+  {
+    "candidate": "lgbm_drift_tuned_ensemble",
+    "submission": "submissions\\public_auc\\lgbm_drift_tuned_ensemble_87bcc2f428.csv",
+    "public_auc": null,
+    "blend_method": "probability_average",
+    "overall_rows": 688998,
+    "overall_oof_auc": 0.8200324600247842,
+    "feature_492_upper_tail_rows": 70711,
+    "feature_492_upper_tail_oof_auc": 0.7674288765835199,
+    "feature_1039_observed_rows": 123163,
+    "feature_1039_observed_oof_auc": 0.7850931754125334,
+    "joint_drift_stress_rows": 69582,
+    "joint_drift_stress_oof_auc": 0.7675016324179739,
+    "default_ap": 0.3939694128630371,
+    "test_rank_correlation_to_public_best": 0.9937743060396568,
+    "test_rank_correlation_to_best_observed_submission": 0.9801042457764844,
+    "fold_auc_mean": 0.8200629228157738,
+    "fold_auc_min": 0.8185533932405504,
+    "fold_auc_std": 0.0017263774935651374,
+    "sha256": "87bcc2f4284ba49e0ead447118921320ada0a2840a192216a3d98f0fdf097c9e",
+    "weights": {
+      "lgbm_drift_tuned_ensemble": 1.0
+    },
+    "positive_class": 1,
+    "calibrated_probability": "not_assessed",
+    "scope": "development OOF; public AUC pending submission",
+    "best_observed_submission_sha256": "01c35718217aaa322852f3f18981a86f6901fe3d4ff6dc9aa282494f79651539",
+    "source_sha256": {
+      "lgbm_drift_tuned_ensemble": {
+        "artifacts\\public_auc_optimization\\completed\\lgbm_drift_tuned_ensemble\\oof_predictions.parquet": "47c6d966c379e436faebc010deaa053220bd1e03a35dff5c527ef321c2f427be",
+        "artifacts\\public_auc_optimization\\completed\\lgbm_drift_tuned_ensemble\\test_predictions.parquet": "768d48c5923c02209d952e0a7266f627217c0ef1b2ed9a298e385f61ff499c27"
+      }
+    }
+  },
+  {
+    "candidate": "blend_lgbm_drift_tuned_ensemble_with_public_best",
+    "submission": "submissions\\public_auc\\blend_lgbm_drift_tuned_ensemble_with_public_best_13520dd066.csv",
+    "public_auc": null,
+    "blend_method": "probability_average",
+    "overall_rows": 688998,
+    "overall_oof_auc": 0.8196402829696199,
+    "feature_492_upper_tail_rows": 70711,
+    "feature_492_upper_tail_oof_auc": 0.7669319950482301,
+    "feature_1039_observed_rows": 123163,
+    "feature_1039_observed_oof_auc": 0.7844008469270147,
+    "joint_drift_stress_rows": 69582,
+    "joint_drift_stress_oof_auc": 0.7670416878058814,
+    "default_ap": 0.3933240479596381,
+    "test_rank_correlation_to_public_best": 0.9969242096699437,
+    "test_rank_correlation_to_best_observed_submission": 0.9789306338936696,
+    "fold_auc_mean": 0.8196573902074288,
+    "fold_auc_min": 0.8181366539379,
+    "fold_auc_std": 0.0017055914169904916,
+    "sha256": "13520dd0664a984e12a825021e77323842edf10b363eeb5e3a8c1c330819b543",
+    "weights": {
+      "lgbm_drift_tuned_ensemble": 0.7,
+      "drift_core": 0.3
+    },
+    "positive_class": 1,
+    "calibrated_probability": "not_assessed",
+    "scope": "development OOF; public AUC pending submission",
+    "best_observed_submission_sha256": "01c35718217aaa322852f3f18981a86f6901fe3d4ff6dc9aa282494f79651539",
+    "source_sha256": {
+      "lgbm_drift_tuned_ensemble": {
+        "artifacts\\public_auc_optimization\\completed\\lgbm_drift_tuned_ensemble\\oof_predictions.parquet": "47c6d966c379e436faebc010deaa053220bd1e03a35dff5c527ef321c2f427be",
+        "artifacts\\public_auc_optimization\\completed\\lgbm_drift_tuned_ensemble\\test_predictions.parquet": "768d48c5923c02209d952e0a7266f627217c0ef1b2ed9a298e385f61ff499c27"
+      },
+      "drift_core": {
+        "artifacts\\feature_screening\\drift_core_filter\\oof_predictions.parquet": "9e17572f71020d5d81eb98b68fcd03d7aedf1767e0a15a8edbaa5b9c01f3bc09",
+        "artifacts\\feature_screening\\drift_core_filter\\test_predictions.parquet": "aa96023620eaf0486a544fbd4d567a9204495616536a4ca4ce3dbf518d04ad0d"
+      }
+    }
+  },
+  {
+    "candidate": "lgbm_drift_tuned_s2026",
+    "submission": "submissions\\public_auc\\lgbm_drift_tuned_s2026_f0b4a58141.csv",
+    "public_auc": null,
+    "blend_method": "probability_average",
+    "overall_rows": 688998,
+    "overall_oof_auc": 0.8180174108226339,
+    "feature_492_upper_tail_rows": 70711,
+    "feature_492_upper_tail_oof_auc": 0.7648460621681006,
+    "feature_1039_observed_rows": 123163,
+    "feature_1039_observed_oof_auc": 0.782812505639273,
+    "joint_drift_stress_rows": 69582,
+    "joint_drift_stress_oof_auc": 0.7648710716271058,
+    "default_ap": 0.39075682536473016,
+    "test_rank_correlation_to_public_best": 0.9909018174790396,
+    "test_rank_correlation_to_best_observed_submission": 0.9770282052002802,
+    "fold_auc_mean": 0.818061872209384,
+    "fold_auc_min": 0.8159410927228674,
+    "fold_auc_std": 0.0014669565486889343,
+    "sha256": "f0b4a581414911a2e6c681bcdf91ba0b808da3995227bb21aa246e806d5b4b02",
+    "weights": {
+      "lgbm_drift_tuned_s2026": 1.0
+    },
+    "positive_class": 1,
+    "calibrated_probability": "not_assessed",
+    "scope": "development OOF; public AUC pending submission",
+    "best_observed_submission_sha256": "01c35718217aaa322852f3f18981a86f6901fe3d4ff6dc9aa282494f79651539",
+    "source_sha256": {
+      "lgbm_drift_tuned_s2026": {
+        "artifacts\\public_auc_optimization\\completed\\lgbm_drift_tuned_s2026\\oof_predictions.parquet": "fa2721a9e2f7d79e5459e28a30711227ba8d4f887dbb8c3318e802dd81e458fc",
+        "artifacts\\public_auc_optimization\\completed\\lgbm_drift_tuned_s2026\\test_predictions.parquet": "90fdc632f80dfb0e264e533c853f8d7576d64b8a50294c67aaede50089b7ece9"
+      }
+    }
+  },
+  {
+    "candidate": "blend_lgbm_drift_tuned_s2026_with_public_best",
+    "submission": "submissions\\public_auc\\blend_lgbm_drift_tuned_s2026_with_public_best_3a8c9a39e6.csv",
+    "public_auc": null,
+    "blend_method": "probability_average",
+    "overall_rows": 688998,
+    "overall_oof_auc": 0.8186808473884468,
+    "feature_492_upper_tail_rows": 70711,
+    "feature_492_upper_tail_oof_auc": 0.7656977157883513,
+    "feature_1039_observed_rows": 123163,
+    "feature_1039_observed_oof_auc": 0.783314554165458,
+    "joint_drift_stress_rows": 69582,
+    "joint_drift_stress_oof_auc": 0.7657740372749474,
+    "default_ap": 0.39177280200550785,
+    "test_rank_correlation_to_public_best": 0.9955231929450543,
+    "test_rank_correlation_to_best_observed_submission": 0.9773506768006529,
+    "fold_auc_mean": 0.8187027867437262,
+    "fold_auc_min": 0.8168904797395254,
+    "fold_auc_std": 0.001544574155051589,
+    "sha256": "3a8c9a39e62cc3f67edd361a03656557e683b2dd14831d389bff8c2430c4af0d",
+    "weights": {
+      "lgbm_drift_tuned_s2026": 0.7,
+      "drift_core": 0.3
+    },
+    "positive_class": 1,
+    "calibrated_probability": "not_assessed",
+    "scope": "development OOF; public AUC pending submission",
+    "best_observed_submission_sha256": "01c35718217aaa322852f3f18981a86f6901fe3d4ff6dc9aa282494f79651539",
+    "source_sha256": {
+      "lgbm_drift_tuned_s2026": {
+        "artifacts\\public_auc_optimization\\completed\\lgbm_drift_tuned_s2026\\oof_predictions.parquet": "fa2721a9e2f7d79e5459e28a30711227ba8d4f887dbb8c3318e802dd81e458fc",
+        "artifacts\\public_auc_optimization\\completed\\lgbm_drift_tuned_s2026\\test_predictions.parquet": "90fdc632f80dfb0e264e533c853f8d7576d64b8a50294c67aaede50089b7ece9"
+      },
+      "drift_core": {
+        "artifacts\\feature_screening\\drift_core_filter\\oof_predictions.parquet": "9e17572f71020d5d81eb98b68fcd03d7aedf1767e0a15a8edbaa5b9c01f3bc09",
+        "artifacts\\feature_screening\\drift_core_filter\\test_predictions.parquet": "aa96023620eaf0486a544fbd4d567a9204495616536a4ca4ce3dbf518d04ad0d"
+      }
+    }
+  },
+  {
+    "candidate": "lgbm_drift_tuned_s3407",
+    "submission": "submissions\\public_auc\\lgbm_drift_tuned_s3407_098f9d7cae.csv",
+    "public_auc": null,
+    "blend_method": "probability_average",
+    "overall_rows": 688998,
+    "overall_oof_auc": 0.817867506473634,
+    "feature_492_upper_tail_rows": 70711,
+    "feature_492_upper_tail_oof_auc": 0.7653318097289981,
+    "feature_1039_observed_rows": 123163,
+    "feature_1039_observed_oof_auc": 0.7826636156099804,
+    "joint_drift_stress_rows": 69582,
+    "joint_drift_stress_oof_auc": 0.7654770155877122,
+    "default_ap": 0.3906817676763493,
+    "test_rank_correlation_to_public_best": 0.9907973694171389,
+    "test_rank_correlation_to_best_observed_submission": 0.9786140377133751,
+    "fold_auc_mean": 0.8179144546706469,
+    "fold_auc_min": 0.815310262995589,
+    "fold_auc_std": 0.0017961560756811997,
+    "sha256": "098f9d7cae91fe219e43f74dd6ffd31b91a2489792366318996e5ddff8eb3d25",
+    "weights": {
+      "lgbm_drift_tuned_s3407": 1.0
+    },
+    "positive_class": 1,
+    "calibrated_probability": "not_assessed",
+    "scope": "development OOF; public AUC pending submission",
+    "best_observed_submission_sha256": "01c35718217aaa322852f3f18981a86f6901fe3d4ff6dc9aa282494f79651539",
+    "source_sha256": {
+      "lgbm_drift_tuned_s3407": {
+        "artifacts\\public_auc_optimization\\completed\\lgbm_drift_tuned_s3407\\oof_predictions.parquet": "96a432cc5c81bbb9d842b85c9c5786d2f9b39a63f5373b2482f24c0c51eaed8a",
+        "artifacts\\public_auc_optimization\\completed\\lgbm_drift_tuned_s3407\\test_predictions.parquet": "d06698f20735026a842c66e460079e90cc6b92239550ca399d3d8dc5ed172e4c"
+      }
+    }
+  },
+  {
+    "candidate": "blend_lgbm_drift_tuned_s3407_with_public_best",
+    "submission": "submissions\\public_auc\\blend_lgbm_drift_tuned_s3407_with_public_best_413fab36d8.csv",
+    "public_auc": null,
+    "blend_method": "probability_average",
+    "overall_rows": 688998,
+    "overall_oof_auc": 0.8185544907856822,
+    "feature_492_upper_tail_rows": 70711,
+    "feature_492_upper_tail_oof_auc": 0.7660689979933664,
+    "feature_1039_observed_rows": 123163,
+    "feature_1039_observed_oof_auc": 0.7832333501904813,
+    "joint_drift_stress_rows": 69582,
+    "joint_drift_stress_oof_auc": 0.766219343663554,
+    "default_ap": 0.39172958348506615,
+    "test_rank_correlation_to_public_best": 0.9954340485521486,
+    "test_rank_correlation_to_best_observed_submission": 0.978491007950083,
+    "fold_auc_mean": 0.8185783602819573,
+    "fold_auc_min": 0.816465270989225,
+    "fold_auc_std": 0.001726531415751825,
+    "sha256": "413fab36d859e4446012e7dceb1e3c76cf7ac7869c8ac7fccdeeb96e4e301fe2",
+    "weights": {
+      "lgbm_drift_tuned_s3407": 0.7,
+      "drift_core": 0.3
+    },
+    "positive_class": 1,
+    "calibrated_probability": "not_assessed",
+    "scope": "development OOF; public AUC pending submission",
+    "best_observed_submission_sha256": "01c35718217aaa322852f3f18981a86f6901fe3d4ff6dc9aa282494f79651539",
+    "source_sha256": {
+      "lgbm_drift_tuned_s3407": {
+        "artifacts\\public_auc_optimization\\completed\\lgbm_drift_tuned_s3407\\oof_predictions.parquet": "96a432cc5c81bbb9d842b85c9c5786d2f9b39a63f5373b2482f24c0c51eaed8a",
+        "artifacts\\public_auc_optimization\\completed\\lgbm_drift_tuned_s3407\\test_predictions.parquet": "d06698f20735026a842c66e460079e90cc6b92239550ca399d3d8dc5ed172e4c"
+      },
+      "drift_core": {
+        "artifacts\\feature_screening\\drift_core_filter\\oof_predictions.parquet": "9e17572f71020d5d81eb98b68fcd03d7aedf1767e0a15a8edbaa5b9c01f3bc09",
+        "artifacts\\feature_screening\\drift_core_filter\\test_predictions.parquet": "aa96023620eaf0486a544fbd4d567a9204495616536a4ca4ce3dbf518d04ad0d"
+      }
+    }
+  },
+  {
+    "candidate": "lgbm_drift_tuned_s42",
+    "submission": "submissions\\public_auc\\lgbm_drift_tuned_s42_e118aaad51.csv",
+    "public_auc": null,
+    "blend_method": "probability_average",
+    "overall_rows": 688998,
+    "overall_oof_auc": 0.8179054248052009,
+    "feature_492_upper_tail_rows": 70711,
+    "feature_492_upper_tail_oof_auc": 0.7639697201698494,
+    "feature_1039_observed_rows": 123163,
+    "feature_1039_observed_oof_auc": 0.7823092654763739,
+    "joint_drift_stress_rows": 69582,
+    "joint_drift_stress_oof_auc": 0.7640382052894759,
+    "default_ap": 0.390643997862435,
+    "test_rank_correlation_to_public_best": 0.9918975262323919,
+    "test_rank_correlation_to_best_observed_submission": 0.9770762493381959,
+    "fold_auc_mean": 0.8179521428397043,
+    "fold_auc_min": 0.8158705250257628,
+    "fold_auc_std": 0.0016020208549383257,
+    "sha256": "e118aaad51496a019f719a5ac6e0552460db1235cdfc981a8c503805e3a49da6",
+    "weights": {
+      "lgbm_drift_tuned_s42": 1.0
+    },
+    "positive_class": 1,
+    "calibrated_probability": "not_assessed",
+    "scope": "development OOF; public AUC pending submission",
+    "best_observed_submission_sha256": "01c35718217aaa322852f3f18981a86f6901fe3d4ff6dc9aa282494f79651539",
+    "source_sha256": {
+      "lgbm_drift_tuned_s42": {
+        "artifacts\\public_auc_optimization\\completed\\lgbm_drift_tuned_s42\\oof_predictions.parquet": "8d15747e0c824b8e26f4b34ca4acb169e336a605810677c487cc3fee03cb70f5",
+        "artifacts\\public_auc_optimization\\completed\\lgbm_drift_tuned_s42\\test_predictions.parquet": "befc95199014bde3a2f233490ab4881858637d0beca2df55931ebf93fae8dec6"
+      }
+    }
+  },
+  {
+    "candidate": "blend_lgbm_drift_tuned_s42_with_public_best",
+    "submission": "submissions\\public_auc\\blend_lgbm_drift_tuned_s42_with_public_best_acdc8f3c9d.csv",
+    "public_auc": null,
+    "blend_method": "probability_average",
+    "overall_rows": 688998,
+    "overall_oof_auc": 0.8185249266520715,
+    "feature_492_upper_tail_rows": 70711,
+    "feature_492_upper_tail_oof_auc": 0.7649536339553897,
+    "feature_1039_observed_rows": 123163,
+    "feature_1039_observed_oof_auc": 0.7829015143680275,
+    "joint_drift_stress_rows": 69582,
+    "joint_drift_stress_oof_auc": 0.7650602844854619,
+    "default_ap": 0.39157888993874423,
+    "test_rank_correlation_to_public_best": 0.9959777043766288,
+    "test_rank_correlation_to_best_observed_submission": 0.97718838943003,
+    "fold_auc_mean": 0.8185481326828782,
+    "fold_auc_min": 0.8167786846855396,
+    "fold_auc_std": 0.0016259754540398322,
+    "sha256": "acdc8f3c9d86a5affe595c722a5d6f55c4a6ed825a4516fbf7cb7e4138b38fa0",
+    "weights": {
+      "lgbm_drift_tuned_s42": 0.7,
+      "drift_core": 0.3
+    },
+    "positive_class": 1,
+    "calibrated_probability": "not_assessed",
+    "scope": "development OOF; public AUC pending submission",
+    "best_observed_submission_sha256": "01c35718217aaa322852f3f18981a86f6901fe3d4ff6dc9aa282494f79651539",
+    "source_sha256": {
+      "lgbm_drift_tuned_s42": {
+        "artifacts\\public_auc_optimization\\completed\\lgbm_drift_tuned_s42\\oof_predictions.parquet": "8d15747e0c824b8e26f4b34ca4acb169e336a605810677c487cc3fee03cb70f5",
+        "artifacts\\public_auc_optimization\\completed\\lgbm_drift_tuned_s42\\test_predictions.parquet": "befc95199014bde3a2f233490ab4881858637d0beca2df55931ebf93fae8dec6"
+      },
+      "drift_core": {
+        "artifacts\\feature_screening\\drift_core_filter\\oof_predictions.parquet": "9e17572f71020d5d81eb98b68fcd03d7aedf1767e0a15a8edbaa5b9c01f3bc09",
+        "artifacts\\feature_screening\\drift_core_filter\\test_predictions.parquet": "aa96023620eaf0486a544fbd4d567a9204495616536a4ca4ce3dbf518d04ad0d"
+      }
+    }
+  },
+  {
+    "candidate": "xgboost_drift_fast_s42",
+    "submission": "submissions\\public_auc\\xgboost_drift_fast_s42_e9f49f25a3.csv",
+    "public_auc": null,
+    "blend_method": "probability_average",
+    "overall_rows": 688998,
+    "overall_oof_auc": 0.8184049029884767,
+    "feature_492_upper_tail_rows": 70711,
+    "feature_492_upper_tail_oof_auc": 0.7646823934427334,
+    "feature_1039_observed_rows": 123163,
+    "feature_1039_observed_oof_auc": 0.7824386778457746,
+    "joint_drift_stress_rows": 69582,
+    "joint_drift_stress_oof_auc": 0.7649456411353674,
+    "default_ap": 0.39059714854846417,
+    "test_rank_correlation_to_public_best": 0.9780424940880635,
+    "test_rank_correlation_to_best_observed_submission": 0.9785824041232047,
+    "fold_auc_mean": 0.8184119551991677,
+    "fold_auc_min": 0.8158928536949466,
+    "fold_auc_std": 0.0015157395837933389,
+    "sha256": "e9f49f25a3314eae4e8faab9414287f57d71bf4b839366d5c440df1c1e032871",
+    "weights": {
+      "xgboost_drift_fast_s42": 1.0
+    },
+    "positive_class": 1,
+    "calibrated_probability": "not_assessed",
+    "scope": "development OOF; public AUC pending submission",
+    "best_observed_submission_sha256": "01c35718217aaa322852f3f18981a86f6901fe3d4ff6dc9aa282494f79651539",
+    "source_sha256": {
+      "xgboost_drift_fast_s42": {
+        "artifacts\\public_auc_optimization\\completed\\xgboost_drift_fast_s42\\oof_predictions.parquet": "6a4a77084e2ffc5401cc6619d74437d793b1548269353cffa351ef30c36929e2",
+        "artifacts\\public_auc_optimization\\completed\\xgboost_drift_fast_s42\\test_predictions.parquet": "60bf80c36fa16e8dd16db078a70c07fd0305be0202045e1dc2db48fb2655380d"
+      }
+    }
+  },
+  {
+    "candidate": "blend_xgboost_drift_fast_s42_with_public_best",
+    "submission": "submissions\\public_auc\\blend_xgboost_drift_fast_s42_with_public_best_38c46b679f.csv",
+    "public_auc": null,
+    "blend_method": "probability_average",
+    "overall_rows": 688998,
+    "overall_oof_auc": 0.819620516467117,
+    "feature_492_upper_tail_rows": 70711,
+    "feature_492_upper_tail_oof_auc": 0.7665990114808824,
+    "feature_1039_observed_rows": 123163,
+    "feature_1039_observed_oof_auc": 0.7839917974013484,
+    "joint_drift_stress_rows": 69582,
+    "joint_drift_stress_oof_auc": 0.7668423141012084,
+    "default_ap": 0.39288177684275605,
+    "test_rank_correlation_to_public_best": 0.9890417016036399,
+    "test_rank_correlation_to_best_observed_submission": 0.981078146468294,
+    "fold_auc_mean": 0.8196291878645434,
+    "fold_auc_min": 0.817217932638308,
+    "fold_auc_std": 0.0015140036365837357,
+    "sha256": "38c46b679fceee1f52c8e5e7725bd2552f3e7f20399056599a544c16205ad994",
+    "weights": {
+      "xgboost_drift_fast_s42": 0.7,
+      "drift_core": 0.3
+    },
+    "positive_class": 1,
+    "calibrated_probability": "not_assessed",
+    "scope": "development OOF; public AUC pending submission",
+    "best_observed_submission_sha256": "01c35718217aaa322852f3f18981a86f6901fe3d4ff6dc9aa282494f79651539",
+    "source_sha256": {
+      "xgboost_drift_fast_s42": {
+        "artifacts\\public_auc_optimization\\completed\\xgboost_drift_fast_s42\\oof_predictions.parquet": "6a4a77084e2ffc5401cc6619d74437d793b1548269353cffa351ef30c36929e2",
+        "artifacts\\public_auc_optimization\\completed\\xgboost_drift_fast_s42\\test_predictions.parquet": "60bf80c36fa16e8dd16db078a70c07fd0305be0202045e1dc2db48fb2655380d"
+      },
+      "drift_core": {
+        "artifacts\\feature_screening\\drift_core_filter\\oof_predictions.parquet": "9e17572f71020d5d81eb98b68fcd03d7aedf1767e0a15a8edbaa5b9c01f3bc09",
+        "artifacts\\feature_screening\\drift_core_filter\\test_predictions.parquet": "aa96023620eaf0486a544fbd4d567a9204495616536a4ca4ce3dbf518d04ad0d"
+      }
+    }
+  },
+  {
+    "candidate": "blend_drift_lgbm70_catboost30",
+    "submission": "submissions\\public_auc\\blend_drift_lgbm70_catboost30_552149333c.csv",
+    "public_auc": null,
+    "blend_method": "probability_average",
+    "overall_rows": 688998,
+    "overall_oof_auc": 0.82112842856553,
+    "feature_492_upper_tail_rows": 70711,
+    "feature_492_upper_tail_oof_auc": 0.769105689433452,
+    "feature_1039_observed_rows": 123163,
+    "feature_1039_observed_oof_auc": 0.7865121098292045,
+    "joint_drift_stress_rows": 69582,
+    "joint_drift_stress_oof_auc": 0.7691725555962157,
+    "default_ap": 0.39694463827579696,
+    "test_rank_correlation_to_public_best": 0.9916092962966508,
+    "test_rank_correlation_to_best_observed_submission": 0.9837465039429106,
+    "fold_auc_mean": 0.8211441877270154,
+    "fold_auc_min": 0.819729152829052,
+    "fold_auc_std": 0.0016356168969445476,
+    "sha256": "552149333c632388d8b514095135ff90118885974e532527df6ad54267c7fa54",
+    "weights": {
+      "lgbm_drift_tuned_ensemble": 0.7,
+      "catboost_gpu_capacity_ensemble": 0.3
+    },
+    "positive_class": 1,
+    "calibrated_probability": "not_assessed",
+    "scope": "development OOF; public AUC pending submission",
+    "best_observed_submission_sha256": "01c35718217aaa322852f3f18981a86f6901fe3d4ff6dc9aa282494f79651539",
+    "source_sha256": {
+      "lgbm_drift_tuned_ensemble": {
+        "artifacts\\public_auc_optimization\\completed\\lgbm_drift_tuned_ensemble\\oof_predictions.parquet": "47c6d966c379e436faebc010deaa053220bd1e03a35dff5c527ef321c2f427be",
+        "artifacts\\public_auc_optimization\\completed\\lgbm_drift_tuned_ensemble\\test_predictions.parquet": "768d48c5923c02209d952e0a7266f627217c0ef1b2ed9a298e385f61ff499c27"
+      },
+      "catboost_gpu_capacity_ensemble": {
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_capacity_ensemble\\oof_predictions.parquet": "cec46f19349dcf9a201756a3a391e12754894b3d40d64fc4e50657626c02cf52",
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_capacity_ensemble\\test_predictions.parquet": "05e79cb75d1724916790aace371b9d1c5237be595ae28b9f1228600ee9bab020"
+      }
+    }
+  },
+  {
+    "candidate": "blend_lgbm50_xgb50",
+    "submission": "submissions\\public_auc\\blend_lgbm50_xgb50_c0a9e8ac79.csv",
+    "public_auc": null,
+    "blend_method": "probability_average",
+    "overall_rows": 688998,
+    "overall_oof_auc": 0.8213103558137248,
+    "feature_492_upper_tail_rows": 70711,
+    "feature_492_upper_tail_oof_auc": 0.769597592797499,
+    "feature_1039_observed_rows": 123163,
+    "feature_1039_observed_oof_auc": 0.7867393888639777,
+    "joint_drift_stress_rows": 69582,
+    "joint_drift_stress_oof_auc": 0.7697097499209682,
+    "default_ap": 0.3965101878601961,
+    "test_rank_correlation_to_public_best": 0.9842287120601642,
+    "test_rank_correlation_to_best_observed_submission": 0.9963302376808706,
+    "fold_auc_mean": 0.8213219510029545,
+    "fold_auc_min": 0.8192303429098822,
+    "fold_auc_std": 0.0016507002363749955,
+    "sha256": "c0a9e8ac79706f8df1833591039a9e2d02b1162ca2c74e45f6a152b40fda19d1",
+    "weights": {
+      "lgbm_drift_tuned_ensemble": 0.5,
+      "xgboost": 0.5
+    },
+    "positive_class": 1,
+    "calibrated_probability": "not_assessed",
+    "scope": "development OOF; public AUC pending submission",
+    "best_observed_submission_sha256": "01c35718217aaa322852f3f18981a86f6901fe3d4ff6dc9aa282494f79651539",
+    "source_sha256": {
+      "lgbm_drift_tuned_ensemble": {
+        "artifacts\\public_auc_optimization\\completed\\lgbm_drift_tuned_ensemble\\oof_predictions.parquet": "47c6d966c379e436faebc010deaa053220bd1e03a35dff5c527ef321c2f427be",
+        "artifacts\\public_auc_optimization\\completed\\lgbm_drift_tuned_ensemble\\test_predictions.parquet": "768d48c5923c02209d952e0a7266f627217c0ef1b2ed9a298e385f61ff499c27"
+      },
+      "xgboost": {
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_0.npz": "b1aaf60264fb69e3a07f4d052f3126e47415af8f0ef9e6992872a7227953acbc",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_1.npz": "02cad7e2b87c339481bc295cce4b234fa2845eeeb4cb9768537219b2bc56a586",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_2.npz": "0584f850b71dc68463383a59958c7ebc390880ed76287411879df2424759ac28",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_3.npz": "3cd507e765a4ad24d4befc3a192c2445c31be841721c88fc4ab46326121198cd",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_4.npz": "40da423dc1c8f8e4cf390a708a62634295b5bd422031c0c892e95884fb985055"
+      }
+    }
+  },
+  {
+    "candidate": "blend_catboost50_xgb50",
+    "submission": "submissions\\public_auc\\blend_catboost50_xgb50_e2898869b1.csv",
+    "public_auc": null,
+    "blend_method": "probability_average",
+    "overall_rows": 688998,
+    "overall_oof_auc": 0.8218596149939668,
+    "feature_492_upper_tail_rows": 70711,
+    "feature_492_upper_tail_oof_auc": 0.770669535731747,
+    "feature_1039_observed_rows": 123163,
+    "feature_1039_observed_oof_auc": 0.7875406735479175,
+    "joint_drift_stress_rows": 69582,
+    "joint_drift_stress_oof_auc": 0.7707830736678325,
+    "default_ap": 0.3990242713704324,
+    "test_rank_correlation_to_public_best": 0.9764528207684944,
+    "test_rank_correlation_to_best_observed_submission": 0.9971969989971654,
+    "fold_auc_mean": 0.8218679310488077,
+    "fold_auc_min": 0.8197218763584768,
+    "fold_auc_std": 0.0016664735088164398,
+    "sha256": "e2898869b1bf7b77a037bfabc8474c065035b86115fe384d9d334f8307b538de",
+    "weights": {
+      "catboost_gpu_capacity_ensemble": 0.5,
+      "xgboost": 0.5
+    },
+    "positive_class": 1,
+    "calibrated_probability": "not_assessed",
+    "scope": "development OOF; public AUC pending submission",
+    "best_observed_submission_sha256": "01c35718217aaa322852f3f18981a86f6901fe3d4ff6dc9aa282494f79651539",
+    "source_sha256": {
+      "catboost_gpu_capacity_ensemble": {
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_capacity_ensemble\\oof_predictions.parquet": "cec46f19349dcf9a201756a3a391e12754894b3d40d64fc4e50657626c02cf52",
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_capacity_ensemble\\test_predictions.parquet": "05e79cb75d1724916790aace371b9d1c5237be595ae28b9f1228600ee9bab020"
+      },
+      "xgboost": {
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_0.npz": "b1aaf60264fb69e3a07f4d052f3126e47415af8f0ef9e6992872a7227953acbc",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_1.npz": "02cad7e2b87c339481bc295cce4b234fa2845eeeb4cb9768537219b2bc56a586",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_2.npz": "0584f850b71dc68463383a59958c7ebc390880ed76287411879df2424759ac28",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_3.npz": "3cd507e765a4ad24d4befc3a192c2445c31be841721c88fc4ab46326121198cd",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_4.npz": "40da423dc1c8f8e4cf390a708a62634295b5bd422031c0c892e95884fb985055"
+      }
+    }
+  },
+  {
+    "candidate": "blend_catboost25_xgb75",
+    "submission": "submissions\\public_auc\\blend_catboost25_xgb75_4d251c4c9d.csv",
+    "public_auc": null,
+    "blend_method": "probability_average",
+    "overall_rows": 688998,
+    "overall_oof_auc": 0.8213299643713361,
+    "feature_492_upper_tail_rows": 70711,
+    "feature_492_upper_tail_oof_auc": 0.7698580193444333,
+    "feature_1039_observed_rows": 123163,
+    "feature_1039_observed_oof_auc": 0.7867764478323849,
+    "joint_drift_stress_rows": 69582,
+    "joint_drift_stress_oof_auc": 0.7700016457172917,
+    "default_ap": 0.397476385554409,
+    "test_rank_correlation_to_public_best": 0.9720930792846595,
+    "test_rank_correlation_to_best_observed_submission": 0.9999741465418606,
+    "fold_auc_mean": 0.8213356184006682,
+    "fold_auc_min": 0.8189345852742771,
+    "fold_auc_std": 0.0016743833716384602,
+    "sha256": "4d251c4c9d92bd278582c3f1d622ae3e577bb5cfe1d091018b843ec8b8c40666",
+    "weights": {
+      "catboost_gpu_capacity_ensemble": 0.25,
+      "xgboost": 0.75
+    },
+    "positive_class": 1,
+    "calibrated_probability": "not_assessed",
+    "scope": "development OOF; public AUC pending submission",
+    "best_observed_submission_sha256": "01c35718217aaa322852f3f18981a86f6901fe3d4ff6dc9aa282494f79651539",
+    "source_sha256": {
+      "catboost_gpu_capacity_ensemble": {
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_capacity_ensemble\\oof_predictions.parquet": "cec46f19349dcf9a201756a3a391e12754894b3d40d64fc4e50657626c02cf52",
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_capacity_ensemble\\test_predictions.parquet": "05e79cb75d1724916790aace371b9d1c5237be595ae28b9f1228600ee9bab020"
+      },
+      "xgboost": {
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_0.npz": "b1aaf60264fb69e3a07f4d052f3126e47415af8f0ef9e6992872a7227953acbc",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_1.npz": "02cad7e2b87c339481bc295cce4b234fa2845eeeb4cb9768537219b2bc56a586",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_2.npz": "0584f850b71dc68463383a59958c7ebc390880ed76287411879df2424759ac28",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_3.npz": "3cd507e765a4ad24d4befc3a192c2445c31be841721c88fc4ab46326121198cd",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_4.npz": "40da423dc1c8f8e4cf390a708a62634295b5bd422031c0c892e95884fb985055"
+      }
+    }
+  },
+  {
+    "candidate": "blend_catboost75_xgb25",
+    "submission": "submissions\\public_auc\\blend_catboost75_xgb25_c8018abef9.csv",
+    "public_auc": null,
+    "blend_method": "probability_average",
+    "overall_rows": 688998,
+    "overall_oof_auc": 0.8213493062210965,
+    "feature_492_upper_tail_rows": 70711,
+    "feature_492_upper_tail_oof_auc": 0.7699888435435439,
+    "feature_1039_observed_rows": 123163,
+    "feature_1039_observed_oof_auc": 0.7869533102112252,
+    "joint_drift_stress_rows": 69582,
+    "joint_drift_stress_oof_auc": 0.7700758586626469,
+    "default_ap": 0.39868328819416654,
+    "test_rank_correlation_to_public_best": 0.9756538780158697,
+    "test_rank_correlation_to_best_observed_submission": 0.9887673025823879,
+    "fold_auc_mean": 0.8213584164891146,
+    "fold_auc_min": 0.819466279985789,
+    "fold_auc_std": 0.0016829801265797336,
+    "sha256": "c8018abef945886ad75e6a3f781843650e0020a069dc58910a6b5c8b4125bb27",
+    "weights": {
+      "catboost_gpu_capacity_ensemble": 0.75,
+      "xgboost": 0.25
+    },
+    "positive_class": 1,
+    "calibrated_probability": "not_assessed",
+    "scope": "development OOF; public AUC pending submission",
+    "best_observed_submission_sha256": "01c35718217aaa322852f3f18981a86f6901fe3d4ff6dc9aa282494f79651539",
+    "source_sha256": {
+      "catboost_gpu_capacity_ensemble": {
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_capacity_ensemble\\oof_predictions.parquet": "cec46f19349dcf9a201756a3a391e12754894b3d40d64fc4e50657626c02cf52",
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_capacity_ensemble\\test_predictions.parquet": "05e79cb75d1724916790aace371b9d1c5237be595ae28b9f1228600ee9bab020"
+      },
+      "xgboost": {
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_0.npz": "b1aaf60264fb69e3a07f4d052f3126e47415af8f0ef9e6992872a7227953acbc",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_1.npz": "02cad7e2b87c339481bc295cce4b234fa2845eeeb4cb9768537219b2bc56a586",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_2.npz": "0584f850b71dc68463383a59958c7ebc390880ed76287411879df2424759ac28",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_3.npz": "3cd507e765a4ad24d4befc3a192c2445c31be841721c88fc4ab46326121198cd",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_4.npz": "40da423dc1c8f8e4cf390a708a62634295b5bd422031c0c892e95884fb985055"
+      }
+    }
+  },
+  {
+    "candidate": "blend_catboost50_xgb_mix50",
+    "submission": "submissions\\public_auc\\blend_catboost50_xgb_mix50_1c4278746e.csv",
+    "public_auc": null,
+    "blend_method": "probability_average",
+    "overall_rows": 688998,
+    "overall_oof_auc": 0.8222949603519347,
+    "feature_492_upper_tail_rows": 70711,
+    "feature_492_upper_tail_oof_auc": 0.7708767593826507,
+    "feature_1039_observed_rows": 123163,
+    "feature_1039_observed_oof_auc": 0.7878587759905924,
+    "joint_drift_stress_rows": 69582,
+    "joint_drift_stress_oof_auc": 0.7710008259169504,
+    "default_ap": 0.39938765062773834,
+    "test_rank_correlation_to_public_best": 0.9806831648960509,
+    "test_rank_correlation_to_best_observed_submission": 0.9928136255057884,
+    "fold_auc_mean": 0.8223034728223728,
+    "fold_auc_min": 0.8201522783517553,
+    "fold_auc_std": 0.001610285142484567,
+    "sha256": "1c4278746e49a48ebcbb49b2495651546ec3dce84682b6335edb70ce5bc18935",
+    "weights": {
+      "catboost_gpu_capacity_ensemble": 0.5,
+      "xgboost": 0.25,
+      "xgboost_drift_fast_s42": 0.25
+    },
+    "positive_class": 1,
+    "calibrated_probability": "not_assessed",
+    "scope": "development OOF; public AUC pending submission",
+    "best_observed_submission_sha256": "01c35718217aaa322852f3f18981a86f6901fe3d4ff6dc9aa282494f79651539",
+    "source_sha256": {
+      "catboost_gpu_capacity_ensemble": {
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_capacity_ensemble\\oof_predictions.parquet": "cec46f19349dcf9a201756a3a391e12754894b3d40d64fc4e50657626c02cf52",
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_capacity_ensemble\\test_predictions.parquet": "05e79cb75d1724916790aace371b9d1c5237be595ae28b9f1228600ee9bab020"
+      },
+      "xgboost": {
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_0.npz": "b1aaf60264fb69e3a07f4d052f3126e47415af8f0ef9e6992872a7227953acbc",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_1.npz": "02cad7e2b87c339481bc295cce4b234fa2845eeeb4cb9768537219b2bc56a586",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_2.npz": "0584f850b71dc68463383a59958c7ebc390880ed76287411879df2424759ac28",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_3.npz": "3cd507e765a4ad24d4befc3a192c2445c31be841721c88fc4ab46326121198cd",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_4.npz": "40da423dc1c8f8e4cf390a708a62634295b5bd422031c0c892e95884fb985055"
+      },
+      "xgboost_drift_fast_s42": {
+        "artifacts\\public_auc_optimization\\completed\\xgboost_drift_fast_s42\\oof_predictions.parquet": "6a4a77084e2ffc5401cc6619d74437d793b1548269353cffa351ef30c36929e2",
+        "artifacts\\public_auc_optimization\\completed\\xgboost_drift_fast_s42\\test_predictions.parquet": "60bf80c36fa16e8dd16db078a70c07fd0305be0202045e1dc2db48fb2655380d"
+      }
+    }
+  },
+  {
+    "candidate": "blend_catboost_diverse50_xgb50",
+    "submission": "submissions\\public_auc\\blend_catboost_diverse50_xgb50_8a04935d6a.csv",
+    "public_auc": 0.7404,
+    "blend_method": "probability_average",
+    "overall_rows": 688998,
+    "overall_oof_auc": 0.8220822895416158,
+    "feature_492_upper_tail_rows": 70711,
+    "feature_492_upper_tail_oof_auc": 0.771149295057671,
+    "feature_1039_observed_rows": 123163,
+    "feature_1039_observed_oof_auc": 0.78797995502147,
+    "joint_drift_stress_rows": 69582,
+    "joint_drift_stress_oof_auc": 0.7712717778303337,
+    "default_ap": 0.3994168718641193,
+    "test_rank_correlation_to_public_best": 0.9762524731201493,
+    "test_rank_correlation_to_best_observed_submission": 0.9974066924291547,
+    "fold_auc_mean": 0.8220913697671886,
+    "fold_auc_min": 0.8200509663252223,
+    "fold_auc_std": 0.0015961279246271276,
+    "sha256": "8a04935d6a98d96f21a04709c7d493cfb70f66155301d459ae4e3595f18e5617",
+    "weights": {
+      "catboost_gpu_capacity_ensemble": 0.375,
+      "catboost_gpu_depth9_s42": 0.125,
+      "xgboost": 0.5
+    },
+    "positive_class": 1,
+    "calibrated_probability": "not_assessed",
+    "scope": "development OOF; public AUC observed for this exact hash",
+    "best_observed_submission_sha256": "01c35718217aaa322852f3f18981a86f6901fe3d4ff6dc9aa282494f79651539",
+    "source_sha256": {
+      "catboost_gpu_capacity_ensemble": {
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_capacity_ensemble\\oof_predictions.parquet": "cec46f19349dcf9a201756a3a391e12754894b3d40d64fc4e50657626c02cf52",
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_capacity_ensemble\\test_predictions.parquet": "05e79cb75d1724916790aace371b9d1c5237be595ae28b9f1228600ee9bab020"
+      },
+      "catboost_gpu_depth9_s42": {
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_depth9_s42\\oof_predictions.parquet": "0af8cb0b29e09966c54e575671bbc1d8634879174e760dbd969ad134a8961912",
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_depth9_s42\\test_predictions.parquet": "c7b3ed4950aeeff0492cf8d294eb56488520692bfd6202db1a69aba56d60fbfe"
+      },
+      "xgboost": {
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_0.npz": "b1aaf60264fb69e3a07f4d052f3126e47415af8f0ef9e6992872a7227953acbc",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_1.npz": "02cad7e2b87c339481bc295cce4b234fa2845eeeb4cb9768537219b2bc56a586",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_2.npz": "0584f850b71dc68463383a59958c7ebc390880ed76287411879df2424759ac28",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_3.npz": "3cd507e765a4ad24d4befc3a192c2445c31be841721c88fc4ab46326121198cd",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_4.npz": "40da423dc1c8f8e4cf390a708a62634295b5bd422031c0c892e95884fb985055"
+      }
+    }
+  },
+  {
+    "candidate": "blend_catboost_diverse25_xgb75",
+    "submission": "submissions\\public_auc\\blend_catboost_diverse25_xgb75_01c3571821.csv",
+    "public_auc": 0.74065,
+    "blend_method": "probability_average",
+    "overall_rows": 688998,
+    "overall_oof_auc": 0.8214257583893487,
+    "feature_492_upper_tail_rows": 70711,
+    "feature_492_upper_tail_oof_auc": 0.7700798540093914,
+    "feature_1039_observed_rows": 123163,
+    "feature_1039_observed_oof_auc": 0.7869793955433657,
+    "joint_drift_stress_rows": 69582,
+    "joint_drift_stress_oof_auc": 0.770227362002336,
+    "default_ap": 0.3976414953610093,
+    "test_rank_correlation_to_public_best": 0.971913666514658,
+    "test_rank_correlation_to_best_observed_submission": 0.9999999999999998,
+    "fold_auc_mean": 0.8214325554623569,
+    "fold_auc_min": 0.81907926994768,
+    "fold_auc_std": 0.0016419013978635412,
+    "sha256": "01c35718217aaa322852f3f18981a86f6901fe3d4ff6dc9aa282494f79651539",
+    "weights": {
+      "catboost_gpu_capacity_ensemble": 0.1875,
+      "catboost_gpu_depth9_s42": 0.0625,
+      "xgboost": 0.75
+    },
+    "positive_class": 1,
+    "calibrated_probability": "not_assessed",
+    "scope": "development OOF; public AUC observed for this exact hash",
+    "best_observed_submission_sha256": "01c35718217aaa322852f3f18981a86f6901fe3d4ff6dc9aa282494f79651539",
+    "source_sha256": {
+      "catboost_gpu_capacity_ensemble": {
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_capacity_ensemble\\oof_predictions.parquet": "cec46f19349dcf9a201756a3a391e12754894b3d40d64fc4e50657626c02cf52",
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_capacity_ensemble\\test_predictions.parquet": "05e79cb75d1724916790aace371b9d1c5237be595ae28b9f1228600ee9bab020"
+      },
+      "catboost_gpu_depth9_s42": {
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_depth9_s42\\oof_predictions.parquet": "0af8cb0b29e09966c54e575671bbc1d8634879174e760dbd969ad134a8961912",
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_depth9_s42\\test_predictions.parquet": "c7b3ed4950aeeff0492cf8d294eb56488520692bfd6202db1a69aba56d60fbfe"
+      },
+      "xgboost": {
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_0.npz": "b1aaf60264fb69e3a07f4d052f3126e47415af8f0ef9e6992872a7227953acbc",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_1.npz": "02cad7e2b87c339481bc295cce4b234fa2845eeeb4cb9768537219b2bc56a586",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_2.npz": "0584f850b71dc68463383a59958c7ebc390880ed76287411879df2424759ac28",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_3.npz": "3cd507e765a4ad24d4befc3a192c2445c31be841721c88fc4ab46326121198cd",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_4.npz": "40da423dc1c8f8e4cf390a708a62634295b5bd422031c0c892e95884fb985055"
+      }
+    }
+  },
+  {
+    "candidate": "blend_catboost_diverse75_xgb25",
+    "submission": "submissions\\public_auc\\blend_catboost_diverse75_xgb25_3512bfa7dc.csv",
+    "public_auc": 0.73892,
+    "blend_method": "probability_average",
+    "overall_rows": 688998,
+    "overall_oof_auc": 0.8217290011612584,
+    "feature_492_upper_tail_rows": 70711,
+    "feature_492_upper_tail_oof_auc": 0.7707474200237705,
+    "feature_1039_observed_rows": 123163,
+    "feature_1039_observed_oof_auc": 0.787652339708683,
+    "joint_drift_stress_rows": 69582,
+    "joint_drift_stress_oof_auc": 0.7708523713097644,
+    "default_ap": 0.3993489757656779,
+    "test_rank_correlation_to_public_best": 0.9755710884252697,
+    "test_rank_correlation_to_best_observed_submission": 0.9892859573909205,
+    "fold_auc_mean": 0.8217411623414707,
+    "fold_auc_min": 0.8200176843335767,
+    "fold_auc_std": 0.0015676779850440222,
+    "sha256": "3512bfa7dcfaeaeca37c0efc2bbb3d542c589015e3799ecdfc70bf67d9d54bf5",
+    "weights": {
+      "catboost_gpu_capacity_ensemble": 0.5625,
+      "catboost_gpu_depth9_s42": 0.1875,
+      "xgboost": 0.25
+    },
+    "positive_class": 1,
+    "calibrated_probability": "not_assessed",
+    "scope": "development OOF; public AUC observed for this exact hash",
+    "best_observed_submission_sha256": "01c35718217aaa322852f3f18981a86f6901fe3d4ff6dc9aa282494f79651539",
+    "source_sha256": {
+      "catboost_gpu_capacity_ensemble": {
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_capacity_ensemble\\oof_predictions.parquet": "cec46f19349dcf9a201756a3a391e12754894b3d40d64fc4e50657626c02cf52",
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_capacity_ensemble\\test_predictions.parquet": "05e79cb75d1724916790aace371b9d1c5237be595ae28b9f1228600ee9bab020"
+      },
+      "catboost_gpu_depth9_s42": {
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_depth9_s42\\oof_predictions.parquet": "0af8cb0b29e09966c54e575671bbc1d8634879174e760dbd969ad134a8961912",
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_depth9_s42\\test_predictions.parquet": "c7b3ed4950aeeff0492cf8d294eb56488520692bfd6202db1a69aba56d60fbfe"
+      },
+      "xgboost": {
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_0.npz": "b1aaf60264fb69e3a07f4d052f3126e47415af8f0ef9e6992872a7227953acbc",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_1.npz": "02cad7e2b87c339481bc295cce4b234fa2845eeeb4cb9768537219b2bc56a586",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_2.npz": "0584f850b71dc68463383a59958c7ebc390880ed76287411879df2424759ac28",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_3.npz": "3cd507e765a4ad24d4befc3a192c2445c31be841721c88fc4ab46326121198cd",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_4.npz": "40da423dc1c8f8e4cf390a708a62634295b5bd422031c0c892e95884fb985055"
+      }
+    }
+  },
+  {
+    "candidate": "blend_catboost_diverse50_xgb_mix50",
+    "submission": "submissions\\public_auc\\blend_catboost_diverse50_xgb_mix50_cd021d6746.csv",
+    "public_auc": 0.73979,
+    "blend_method": "probability_average",
+    "overall_rows": 688998,
+    "overall_oof_auc": 0.8225120285179484,
+    "feature_492_upper_tail_rows": 70711,
+    "feature_492_upper_tail_oof_auc": 0.7713366130056113,
+    "feature_1039_observed_rows": 123163,
+    "feature_1039_observed_oof_auc": 0.7882820893766115,
+    "joint_drift_stress_rows": 69582,
+    "joint_drift_stress_oof_auc": 0.7714700028759789,
+    "default_ap": 0.3997721297686251,
+    "test_rank_correlation_to_public_best": 0.9805482999947962,
+    "test_rank_correlation_to_best_observed_submission": 0.9930811172982956,
+    "fold_auc_mean": 0.8225225521174929,
+    "fold_auc_min": 0.8204834377544558,
+    "fold_auc_std": 0.0015396051739622182,
+    "sha256": "cd021d67467c79f6fc16779f7f37dd6d60b08361c3c456f4096b4333bfcbc2f0",
+    "weights": {
+      "catboost_gpu_capacity_ensemble": 0.375,
+      "catboost_gpu_depth9_s42": 0.125,
+      "xgboost": 0.25,
+      "xgboost_drift_fast_s42": 0.25
+    },
+    "positive_class": 1,
+    "calibrated_probability": "not_assessed",
+    "scope": "development OOF; public AUC observed for this exact hash",
+    "best_observed_submission_sha256": "01c35718217aaa322852f3f18981a86f6901fe3d4ff6dc9aa282494f79651539",
+    "source_sha256": {
+      "catboost_gpu_capacity_ensemble": {
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_capacity_ensemble\\oof_predictions.parquet": "cec46f19349dcf9a201756a3a391e12754894b3d40d64fc4e50657626c02cf52",
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_capacity_ensemble\\test_predictions.parquet": "05e79cb75d1724916790aace371b9d1c5237be595ae28b9f1228600ee9bab020"
+      },
+      "catboost_gpu_depth9_s42": {
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_depth9_s42\\oof_predictions.parquet": "0af8cb0b29e09966c54e575671bbc1d8634879174e760dbd969ad134a8961912",
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_depth9_s42\\test_predictions.parquet": "c7b3ed4950aeeff0492cf8d294eb56488520692bfd6202db1a69aba56d60fbfe"
+      },
+      "xgboost": {
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_0.npz": "b1aaf60264fb69e3a07f4d052f3126e47415af8f0ef9e6992872a7227953acbc",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_1.npz": "02cad7e2b87c339481bc295cce4b234fa2845eeeb4cb9768537219b2bc56a586",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_2.npz": "0584f850b71dc68463383a59958c7ebc390880ed76287411879df2424759ac28",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_3.npz": "3cd507e765a4ad24d4befc3a192c2445c31be841721c88fc4ab46326121198cd",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_4.npz": "40da423dc1c8f8e4cf390a708a62634295b5bd422031c0c892e95884fb985055"
+      },
+      "xgboost_drift_fast_s42": {
+        "artifacts\\public_auc_optimization\\completed\\xgboost_drift_fast_s42\\oof_predictions.parquet": "6a4a77084e2ffc5401cc6619d74437d793b1548269353cffa351ef30c36929e2",
+        "artifacts\\public_auc_optimization\\completed\\xgboost_drift_fast_s42\\test_predictions.parquet": "60bf80c36fa16e8dd16db078a70c07fd0305be0202045e1dc2db48fb2655380d"
+      }
+    }
+  },
+  {
+    "candidate": "reference_catboost25_xgb75",
+    "submission": "submissions\\public_auc\\reference_catboost25_xgb75_8fe0926820.csv",
+    "public_auc": null,
+    "blend_method": "probability_average",
+    "overall_rows": 688998,
+    "overall_oof_auc": 0.8213412823668392,
+    "feature_492_upper_tail_rows": 70711,
+    "feature_492_upper_tail_oof_auc": 0.7699204291808268,
+    "feature_1039_observed_rows": 123163,
+    "feature_1039_observed_oof_auc": 0.7867539918585389,
+    "joint_drift_stress_rows": 69582,
+    "joint_drift_stress_oof_auc": 0.770062208764533,
+    "default_ap": 0.39737625165747853,
+    "test_rank_correlation_to_public_best": 0.9718229785546755,
+    "test_rank_correlation_to_best_observed_submission": 0.9998226021298249,
+    "fold_auc_mean": 0.8213474973709692,
+    "fold_auc_min": 0.8189190579535852,
+    "fold_auc_std": 0.0017396181186934189,
+    "sha256": "8fe0926820fe2db980cc273e9d713e1efdf5b37051cabe0d0bb3f22378c69993",
+    "weights": {
+      "catboost_gpu_capacity_s42": 0.25,
+      "xgboost": 0.75
+    },
+    "positive_class": 1,
+    "calibrated_probability": "not_assessed",
+    "scope": "development OOF; public AUC pending submission",
+    "best_observed_submission_sha256": "01c35718217aaa322852f3f18981a86f6901fe3d4ff6dc9aa282494f79651539",
+    "source_sha256": {
+      "catboost_gpu_capacity_s42": {
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_capacity_s42\\oof_predictions.parquet": "6b573288ddba9be437af00ceb8a4c4a84b04301d55d7d3bdbcc6f9cd2bb67001",
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_capacity_s42\\test_predictions.parquet": "7441aff8e023935cb9c08cc553b31ba44738ec811d1841026b7d26313ed938b7"
+      },
+      "xgboost": {
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_0.npz": "b1aaf60264fb69e3a07f4d052f3126e47415af8f0ef9e6992872a7227953acbc",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_1.npz": "02cad7e2b87c339481bc295cce4b234fa2845eeeb4cb9768537219b2bc56a586",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_2.npz": "0584f850b71dc68463383a59958c7ebc390880ed76287411879df2424759ac28",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_3.npz": "3cd507e765a4ad24d4befc3a192c2445c31be841721c88fc4ab46326121198cd",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_4.npz": "40da423dc1c8f8e4cf390a708a62634295b5bd422031c0c892e95884fb985055"
+      }
+    }
+  },
+  {
+    "candidate": "reference_catboost75_xgb25",
+    "submission": "submissions\\public_auc\\reference_catboost75_xgb25_466069c11d.csv",
+    "public_auc": null,
+    "blend_method": "probability_average",
+    "overall_rows": 688998,
+    "overall_oof_auc": 0.8209248011898076,
+    "feature_492_upper_tail_rows": 70711,
+    "feature_492_upper_tail_oof_auc": 0.7693219128918339,
+    "feature_1039_observed_rows": 123163,
+    "feature_1039_observed_oof_auc": 0.7862214360323811,
+    "joint_drift_stress_rows": 69582,
+    "joint_drift_stress_oof_auc": 0.7694294986555389,
+    "default_ap": 0.39739854611203645,
+    "test_rank_correlation_to_public_best": 0.9740091660204288,
+    "test_rank_correlation_to_best_observed_submission": 0.9875444034717843,
+    "fold_auc_mean": 0.8209326202107878,
+    "fold_auc_min": 0.8189833980345254,
+    "fold_auc_std": 0.0018991819333433525,
+    "sha256": "466069c11de64ab1a1b88999dd6960c652596453f179522a5c41cb5888551e7d",
+    "weights": {
+      "catboost_gpu_capacity_s42": 0.75,
+      "xgboost": 0.25
+    },
+    "positive_class": 1,
+    "calibrated_probability": "not_assessed",
+    "scope": "development OOF; public AUC pending submission",
+    "best_observed_submission_sha256": "01c35718217aaa322852f3f18981a86f6901fe3d4ff6dc9aa282494f79651539",
+    "source_sha256": {
+      "catboost_gpu_capacity_s42": {
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_capacity_s42\\oof_predictions.parquet": "6b573288ddba9be437af00ceb8a4c4a84b04301d55d7d3bdbcc6f9cd2bb67001",
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_capacity_s42\\test_predictions.parquet": "7441aff8e023935cb9c08cc553b31ba44738ec811d1841026b7d26313ed938b7"
+      },
+      "xgboost": {
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_0.npz": "b1aaf60264fb69e3a07f4d052f3126e47415af8f0ef9e6992872a7227953acbc",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_1.npz": "02cad7e2b87c339481bc295cce4b234fa2845eeeb4cb9768537219b2bc56a586",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_2.npz": "0584f850b71dc68463383a59958c7ebc390880ed76287411879df2424759ac28",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_3.npz": "3cd507e765a4ad24d4befc3a192c2445c31be841721c88fc4ab46326121198cd",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_4.npz": "40da423dc1c8f8e4cf390a708a62634295b5bd422031c0c892e95884fb985055"
+      }
+    }
+  },
+  {
+    "candidate": "blend_lgbm50_catboost30_xgb20",
+    "submission": "submissions\\public_auc\\blend_lgbm50_catboost30_xgb20_ff35c683f6.csv",
+    "public_auc": null,
+    "blend_method": "probability_average",
+    "overall_rows": 688998,
+    "overall_oof_auc": 0.821833114125119,
+    "feature_492_upper_tail_rows": 70711,
+    "feature_492_upper_tail_oof_auc": 0.7703019120985848,
+    "feature_1039_observed_rows": 123163,
+    "feature_1039_observed_oof_auc": 0.7874530929164261,
+    "joint_drift_stress_rows": 69582,
+    "joint_drift_stress_oof_auc": 0.7703825123344383,
+    "default_ap": 0.3982318292620173,
+    "test_rank_correlation_to_public_best": 0.98903737247027,
+    "test_rank_correlation_to_best_observed_submission": 0.9916808144658777,
+    "fold_auc_mean": 0.8218438857166095,
+    "fold_auc_min": 0.8201545539727654,
+    "fold_auc_std": 0.0016196978499517674,
+    "sha256": "ff35c683f674e0ddc9b902ae020090403f2ef49f733153b6a032561ca0b057fa",
+    "weights": {
+      "lgbm_drift_tuned_ensemble": 0.5,
+      "catboost_gpu_capacity_ensemble": 0.3,
+      "xgboost": 0.2
+    },
+    "positive_class": 1,
+    "calibrated_probability": "not_assessed",
+    "scope": "development OOF; public AUC pending submission",
+    "best_observed_submission_sha256": "01c35718217aaa322852f3f18981a86f6901fe3d4ff6dc9aa282494f79651539",
+    "source_sha256": {
+      "lgbm_drift_tuned_ensemble": {
+        "artifacts\\public_auc_optimization\\completed\\lgbm_drift_tuned_ensemble\\oof_predictions.parquet": "47c6d966c379e436faebc010deaa053220bd1e03a35dff5c527ef321c2f427be",
+        "artifacts\\public_auc_optimization\\completed\\lgbm_drift_tuned_ensemble\\test_predictions.parquet": "768d48c5923c02209d952e0a7266f627217c0ef1b2ed9a298e385f61ff499c27"
+      },
+      "catboost_gpu_capacity_ensemble": {
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_capacity_ensemble\\oof_predictions.parquet": "cec46f19349dcf9a201756a3a391e12754894b3d40d64fc4e50657626c02cf52",
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_capacity_ensemble\\test_predictions.parquet": "05e79cb75d1724916790aace371b9d1c5237be595ae28b9f1228600ee9bab020"
+      },
+      "xgboost": {
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_0.npz": "b1aaf60264fb69e3a07f4d052f3126e47415af8f0ef9e6992872a7227953acbc",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_1.npz": "02cad7e2b87c339481bc295cce4b234fa2845eeeb4cb9768537219b2bc56a586",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_2.npz": "0584f850b71dc68463383a59958c7ebc390880ed76287411879df2424759ac28",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_3.npz": "3cd507e765a4ad24d4befc3a192c2445c31be841721c88fc4ab46326121198cd",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_4.npz": "40da423dc1c8f8e4cf390a708a62634295b5bd422031c0c892e95884fb985055"
+      }
+    }
+  },
+  {
+    "candidate": "blend_lgbm20_catboost40_xgb40",
+    "submission": "submissions\\public_auc\\blend_lgbm20_catboost40_xgb40_bd9127f133.csv",
+    "public_auc": null,
+    "blend_method": "probability_average",
+    "overall_rows": 688998,
+    "overall_oof_auc": 0.8220751004010085,
+    "feature_492_upper_tail_rows": 70711,
+    "feature_492_upper_tail_oof_auc": 0.7708465691828561,
+    "feature_1039_observed_rows": 123163,
+    "feature_1039_observed_oof_auc": 0.7877940184690624,
+    "joint_drift_stress_rows": 69582,
+    "joint_drift_stress_oof_auc": 0.7709458458311923,
+    "default_ap": 0.3990622829920941,
+    "test_rank_correlation_to_public_best": 0.9821543318801802,
+    "test_rank_correlation_to_best_observed_submission": 0.996493063546269,
+    "fold_auc_mean": 0.8220828126984321,
+    "fold_auc_min": 0.820112927347834,
+    "fold_auc_std": 0.0016297610892235781,
+    "sha256": "bd9127f133958968bc151b24b5be8dfc8a9228fddaaee22f60f39081ba35f031",
+    "weights": {
+      "lgbm_drift_tuned_ensemble": 0.2,
+      "catboost_gpu_capacity_ensemble": 0.4,
+      "xgboost": 0.4
+    },
+    "positive_class": 1,
+    "calibrated_probability": "not_assessed",
+    "scope": "development OOF; public AUC pending submission",
+    "best_observed_submission_sha256": "01c35718217aaa322852f3f18981a86f6901fe3d4ff6dc9aa282494f79651539",
+    "source_sha256": {
+      "lgbm_drift_tuned_ensemble": {
+        "artifacts\\public_auc_optimization\\completed\\lgbm_drift_tuned_ensemble\\oof_predictions.parquet": "47c6d966c379e436faebc010deaa053220bd1e03a35dff5c527ef321c2f427be",
+        "artifacts\\public_auc_optimization\\completed\\lgbm_drift_tuned_ensemble\\test_predictions.parquet": "768d48c5923c02209d952e0a7266f627217c0ef1b2ed9a298e385f61ff499c27"
+      },
+      "catboost_gpu_capacity_ensemble": {
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_capacity_ensemble\\oof_predictions.parquet": "cec46f19349dcf9a201756a3a391e12754894b3d40d64fc4e50657626c02cf52",
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_capacity_ensemble\\test_predictions.parquet": "05e79cb75d1724916790aace371b9d1c5237be595ae28b9f1228600ee9bab020"
+      },
+      "xgboost": {
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_0.npz": "b1aaf60264fb69e3a07f4d052f3126e47415af8f0ef9e6992872a7227953acbc",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_1.npz": "02cad7e2b87c339481bc295cce4b234fa2845eeeb4cb9768537219b2bc56a586",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_2.npz": "0584f850b71dc68463383a59958c7ebc390880ed76287411879df2424759ac28",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_3.npz": "3cd507e765a4ad24d4befc3a192c2445c31be841721c88fc4ab46326121198cd",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_4.npz": "40da423dc1c8f8e4cf390a708a62634295b5bd422031c0c892e95884fb985055"
+      }
+    }
+  },
+  {
+    "candidate": "blend_lgbm35_bins15_catboost30_xgb20",
+    "submission": "submissions\\public_auc\\blend_lgbm35_bins15_catboost30_xgb20_a2071d5df2.csv",
+    "public_auc": null,
+    "blend_method": "probability_average",
+    "overall_rows": 688998,
+    "overall_oof_auc": 0.8219165149031621,
+    "feature_492_upper_tail_rows": 70711,
+    "feature_492_upper_tail_oof_auc": 0.7703817653166821,
+    "feature_1039_observed_rows": 123163,
+    "feature_1039_observed_oof_auc": 0.7874745820466458,
+    "joint_drift_stress_rows": 69582,
+    "joint_drift_stress_oof_auc": 0.7704673144802061,
+    "default_ap": 0.39841524790755767,
+    "test_rank_correlation_to_public_best": 0.9892544822231136,
+    "test_rank_correlation_to_best_observed_submission": 0.9914526582967155,
+    "fold_auc_mean": 0.8219275807249977,
+    "fold_auc_min": 0.8201332086476909,
+    "fold_auc_std": 0.0016566532014070507,
+    "sha256": "a2071d5df26acc9f1497e4156c6dcf5eb1cee36188a1dcca015e87ca41b0e583",
+    "weights": {
+      "lgbm_drift_tuned_ensemble": 0.35,
+      "lgbm_drift_bins255_s42": 0.15,
+      "catboost_gpu_capacity_ensemble": 0.3,
+      "xgboost": 0.2
+    },
+    "positive_class": 1,
+    "calibrated_probability": "not_assessed",
+    "scope": "development OOF; public AUC pending submission",
+    "best_observed_submission_sha256": "01c35718217aaa322852f3f18981a86f6901fe3d4ff6dc9aa282494f79651539",
+    "source_sha256": {
+      "lgbm_drift_tuned_ensemble": {
+        "artifacts\\public_auc_optimization\\completed\\lgbm_drift_tuned_ensemble\\oof_predictions.parquet": "47c6d966c379e436faebc010deaa053220bd1e03a35dff5c527ef321c2f427be",
+        "artifacts\\public_auc_optimization\\completed\\lgbm_drift_tuned_ensemble\\test_predictions.parquet": "768d48c5923c02209d952e0a7266f627217c0ef1b2ed9a298e385f61ff499c27"
+      },
+      "lgbm_drift_bins255_s42": {
+        "artifacts\\public_auc_optimization\\completed\\lgbm_drift_bins255_s42\\oof_predictions.parquet": "30a1ed08f62b1ef355834cb425541cc3a72aa7a85888ea1cf1a6f208edc5a61b",
+        "artifacts\\public_auc_optimization\\completed\\lgbm_drift_bins255_s42\\test_predictions.parquet": "8f51441ba0da47953f4f78b638520f6bfc7160f400eb04490aabb9b1235dfbd1"
+      },
+      "catboost_gpu_capacity_ensemble": {
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_capacity_ensemble\\oof_predictions.parquet": "cec46f19349dcf9a201756a3a391e12754894b3d40d64fc4e50657626c02cf52",
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_capacity_ensemble\\test_predictions.parquet": "05e79cb75d1724916790aace371b9d1c5237be595ae28b9f1228600ee9bab020"
+      },
+      "xgboost": {
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_0.npz": "b1aaf60264fb69e3a07f4d052f3126e47415af8f0ef9e6992872a7227953acbc",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_1.npz": "02cad7e2b87c339481bc295cce4b234fa2845eeeb4cb9768537219b2bc56a586",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_2.npz": "0584f850b71dc68463383a59958c7ebc390880ed76287411879df2424759ac28",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_3.npz": "3cd507e765a4ad24d4befc3a192c2445c31be841721c88fc4ab46326121198cd",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_4.npz": "40da423dc1c8f8e4cf390a708a62634295b5bd422031c0c892e95884fb985055"
+      }
+    }
+  },
+  {
+    "candidate": "blend_lgbm50_catboost21_depth9_9_xgb20",
+    "submission": "submissions\\public_auc\\blend_lgbm50_catboost21_depth9_9_xgb20_75d8579ef3.csv",
+    "public_auc": null,
+    "blend_method": "probability_average",
+    "overall_rows": 688998,
+    "overall_oof_auc": 0.8219784122262371,
+    "feature_492_upper_tail_rows": 70711,
+    "feature_492_upper_tail_oof_auc": 0.7706291355098662,
+    "feature_1039_observed_rows": 123163,
+    "feature_1039_observed_oof_auc": 0.7877514407914608,
+    "joint_drift_stress_rows": 69582,
+    "joint_drift_stress_oof_auc": 0.7707165352006069,
+    "default_ap": 0.39849395439552415,
+    "test_rank_correlation_to_public_best": 0.9889362828929804,
+    "test_rank_correlation_to_best_observed_submission": 0.9918532764684952,
+    "fold_auc_mean": 0.8219907206369512,
+    "fold_auc_min": 0.8203732163268774,
+    "fold_auc_std": 0.0015738239360254393,
+    "sha256": "75d8579ef3842d432e035491e6e4df0c3a6e9859dfa24ca69eedd91e17a719ef",
+    "weights": {
+      "lgbm_drift_tuned_ensemble": 0.5,
+      "catboost_gpu_capacity_ensemble": 0.21,
+      "catboost_gpu_depth9_s42": 0.09,
+      "xgboost": 0.2
+    },
+    "positive_class": 1,
+    "calibrated_probability": "not_assessed",
+    "scope": "development OOF; public AUC pending submission",
+    "best_observed_submission_sha256": "01c35718217aaa322852f3f18981a86f6901fe3d4ff6dc9aa282494f79651539",
+    "source_sha256": {
+      "lgbm_drift_tuned_ensemble": {
+        "artifacts\\public_auc_optimization\\completed\\lgbm_drift_tuned_ensemble\\oof_predictions.parquet": "47c6d966c379e436faebc010deaa053220bd1e03a35dff5c527ef321c2f427be",
+        "artifacts\\public_auc_optimization\\completed\\lgbm_drift_tuned_ensemble\\test_predictions.parquet": "768d48c5923c02209d952e0a7266f627217c0ef1b2ed9a298e385f61ff499c27"
+      },
+      "catboost_gpu_capacity_ensemble": {
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_capacity_ensemble\\oof_predictions.parquet": "cec46f19349dcf9a201756a3a391e12754894b3d40d64fc4e50657626c02cf52",
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_capacity_ensemble\\test_predictions.parquet": "05e79cb75d1724916790aace371b9d1c5237be595ae28b9f1228600ee9bab020"
+      },
+      "catboost_gpu_depth9_s42": {
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_depth9_s42\\oof_predictions.parquet": "0af8cb0b29e09966c54e575671bbc1d8634879174e760dbd969ad134a8961912",
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_depth9_s42\\test_predictions.parquet": "c7b3ed4950aeeff0492cf8d294eb56488520692bfd6202db1a69aba56d60fbfe"
+      },
+      "xgboost": {
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_0.npz": "b1aaf60264fb69e3a07f4d052f3126e47415af8f0ef9e6992872a7227953acbc",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_1.npz": "02cad7e2b87c339481bc295cce4b234fa2845eeeb4cb9768537219b2bc56a586",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_2.npz": "0584f850b71dc68463383a59958c7ebc390880ed76287411879df2424759ac28",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_3.npz": "3cd507e765a4ad24d4befc3a192c2445c31be841721c88fc4ab46326121198cd",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_4.npz": "40da423dc1c8f8e4cf390a708a62634295b5bd422031c0c892e95884fb985055"
+      }
+    }
+  },
+  {
+    "candidate": "blend_diverse_challengers",
+    "submission": "submissions\\public_auc\\blend_diverse_challengers_56bdb578f4.csv",
+    "public_auc": null,
+    "blend_method": "probability_average",
+    "overall_rows": 688998,
+    "overall_oof_auc": 0.8220617154955149,
+    "feature_492_upper_tail_rows": 70711,
+    "feature_492_upper_tail_oof_auc": 0.7707068010323261,
+    "feature_1039_observed_rows": 123163,
+    "feature_1039_observed_oof_auc": 0.7877694747974746,
+    "joint_drift_stress_rows": 69582,
+    "joint_drift_stress_oof_auc": 0.7707986643210953,
+    "default_ap": 0.3986795883893439,
+    "test_rank_correlation_to_public_best": 0.989155327257936,
+    "test_rank_correlation_to_best_observed_submission": 0.9916283715530498,
+    "fold_auc_mean": 0.8220742460632197,
+    "fold_auc_min": 0.8203506745768172,
+    "fold_auc_std": 0.0016132115859558492,
+    "sha256": "56bdb578f4a61a67a077771c60ad39eb586b2a411912b718d69735ef04220515",
+    "weights": {
+      "lgbm_drift_tuned_ensemble": 0.35,
+      "lgbm_drift_bins255_s42": 0.15,
+      "catboost_gpu_capacity_ensemble": 0.21,
+      "catboost_gpu_depth9_s42": 0.09,
+      "xgboost": 0.2
+    },
+    "positive_class": 1,
+    "calibrated_probability": "not_assessed",
+    "scope": "development OOF; public AUC pending submission",
+    "best_observed_submission_sha256": "01c35718217aaa322852f3f18981a86f6901fe3d4ff6dc9aa282494f79651539",
+    "source_sha256": {
+      "lgbm_drift_tuned_ensemble": {
+        "artifacts\\public_auc_optimization\\completed\\lgbm_drift_tuned_ensemble\\oof_predictions.parquet": "47c6d966c379e436faebc010deaa053220bd1e03a35dff5c527ef321c2f427be",
+        "artifacts\\public_auc_optimization\\completed\\lgbm_drift_tuned_ensemble\\test_predictions.parquet": "768d48c5923c02209d952e0a7266f627217c0ef1b2ed9a298e385f61ff499c27"
+      },
+      "lgbm_drift_bins255_s42": {
+        "artifacts\\public_auc_optimization\\completed\\lgbm_drift_bins255_s42\\oof_predictions.parquet": "30a1ed08f62b1ef355834cb425541cc3a72aa7a85888ea1cf1a6f208edc5a61b",
+        "artifacts\\public_auc_optimization\\completed\\lgbm_drift_bins255_s42\\test_predictions.parquet": "8f51441ba0da47953f4f78b638520f6bfc7160f400eb04490aabb9b1235dfbd1"
+      },
+      "catboost_gpu_capacity_ensemble": {
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_capacity_ensemble\\oof_predictions.parquet": "cec46f19349dcf9a201756a3a391e12754894b3d40d64fc4e50657626c02cf52",
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_capacity_ensemble\\test_predictions.parquet": "05e79cb75d1724916790aace371b9d1c5237be595ae28b9f1228600ee9bab020"
+      },
+      "catboost_gpu_depth9_s42": {
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_depth9_s42\\oof_predictions.parquet": "0af8cb0b29e09966c54e575671bbc1d8634879174e760dbd969ad134a8961912",
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_depth9_s42\\test_predictions.parquet": "c7b3ed4950aeeff0492cf8d294eb56488520692bfd6202db1a69aba56d60fbfe"
+      },
+      "xgboost": {
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_0.npz": "b1aaf60264fb69e3a07f4d052f3126e47415af8f0ef9e6992872a7227953acbc",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_1.npz": "02cad7e2b87c339481bc295cce4b234fa2845eeeb4cb9768537219b2bc56a586",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_2.npz": "0584f850b71dc68463383a59958c7ebc390880ed76287411879df2424759ac28",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_3.npz": "3cd507e765a4ad24d4befc3a192c2445c31be841721c88fc4ab46326121198cd",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_4.npz": "40da423dc1c8f8e4cf390a708a62634295b5bd422031c0c892e95884fb985055"
+      }
+    }
+  },
+  {
+    "candidate": "existing_rank_drift50_tuned50",
+    "submission": "submissions\\public_auc\\existing_rank_drift50_tuned50_2018eb39bc.csv",
+    "public_auc": null,
+    "blend_method": "rank_average",
+    "overall_rows": 688998,
+    "overall_oof_auc": 0.8192341821178734,
+    "feature_492_upper_tail_rows": 70711,
+    "feature_492_upper_tail_oof_auc": 0.7671024770491062,
+    "feature_1039_observed_rows": 123163,
+    "feature_1039_observed_oof_auc": 0.7841536285897979,
+    "joint_drift_stress_rows": 69582,
+    "joint_drift_stress_oof_auc": 0.7673193641606566,
+    "default_ap": 0.3930964290597044,
+    "test_rank_correlation_to_public_best": 0.9916615374029214,
+    "test_rank_correlation_to_best_observed_submission": 0.9863746513066983,
+    "fold_auc_mean": 0.8192466964314578,
+    "fold_auc_min": 0.8177063253851178,
+    "fold_auc_std": 0.0016900359623341211,
+    "sha256": "2018eb39bc31c05d73ef86c6919293d0764d9e2737d086cafc765dc7c020d383",
+    "weights": {
+      "drift_core": 0.5,
+      "tuned": 0.5
+    },
+    "positive_class": 1,
+    "calibrated_probability": false,
+    "scope": "development OOF; public AUC pending submission",
+    "best_observed_submission_sha256": "01c35718217aaa322852f3f18981a86f6901fe3d4ff6dc9aa282494f79651539",
+    "source_sha256": {
+      "drift_core": {
+        "artifacts\\feature_screening\\drift_core_filter\\oof_predictions.parquet": "9e17572f71020d5d81eb98b68fcd03d7aedf1767e0a15a8edbaa5b9c01f3bc09",
+        "artifacts\\feature_screening\\drift_core_filter\\test_predictions.parquet": "aa96023620eaf0486a544fbd4d567a9204495616536a4ca4ce3dbf518d04ad0d"
+      },
+      "tuned": {
+        "artifacts\\hyperparameter_seed_optimization\\oof_predictions.parquet": "93bf65506ad02ea80531a4c522d7e2b38cadf96c50a617994dc58fa94b827314",
+        "artifacts\\hyperparameter_seed_optimization\\test_predictions.parquet": "1be1b70255946aa9cf3ee3bfac67dd6d8f4a2538ed4ab414f214897997230f1c"
+      }
+    }
+  },
+  {
+    "candidate": "existing_rank_drift50_xgb50",
+    "submission": "submissions\\public_auc\\existing_rank_drift50_xgb50_a8ae2356bf.csv",
+    "public_auc": null,
+    "blend_method": "rank_average",
+    "overall_rows": 688998,
+    "overall_oof_auc": 0.8198524617675342,
+    "feature_492_upper_tail_rows": 70711,
+    "feature_492_upper_tail_oof_auc": 0.7678112066515034,
+    "feature_1039_observed_rows": 123163,
+    "feature_1039_observed_oof_auc": 0.7847121756305749,
+    "joint_drift_stress_rows": 69582,
+    "joint_drift_stress_oof_auc": 0.7679971052931005,
+    "default_ap": 0.3942013815063731,
+    "test_rank_correlation_to_public_best": 0.9907096605771053,
+    "test_rank_correlation_to_best_observed_submission": 0.9939481628768425,
+    "fold_auc_mean": 0.8198600307500037,
+    "fold_auc_min": 0.8175098899868262,
+    "fold_auc_std": 0.0016460666977448693,
+    "sha256": "a8ae2356bf9c7ebf212c1852b1254825e4c12eeefffbc8a13e91ac9e3b42c0a7",
+    "weights": {
+      "drift_core": 0.5,
+      "xgboost": 0.5
+    },
+    "positive_class": 1,
+    "calibrated_probability": false,
+    "scope": "development OOF; public AUC pending submission",
+    "best_observed_submission_sha256": "01c35718217aaa322852f3f18981a86f6901fe3d4ff6dc9aa282494f79651539",
+    "source_sha256": {
+      "drift_core": {
+        "artifacts\\feature_screening\\drift_core_filter\\oof_predictions.parquet": "9e17572f71020d5d81eb98b68fcd03d7aedf1767e0a15a8edbaa5b9c01f3bc09",
+        "artifacts\\feature_screening\\drift_core_filter\\test_predictions.parquet": "aa96023620eaf0486a544fbd4d567a9204495616536a4ca4ce3dbf518d04ad0d"
+      },
+      "xgboost": {
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_0.npz": "b1aaf60264fb69e3a07f4d052f3126e47415af8f0ef9e6992872a7227953acbc",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_1.npz": "02cad7e2b87c339481bc295cce4b234fa2845eeeb4cb9768537219b2bc56a586",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_2.npz": "0584f850b71dc68463383a59958c7ebc390880ed76287411879df2424759ac28",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_3.npz": "3cd507e765a4ad24d4befc3a192c2445c31be841721c88fc4ab46326121198cd",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_4.npz": "40da423dc1c8f8e4cf390a708a62634295b5bd422031c0c892e95884fb985055"
+      }
+    }
+  },
+  {
+    "candidate": "rank_drift_lgbm50_catboost50",
+    "submission": "submissions\\public_auc\\rank_drift_lgbm50_catboost50_5ce944f065.csv",
+    "public_auc": null,
+    "blend_method": "rank_average",
+    "overall_rows": 688998,
+    "overall_oof_auc": 0.8212691516574305,
+    "feature_492_upper_tail_rows": 70711,
+    "feature_492_upper_tail_oof_auc": 0.7693879906094234,
+    "feature_1039_observed_rows": 123163,
+    "feature_1039_observed_oof_auc": 0.7867173000262472,
+    "joint_drift_stress_rows": 69582,
+    "joint_drift_stress_oof_auc": 0.7694511425025743,
+    "default_ap": 0.3978354850580911,
+    "test_rank_correlation_to_public_best": 0.9878786088638372,
+    "test_rank_correlation_to_best_observed_submission": 0.9835129882584999,
+    "fold_auc_mean": 0.821279723046791,
+    "fold_auc_min": 0.8198363735400167,
+    "fold_auc_std": 0.0016374976930571801,
+    "sha256": "5ce944f0652d465b161fec1cbdc57b48c2ed652e52897583164356f1c88c7aa9",
+    "weights": {
+      "lgbm_drift_tuned_ensemble": 0.5,
+      "catboost_gpu_capacity_ensemble": 0.5
+    },
+    "positive_class": 1,
+    "calibrated_probability": false,
+    "scope": "development OOF; public AUC pending submission",
+    "best_observed_submission_sha256": "01c35718217aaa322852f3f18981a86f6901fe3d4ff6dc9aa282494f79651539",
+    "source_sha256": {
+      "lgbm_drift_tuned_ensemble": {
+        "artifacts\\public_auc_optimization\\completed\\lgbm_drift_tuned_ensemble\\oof_predictions.parquet": "47c6d966c379e436faebc010deaa053220bd1e03a35dff5c527ef321c2f427be",
+        "artifacts\\public_auc_optimization\\completed\\lgbm_drift_tuned_ensemble\\test_predictions.parquet": "768d48c5923c02209d952e0a7266f627217c0ef1b2ed9a298e385f61ff499c27"
+      },
+      "catboost_gpu_capacity_ensemble": {
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_capacity_ensemble\\oof_predictions.parquet": "cec46f19349dcf9a201756a3a391e12754894b3d40d64fc4e50657626c02cf52",
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_capacity_ensemble\\test_predictions.parquet": "05e79cb75d1724916790aace371b9d1c5237be595ae28b9f1228600ee9bab020"
+      }
+    }
+  },
+  {
+    "candidate": "rank_lgbm50_xgb50",
+    "submission": "submissions\\public_auc\\rank_lgbm50_xgb50_4bd59d5a90.csv",
+    "public_auc": null,
+    "blend_method": "rank_average",
+    "overall_rows": 688998,
+    "overall_oof_auc": 0.8213098351417423,
+    "feature_492_upper_tail_rows": 70711,
+    "feature_492_upper_tail_oof_auc": 0.7696251216888244,
+    "feature_1039_observed_rows": 123163,
+    "feature_1039_observed_oof_auc": 0.7867409297466998,
+    "joint_drift_stress_rows": 69582,
+    "joint_drift_stress_oof_auc": 0.7697476616514849,
+    "default_ap": 0.3965020624001738,
+    "test_rank_correlation_to_public_best": 0.985292647481903,
+    "test_rank_correlation_to_best_observed_submission": 0.9957943958077868,
+    "fold_auc_mean": 0.8213220733440995,
+    "fold_auc_min": 0.8192212569758128,
+    "fold_auc_std": 0.0016633955284620328,
+    "sha256": "4bd59d5a9032986a835c35c7b570d514d7955b7938b03edb13746ebcb9e95d28",
+    "weights": {
+      "lgbm_drift_tuned_ensemble": 0.5,
+      "xgboost": 0.5
+    },
+    "positive_class": 1,
+    "calibrated_probability": false,
+    "scope": "development OOF; public AUC pending submission",
+    "best_observed_submission_sha256": "01c35718217aaa322852f3f18981a86f6901fe3d4ff6dc9aa282494f79651539",
+    "source_sha256": {
+      "lgbm_drift_tuned_ensemble": {
+        "artifacts\\public_auc_optimization\\completed\\lgbm_drift_tuned_ensemble\\oof_predictions.parquet": "47c6d966c379e436faebc010deaa053220bd1e03a35dff5c527ef321c2f427be",
+        "artifacts\\public_auc_optimization\\completed\\lgbm_drift_tuned_ensemble\\test_predictions.parquet": "768d48c5923c02209d952e0a7266f627217c0ef1b2ed9a298e385f61ff499c27"
+      },
+      "xgboost": {
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_0.npz": "b1aaf60264fb69e3a07f4d052f3126e47415af8f0ef9e6992872a7227953acbc",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_1.npz": "02cad7e2b87c339481bc295cce4b234fa2845eeeb4cb9768537219b2bc56a586",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_2.npz": "0584f850b71dc68463383a59958c7ebc390880ed76287411879df2424759ac28",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_3.npz": "3cd507e765a4ad24d4befc3a192c2445c31be841721c88fc4ab46326121198cd",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_4.npz": "40da423dc1c8f8e4cf390a708a62634295b5bd422031c0c892e95884fb985055"
+      }
+    }
+  },
+  {
+    "candidate": "rank_catboost50_xgb50",
+    "submission": "submissions\\public_auc\\rank_catboost50_xgb50_9af227e33b.csv",
+    "public_auc": null,
+    "blend_method": "rank_average",
+    "overall_rows": 688998,
+    "overall_oof_auc": 0.8218196300834149,
+    "feature_492_upper_tail_rows": 70711,
+    "feature_492_upper_tail_oof_auc": 0.7704653108530012,
+    "feature_1039_observed_rows": 123163,
+    "feature_1039_observed_oof_auc": 0.7873719787809015,
+    "joint_drift_stress_rows": 69582,
+    "joint_drift_stress_oof_auc": 0.7705761882117255,
+    "default_ap": 0.39894537401154795,
+    "test_rank_correlation_to_public_best": 0.9767281242152517,
+    "test_rank_correlation_to_best_observed_submission": 0.9967802540191248,
+    "fold_auc_mean": 0.8218269712727952,
+    "fold_auc_min": 0.8196595167573972,
+    "fold_auc_std": 0.0017009676431295243,
+    "sha256": "9af227e33be15786dd5c410edddd1a91cdd45bb35aefdf2bfb1af0eb1ec5c533",
+    "weights": {
+      "catboost_gpu_capacity_ensemble": 0.5,
+      "xgboost": 0.5
+    },
+    "positive_class": 1,
+    "calibrated_probability": false,
+    "scope": "development OOF; public AUC pending submission",
+    "best_observed_submission_sha256": "01c35718217aaa322852f3f18981a86f6901fe3d4ff6dc9aa282494f79651539",
+    "source_sha256": {
+      "catboost_gpu_capacity_ensemble": {
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_capacity_ensemble\\oof_predictions.parquet": "cec46f19349dcf9a201756a3a391e12754894b3d40d64fc4e50657626c02cf52",
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_capacity_ensemble\\test_predictions.parquet": "05e79cb75d1724916790aace371b9d1c5237be595ae28b9f1228600ee9bab020"
+      },
+      "xgboost": {
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_0.npz": "b1aaf60264fb69e3a07f4d052f3126e47415af8f0ef9e6992872a7227953acbc",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_1.npz": "02cad7e2b87c339481bc295cce4b234fa2845eeeb4cb9768537219b2bc56a586",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_2.npz": "0584f850b71dc68463383a59958c7ebc390880ed76287411879df2424759ac28",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_3.npz": "3cd507e765a4ad24d4befc3a192c2445c31be841721c88fc4ab46326121198cd",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_4.npz": "40da423dc1c8f8e4cf390a708a62634295b5bd422031c0c892e95884fb985055"
+      }
+    }
+  },
+  {
+    "candidate": "rank_catboost_diverse50_xgb50",
+    "submission": "submissions\\public_auc\\rank_catboost_diverse50_xgb50_45ad60ebac.csv",
+    "public_auc": 0.74042,
+    "blend_method": "rank_average",
+    "overall_rows": 688998,
+    "overall_oof_auc": 0.8220586101930268,
+    "feature_492_upper_tail_rows": 70711,
+    "feature_492_upper_tail_oof_auc": 0.7710046918670492,
+    "feature_1039_observed_rows": 123163,
+    "feature_1039_observed_oof_auc": 0.7878470517476488,
+    "joint_drift_stress_rows": 69582,
+    "joint_drift_stress_oof_auc": 0.7711308337780618,
+    "default_ap": 0.3994020739077327,
+    "test_rank_correlation_to_public_best": 0.9765276892557174,
+    "test_rank_correlation_to_best_observed_submission": 0.9969843754345148,
+    "fold_auc_mean": 0.8220678251681124,
+    "fold_auc_min": 0.8200324731118137,
+    "fold_auc_std": 0.0016126770807007448,
+    "sha256": "45ad60ebac95ce6ef919a99206a3d298b5f2280ecac796c152c3f920a2e83b79",
+    "weights": {
+      "catboost_gpu_capacity_ensemble": 0.375,
+      "catboost_gpu_depth9_s42": 0.125,
+      "xgboost": 0.5
+    },
+    "positive_class": 1,
+    "calibrated_probability": false,
+    "scope": "development OOF; public AUC observed for this exact hash",
+    "best_observed_submission_sha256": "01c35718217aaa322852f3f18981a86f6901fe3d4ff6dc9aa282494f79651539",
+    "source_sha256": {
+      "catboost_gpu_capacity_ensemble": {
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_capacity_ensemble\\oof_predictions.parquet": "cec46f19349dcf9a201756a3a391e12754894b3d40d64fc4e50657626c02cf52",
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_capacity_ensemble\\test_predictions.parquet": "05e79cb75d1724916790aace371b9d1c5237be595ae28b9f1228600ee9bab020"
+      },
+      "catboost_gpu_depth9_s42": {
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_depth9_s42\\oof_predictions.parquet": "0af8cb0b29e09966c54e575671bbc1d8634879174e760dbd969ad134a8961912",
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_depth9_s42\\test_predictions.parquet": "c7b3ed4950aeeff0492cf8d294eb56488520692bfd6202db1a69aba56d60fbfe"
+      },
+      "xgboost": {
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_0.npz": "b1aaf60264fb69e3a07f4d052f3126e47415af8f0ef9e6992872a7227953acbc",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_1.npz": "02cad7e2b87c339481bc295cce4b234fa2845eeeb4cb9768537219b2bc56a586",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_2.npz": "0584f850b71dc68463383a59958c7ebc390880ed76287411879df2424759ac28",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_3.npz": "3cd507e765a4ad24d4befc3a192c2445c31be841721c88fc4ab46326121198cd",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_4.npz": "40da423dc1c8f8e4cf390a708a62634295b5bd422031c0c892e95884fb985055"
+      }
+    }
+  },
+  {
+    "candidate": "rank_catboost_diverse50_xgb_mix50",
+    "submission": "submissions\\public_auc\\rank_catboost_diverse50_xgb_mix50_c3e98956e7.csv",
+    "public_auc": 0.7397,
+    "blend_method": "rank_average",
+    "overall_rows": 688998,
+    "overall_oof_auc": 0.8224450674695162,
+    "feature_492_upper_tail_rows": 70711,
+    "feature_492_upper_tail_oof_auc": 0.7712484686537823,
+    "feature_1039_observed_rows": 123163,
+    "feature_1039_observed_oof_auc": 0.7881677669238237,
+    "joint_drift_stress_rows": 69582,
+    "joint_drift_stress_oof_auc": 0.7713967591116786,
+    "default_ap": 0.3996625471310598,
+    "test_rank_correlation_to_public_best": 0.9807323324666741,
+    "test_rank_correlation_to_best_observed_submission": 0.9925689153710026,
+    "fold_auc_mean": 0.8224561081110979,
+    "fold_auc_min": 0.8204294224418709,
+    "fold_auc_std": 0.0015439249335989428,
+    "sha256": "c3e98956e727ca8e0e04632a51e27e5dbb0e5234c961a5da93e06d005b6fc1c3",
+    "weights": {
+      "catboost_gpu_capacity_ensemble": 0.375,
+      "catboost_gpu_depth9_s42": 0.125,
+      "xgboost": 0.25,
+      "xgboost_drift_fast_s42": 0.25
+    },
+    "positive_class": 1,
+    "calibrated_probability": false,
+    "scope": "development OOF; public AUC observed for this exact hash",
+    "best_observed_submission_sha256": "01c35718217aaa322852f3f18981a86f6901fe3d4ff6dc9aa282494f79651539",
+    "source_sha256": {
+      "catboost_gpu_capacity_ensemble": {
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_capacity_ensemble\\oof_predictions.parquet": "cec46f19349dcf9a201756a3a391e12754894b3d40d64fc4e50657626c02cf52",
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_capacity_ensemble\\test_predictions.parquet": "05e79cb75d1724916790aace371b9d1c5237be595ae28b9f1228600ee9bab020"
+      },
+      "catboost_gpu_depth9_s42": {
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_depth9_s42\\oof_predictions.parquet": "0af8cb0b29e09966c54e575671bbc1d8634879174e760dbd969ad134a8961912",
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_depth9_s42\\test_predictions.parquet": "c7b3ed4950aeeff0492cf8d294eb56488520692bfd6202db1a69aba56d60fbfe"
+      },
+      "xgboost": {
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_0.npz": "b1aaf60264fb69e3a07f4d052f3126e47415af8f0ef9e6992872a7227953acbc",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_1.npz": "02cad7e2b87c339481bc295cce4b234fa2845eeeb4cb9768537219b2bc56a586",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_2.npz": "0584f850b71dc68463383a59958c7ebc390880ed76287411879df2424759ac28",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_3.npz": "3cd507e765a4ad24d4befc3a192c2445c31be841721c88fc4ab46326121198cd",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_4.npz": "40da423dc1c8f8e4cf390a708a62634295b5bd422031c0c892e95884fb985055"
+      },
+      "xgboost_drift_fast_s42": {
+        "artifacts\\public_auc_optimization\\completed\\xgboost_drift_fast_s42\\oof_predictions.parquet": "6a4a77084e2ffc5401cc6619d74437d793b1548269353cffa351ef30c36929e2",
+        "artifacts\\public_auc_optimization\\completed\\xgboost_drift_fast_s42\\test_predictions.parquet": "60bf80c36fa16e8dd16db078a70c07fd0305be0202045e1dc2db48fb2655380d"
+      }
+    }
+  },
+  {
+    "candidate": "rank_lgbm50_catboost30_xgb20",
+    "submission": "submissions\\public_auc\\rank_lgbm50_catboost30_xgb20_4d3ab970a6.csv",
+    "public_auc": null,
+    "blend_method": "rank_average",
+    "overall_rows": 688998,
+    "overall_oof_auc": 0.8217983916261016,
+    "feature_492_upper_tail_rows": 70711,
+    "feature_492_upper_tail_oof_auc": 0.7702131870764776,
+    "feature_1039_observed_rows": 123163,
+    "feature_1039_observed_oof_auc": 0.7873876127901263,
+    "joint_drift_stress_rows": 69582,
+    "joint_drift_stress_oof_auc": 0.7702969587742231,
+    "default_ap": 0.3981912031674867,
+    "test_rank_correlation_to_public_best": 0.989473495387362,
+    "test_rank_correlation_to_best_observed_submission": 0.9910537272829425,
+    "fold_auc_mean": 0.8218098878724194,
+    "fold_auc_min": 0.8200928336143152,
+    "fold_auc_std": 0.0016440328314037333,
+    "sha256": "4d3ab970a6920b9fa84190ef3fa4b0b9fe626d6eb242d40c00da8edd1446eb55",
+    "weights": {
+      "lgbm_drift_tuned_ensemble": 0.5,
+      "catboost_gpu_capacity_ensemble": 0.3,
+      "xgboost": 0.2
+    },
+    "positive_class": 1,
+    "calibrated_probability": false,
+    "scope": "development OOF; public AUC pending submission",
+    "best_observed_submission_sha256": "01c35718217aaa322852f3f18981a86f6901fe3d4ff6dc9aa282494f79651539",
+    "source_sha256": {
+      "lgbm_drift_tuned_ensemble": {
+        "artifacts\\public_auc_optimization\\completed\\lgbm_drift_tuned_ensemble\\oof_predictions.parquet": "47c6d966c379e436faebc010deaa053220bd1e03a35dff5c527ef321c2f427be",
+        "artifacts\\public_auc_optimization\\completed\\lgbm_drift_tuned_ensemble\\test_predictions.parquet": "768d48c5923c02209d952e0a7266f627217c0ef1b2ed9a298e385f61ff499c27"
+      },
+      "catboost_gpu_capacity_ensemble": {
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_capacity_ensemble\\oof_predictions.parquet": "cec46f19349dcf9a201756a3a391e12754894b3d40d64fc4e50657626c02cf52",
+        "artifacts\\public_auc_optimization\\completed\\catboost_gpu_capacity_ensemble\\test_predictions.parquet": "05e79cb75d1724916790aace371b9d1c5237be595ae28b9f1228600ee9bab020"
+      },
+      "xgboost": {
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_0.npz": "b1aaf60264fb69e3a07f4d052f3126e47415af8f0ef9e6992872a7227953acbc",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_1.npz": "02cad7e2b87c339481bc295cce4b234fa2845eeeb4cb9768537219b2bc56a586",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_2.npz": "0584f850b71dc68463383a59958c7ebc390880ed76287411879df2424759ac28",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_3.npz": "3cd507e765a4ad24d4befc3a192c2445c31be841721c88fc4ab46326121198cd",
+        "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_4.npz": "40da423dc1c8f8e4cf390a708a62634295b5bd422031c0c892e95884fb985055"
+      }
+    }
+  }
+]

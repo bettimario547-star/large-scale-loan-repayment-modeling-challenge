@@ -1,0 +1,8 @@
+{
+  "minutes_budget": 54.0,
+  "threads": 8,
+  "complete_candidate": true,
+  "failures": [],
+  "stopped_at_deadline": [],
+  "log_directory": "D:\\large-scale-loan-repayment-modeling-challenge\\logs\\xgboost_drift_fast\\1792924159828341600"
+}

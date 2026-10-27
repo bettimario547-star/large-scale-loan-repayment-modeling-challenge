@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "candidate": "blend_catboost_diverse50_xgb50",
+  "submission": "D:\\large-scale-loan-repayment-modeling-challenge\\submissions\\public_auc\\blend_catboost_diverse50_xgb50_8a04935d6a.csv",
+  "sha256": "8a04935d6a98d96f21a04709c7d493cfb70f66155301d459ae4e3595f18e5617",
+  "rows": 36324,
+  "overall_oof_auc": 0.8220822895416158,
+  "scope": "complete CSV and source hashes; independent reconstruction of all test scores and full OOF AUC"
+}

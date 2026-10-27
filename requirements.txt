@@ -28,3 +28,12 @@ streamlit>=1.41
 joblib>=1.4
 psutil>=6.1
 pyyaml>=6.0
+
+# Local Power BI project validation and artifact previews
+jsonschema>=4.23
+referencing>=0.36
+Pillow>=11.0
+
+# Optional one-page closeout PDF regeneration
+reportlab>=4.4
+pypdf>=5.0

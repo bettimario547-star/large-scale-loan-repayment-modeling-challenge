@@ -1,0 +1,14 @@
+{
+  "minutes_budget": 95.0,
+  "threads": 2,
+  "requested_seeds": [
+    2026,
+    3407
+  ],
+  "elapsed_seconds": 2835.6292012000013,
+  "complete_seeds": [
+    42,
+    2026,
+    3407
+  ]
+}

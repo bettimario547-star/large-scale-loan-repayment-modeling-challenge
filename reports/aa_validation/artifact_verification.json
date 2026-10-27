@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "rows": 210856,
+  "champion_same_scores_decisions_and_cashflows_verified": true,
+  "frozen_eligibility_and_stable_hash_allocation_verified": true,
+  "sql_metrics_match_itt_rows": true,
+  "simultaneous_mc_intervals_and_predeclared_acceptance_verified": true,
+  "deep_hash_and_calibration_reproduction": true,
+  "negative_controls_detected": true,
+  "csv_and_parquet_verified": true,
+  "frozen_checksums_verified": true,
+  "champion_retained": true,
+  "challenger_promoted": false,
+  "live_experiment_completed": false
+}

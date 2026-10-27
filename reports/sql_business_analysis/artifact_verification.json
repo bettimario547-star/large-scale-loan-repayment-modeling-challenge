@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "prediction_rows": 1450644,
+  "model_count": 2,
+  "sql_metrics_match_sklearn": true,
+  "risk_bands_match_numpy_and_preserve_ties": true,
+  "test_uses_train_oof_boundaries": true,
+  "test_realized_metrics_are_null": true,
+  "threshold_counts_rates_and_zero_approval_handling_verified": true,
+  "paired_comparisons_and_score_psi_verified": true,
+  "frozen_input_and_output_checksums_verified": true,
+  "dataset_scoped_keys_verified": true,
+  "current_model_files_checked": 20,
+  "historical_records_unchanged": true,
+  "quality_tables_reused_and_verified": true,
+  "csv_exports_verified": true,
+  "verification_scope": "current model hashes, checkpoint reconstruction and ID/label/fold alignment; historical native reload audit retained"
+}

@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1100" viewBox="0 0 1600 1100" role="img" aria-labelledby="title desc">
+<title id="title">Loan risk project architecture</title>
+<desc id="desc">Historical modeling, frozen SQL and offline experiments, retained Champion, and a separate proposed live implementation path.</desc>
+<rect width="1600" height="1100" fill="#ffffff"/>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#65798a"/></marker></defs>
+<text x="56" y="35" dominant-baseline="hanging" font-family="Arial, sans-serif" font-size="38" font-weight="700" fill="#183149">Loan repayment modeling &amp; experiment decisions</text>
+<text x="56" y="89" dominant-baseline="hanging" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#183149">Local batch pipeline | Frozen historical evidence | No live trial or production promotion</text>
+<rect x="56" y="132" width="24" height="24" rx="10" fill="#edf4fb" stroke="#35668f" stroke-width="2"/>
+<text x="92" y="133" dominant-baseline="hanging" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#183149">Historical analysis</text>
+<rect x="386" y="132" width="24" height="24" rx="10" fill="#fff5e4" stroke="#a77428" stroke-width="2"/>
+<text x="422" y="133" dominant-baseline="hanging" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#183149">Offline simulation</text>
+<rect x="716" y="132" width="24" height="24" rx="10" fill="#eaf5ef" stroke="#397454" stroke-width="2"/>
+<text x="752" y="133" dominant-baseline="hanging" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#183149">Portfolio decision</text>
+<rect x="1046" y="132" width="24" height="24" rx="10" fill="#f3f5f6" stroke="#7a838c" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="1082" y="133" dominant-baseline="hanging" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#183149">Proposed live work</text>
+<text x="56" y="177" dominant-baseline="hanging" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#183149">01  DATA, VALIDATION &amp; FROZEN MODELS</text>
+<rect x="56" y="214" width="348" height="180" rx="10" fill="#edf4fb" stroke="#35668f" stroke-width="2"/>
+<text x="76" y="234" dominant-baseline="hanging" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#183149">Kaggle data</text>
+<text x="76" y="279" dominant-baseline="hanging" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#183149">688,998 train / 36,324 test</text>
+<text x="76" y="307" dominant-baseline="hanging" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#183149">1,105 anonymous numeric features</text>
+<text x="76" y="335" dominant-baseline="hanging" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#183149">1 = repayment; 0 = default</text>
+<text x="76" y="363" dominant-baseline="hanging" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#183149">id is a join/submission key</text>
+<rect x="436" y="214" width="348" height="180" rx="10" fill="#edf4fb" stroke="#35668f" stroke-width="2"/>
+<text x="456" y="234" dominant-baseline="hanging" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#183149">DuckDB + Parquet</text>
+<text x="456" y="279" dominant-baseline="hanging" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#183149">SQL quality / EDA / shift checks</text>
+<text x="456" y="307" dominant-baseline="hanging" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#183149">Fixed 5-fold split; seed 42</text>
+<text x="456" y="335" dominant-baseline="hanging" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#183149">Inner early stopping</text>
+<text x="456" y="363" dominant-baseline="hanging" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#183149">Row order not verified as time</text>
+<rect x="816" y="214" width="348" height="180" rx="10" fill="#edf4fb" stroke="#35668f" stroke-width="2"/>
+<text x="836" y="234" dominant-baseline="hanging" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#183149">Frozen business models</text>
+<text x="836" y="279" dominant-baseline="hanging" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#183149">A: LightGBM, 5 refit models</text>
+<text x="836" y="307" dominant-baseline="hanging" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#183149">B: 5 folds x 3 seeds, 15 models</text>
+<text x="836" y="335" dominant-baseline="hanging" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#183149">Reused development OOF</text>
+<text x="836" y="363" dominant-baseline="hanging" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#183149">Raw float32 / NaN; uncalibrated</text>
+<rect x="1196" y="214" width="348" height="180" rx="10" fill="#edf4fb" stroke="#35668f" stroke-width="2"/>
+<text x="1216" y="234" dominant-baseline="hanging" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#183149">Prediction freeze</text>
+<text x="1216" y="279" dominant-baseline="hanging" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#183149">SHA-256 input / model records</text>
+<text x="1216" y="307" dominant-baseline="hanging" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#183149">(dataset, id, model_version)</text>
+<text x="1216" y="335" dominant-baseline="hanging" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#183149">Business reuses fixed predictions</text>
+<text x="1216" y="363" dominant-baseline="hanging" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#183149">No retraining in downstream work</text>
+<polyline points="406,304 432,304" fill="none" stroke="#65798a" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline points="786,304 812,304" fill="none" stroke="#65798a" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline points="1166,304 1192,304" fill="none" stroke="#65798a" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline points="1370,394 1370,425 36,425 36,584 56,584" fill="none" stroke="#65798a" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="56" y="449" dominant-baseline="hanging" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#183149">02  SQL, POLICY ECONOMICS &amp; OFFLINE EXPERIMENT VALIDATION</text>
+<rect x="56" y="492" width="348" height="185" rx="10" fill="#edf4fb" stroke="#35668f" stroke-width="2"/>
+<text x="76" y="512" dominant-baseline="hanging" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#183149">SQL risk analysis</text>
+<text x="76" y="557" dominant-baseline="hanging" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#183149">Tie-aware ROC-AUC / AP / KS</text>
+<text x="76" y="585" dominant-baseline="hanging" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#183149">Risk bands / approval / drift</text>
+<text x="76" y="613" dominant-baseline="hanging" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#183149">Full cohort + model identity</text>
+<text x="76" y="641" dominant-baseline="hanging" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#183149">Unknown test outcomes stay NULL</text>
+<rect x="436" y="492" width="348" height="185" rx="10" fill="#fff5e4" stroke="#a77428" stroke-width="2"/>
+<text x="456" y="512" dominant-baseline="hanging" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#183149">Approval simulation</text>
+<text x="456" y="557" dominant-baseline="hanging" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#183149">413,398 dev / 275,600 evaluation</text>
+<text x="456" y="585" dominant-baseline="hanging" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#183149">Frozen thresholds / cash flows</text>
+<text x="456" y="613" dominant-baseline="hanging" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#183149">Full-application profit + risk</text>
+<text x="456" y="641" dominant-baseline="hanging" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#183149">Historical labels; assumed costs</text>
+<rect x="816" y="492" width="348" height="185" rx="10" fill="#fff5e4" stroke="#a77428" stroke-width="2"/>
+<text x="836" y="512" dominant-baseline="hanging" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#183149">Original A/B -&gt; strict A/A</text>
+<text x="836" y="557" dominant-baseline="hanging" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#183149">Common eligibility / hash / SRM</text>
+<text x="836" y="585" dominant-baseline="hanging" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#183149">Same Champion in both arms</text>
+<text x="836" y="613" dominant-baseline="hanging" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#183149">Calibration + fault injection</text>
+<text x="836" y="641" dominant-baseline="hanging" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#183149">6 stress checks uncertified</text>
+<rect x="1196" y="492" width="348" height="185" rx="10" fill="#fff5e4" stroke="#a77428" stroke-width="2"/>
+<text x="1216" y="512" dominant-baseline="hanging" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#183149">V2 feasible A/B</text>
+<text x="1216" y="557" dominant-baseline="hanging" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#183149">Disagreements only; 1:1 arms</text>
+<text x="1216" y="585" dominant-baseline="hanging" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#183149">3 strata -&gt; full-eligible ITT</text>
+<text x="1216" y="613" dominant-baseline="hanging" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#183149">12,614 / 17,141 planned sample</text>
+<text x="1216" y="641" dominant-baseline="hanging" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#183149">20 matched calibration checks</text>
+<polyline points="406,584 432,584" fill="none" stroke="#65798a" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline points="786,584 812,584" fill="none" stroke="#65798a" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline points="1166,584 1192,584" fill="none" stroke="#65798a" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline points="1370,677 1370,716 570,716 570,776" fill="none" stroke="#65798a" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="56" y="740" dominant-baseline="hanging" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#183149">03  DECISION &amp; DELIVERY</text>
+<rect x="56" y="776" width="1060" height="220" rx="10" fill="#eaf5ef" stroke="#397454" stroke-width="2"/>
+<text x="76" y="796" dominant-baseline="hanging" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#183149">Retain Champion; do not promote Challenger</text>
+<text x="76" y="841" dominant-baseline="hanging" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#183149">V2 simulated profit/application: +CNY 3.672; 95% CI [0.119, 7.226]</text>
+<text x="76" y="869" dominant-baseline="hanging" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#183149">Business gate: lower bound &gt;CNY 5; fixed sample + quality + mature outcomes required</text>
+<text x="76" y="897" dominant-baseline="hanging" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#183149">Assumed enrollment 289 days; final analysis 684 days (not measured business traffic)</text>
+<text x="76" y="925" dominant-baseline="hanging" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#183149">Bilingual README / model &amp; experiment cards / one-page memo / 6-page Power BI</text>
+<text x="76" y="953" dominant-baseline="hanging" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#183149">Unified CLI: source review -&gt; read-only audit -&gt; staged rebuild in a clean work copy</text>
+<rect x="1160" y="776" width="384" height="220" rx="10" fill="#f3f5f6" stroke="#7a838c" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="1180" y="796" dominant-baseline="hanging" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#183149">Future live implementation</text>
+<text x="1180" y="841" dominant-baseline="hanging" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#183149">borrower_id / safety / execution</text>
+<text x="1180" y="869" dominant-baseline="hanging" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#183149">Actual cash flows / mature DPD</text>
+<text x="1180" y="897" dominant-baseline="hanging" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#183149">Shadow -&gt; pilot -&gt; locked main</text>
+<text x="1180" y="925" dominant-baseline="hanging" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#183149">All promotion gates required</text>
+<text x="1180" y="953" dominant-baseline="hanging" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#183149">NOT IMPLEMENTED</text>
+<polyline points="1116,886 1160,886" fill="none" stroke="#65798a" stroke-width="2" marker-end="url(#arrow)" stroke-dasharray="7 5"/>
+<text x="56" y="1030" dominant-baseline="hanging" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#183149">V2 weights use the full common-eligible cohort. Agreement effects are zero only with identical terms and cash flows.</text>
+<text x="56" y="1060" dominant-baseline="hanging" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#183149">Historical OOF and simulated profit do not establish real-world causal gain. Source: model card and experiment card, 2026-10-25.</text>
+</svg>

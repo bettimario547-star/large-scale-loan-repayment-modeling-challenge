@@ -1,0 +1,13 @@
+{
+  "render_source": "Pillow + matplotlib, PBIR coordinates and audited aggregates",
+  "is_powerbi_screenshot": false,
+  "dax_executed": false,
+  "pages": [
+    "decision",
+    "models",
+    "policy",
+    "aa",
+    "feasibility",
+    "value"
+  ]
+}

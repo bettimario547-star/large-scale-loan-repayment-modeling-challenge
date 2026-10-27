@@ -1,0 +1,92 @@
+{
+  "status": "completed",
+  "scope": "offline_feasibility_redesign_and_simulation_only",
+  "protocol": {
+    "required_randomized_disagreements": 17141,
+    "profit_required": 17141,
+    "default_ni_required": 1266,
+    "minimum_cell_required": 6252,
+    "selected_disagreement_exposure": 1.0,
+    "planning_coefficient": 43677.485410404486,
+    "planning_safe_coefficient": 54596.856763005606,
+    "planning_disagreement_fraction": 0.05943259539521553,
+    "planning_true_gain": 10.0,
+    "business_boundary": 5.0,
+    "precision_gap": 5.0,
+    "primary_traffic_enrollment_feasible": true,
+    "planning_weights": [
+      {
+        "stratum": "S1_A_approves_B_rejects",
+        "weight": 0.027908359853973035,
+        "n": 8822
+      },
+      {
+        "stratum": "S1_A_rejects_B_approves",
+        "weight": 0.029622974571820844,
+        "n": 9364
+      },
+      {
+        "stratum": "S2_A_approves_B_rejects",
+        "weight": 0.0019012609694216496,
+        "n": 601
+      }
+    ],
+    "minimum_expected_cell_per_arm": 274.1720604673444,
+    "planning_approval_ni_feasible": true,
+    "estimand": "full_common_eligible_cohort_mean_profit_B_minus_A",
+    "standardization": "contemporaneous_full_cohort_pre_treatment_stratum_counts; agreement_effect_exactly_zero_only_under_identity_contract",
+    "decision": "retain_champion_until_business_lower_bound_guardrails_fixed_sample_maturity_and_quality_all_pass",
+    "external_preregistration": false,
+    "reused_development_oof": true,
+    "production_rollout_ready": false,
+    "selected_policies": [
+      {
+        "prospective_arm": "A",
+        "model_role": "champion",
+        "model_version": "lightgbm_baseline",
+        "target_approval_rate": 0.7,
+        "threshold": 0.9247938423619432,
+        "decision_rule": "score_threshold"
+      },
+      {
+        "prospective_arm": "B",
+        "model_role": "challenger",
+        "model_version": "lightgbm_tuned_seed_ensemble",
+        "target_approval_rate": 0.7,
+        "threshold": 0.9256811726550405,
+        "decision_rule": "score_threshold"
+      }
+    ]
+  },
+  "replay": {
+    "delta": 3.6724026857895886,
+    "se": 1.812509261037603,
+    "df": 6208.5603359388815,
+    "ci_low": 0.11925712572745484,
+    "ci_high": 7.225548245851723,
+    "p": 0.0427928223787743,
+    "default_delta": -0.0004302071291569941,
+    "default_upper": -4.407094727884093e-05,
+    "approval_delta": -0.0004078612892211009,
+    "business_threshold": 5.0,
+    "business_value_demonstrated_in_simulation": false,
+    "positive_zero_ci_in_simulation": true,
+    "default_ni_passed": true,
+    "approval_ni_passed": true,
+    "full_portfolio_approved_default_upper": 0.032222011362615294,
+    "absolute_risk_passed": true,
+    "minimum_cell_sample_reached": true
+  },
+  "matched_aa_and_boundary_calibration_passed": true,
+  "quality_passed": true,
+  "all_risk_guards_passed_in_simulation": true,
+  "required_fixed_sample_reached": false,
+  "live_outcome_maturity_validated": false,
+  "champion_retained": true,
+  "challenger_promoted": false,
+  "live_experiment_completed": false,
+  "production_rollout_ready": false,
+  "traffic_assumptions_unchanged_except_disagreement_exposure": true,
+  "primary_assumed_enrollment_days": 289,
+  "primary_assumed_final_analysis_days": 684
+}

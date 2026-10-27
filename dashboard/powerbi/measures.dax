@@ -1,0 +1,171 @@
+-- Table: ModelMetrics
+还款 ROC-AUC =
+MAX(ModelMetrics[ROCAUC])
+
+-- Table: ModelMetrics
+违约 PR-AUC =
+MAX(ModelMetrics[DefaultPRAUC])
+
+-- Table: ModelMetrics
+历史 KS =
+MAX(ModelMetrics[KS])
+
+-- Table: ModelMetrics
+历史样本数 =
+MAX(ModelMetrics[Rows])
+
+-- Table: RiskBands
+训练历史分箱坏账率 =
+CALCULATE(DIVIDE(SUM(RiskBands[DefaultRows]), SUM(RiskBands[LabeledRows])), RiskBands[Dataset] = "train")
+
+-- Table: RiskBands
+测试分箱人群占比 =
+CALCULATE(DIVIDE(SUM(RiskBands[Rows]), CALCULATE(SUM(RiskBands[Rows]), REMOVEFILTERS(RiskBands[RiskDecile]))), RiskBands[Dataset] = "test")
+
+-- Table: ScoreDrift
+分数 PSI =
+MAX(ScoreDrift[ScorePSI])
+
+-- Table: PolicyCurves
+评价模拟净收益 =
+VAR Chosen = SELECTEDVALUE(Scenarios[ScenarioId], "base") RETURN CALCULATE(MAX(PolicyCurves[HistoricalSimulatedProfitPerApplication]), REMOVEFILTERS(Scenarios), PolicyCurves[ScenarioId] = Chosen, PolicyCurves[Cohort] = "policy_evaluation")
+
+-- Table: PolicyCurves
+评价审批率 =
+VAR Chosen = SELECTEDVALUE(Scenarios[ScenarioId], "base") RETURN CALCULATE(MAX(PolicyCurves[ApprovalRate]), REMOVEFILTERS(Scenarios), PolicyCurves[ScenarioId] = Chosen, PolicyCurves[Cohort] = "policy_evaluation")
+
+-- Table: PolicyCurves
+评价获批历史坏账率 =
+VAR Chosen = SELECTEDVALUE(Scenarios[ScenarioId], "base") RETURN CALCULATE(MAX(PolicyCurves[HistoricalApprovedDefaultRate]), REMOVEFILTERS(Scenarios), PolicyCurves[ScenarioId] = Chosen, PolicyCurves[Cohort] = "policy_evaluation")
+
+-- Table: SelectedPolicies
+选中策略模拟收益 =
+VAR Chosen = SELECTEDVALUE(Scenarios[ScenarioId], "base") RETURN CALCULATE(MAX(SelectedPolicies[HistoricalSimulatedProfitPerApplication]), REMOVEFILTERS(Scenarios), SelectedPolicies[ScenarioId] = Chosen)
+
+-- Table: SelectedPolicies
+选中策略审批率 =
+VAR Chosen = SELECTEDVALUE(Scenarios[ScenarioId], "base") RETURN CALCULATE(MAX(SelectedPolicies[ApprovalRate]), REMOVEFILTERS(Scenarios), SelectedPolicies[ScenarioId] = Chosen)
+
+-- Table: SelectedPolicies
+选中策略历史坏账率 =
+VAR Chosen = SELECTEDVALUE(Scenarios[ScenarioId], "base") RETURN CALCULATE(MAX(SelectedPolicies[HistoricalApprovedDefaultRate]), REMOVEFILTERS(Scenarios), SelectedPolicies[ScenarioId] = Chosen)
+
+-- Table: EconomicAssumptions
+假设本金 =
+VAR Chosen = SELECTEDVALUE(Scenarios[ScenarioId], "base") RETURN CALCULATE(MAX(EconomicAssumptions[Principal]), REMOVEFILTERS(Scenarios), EconomicAssumptions[ScenarioId] = Chosen)
+
+-- Table: EconomicAssumptions
+假设利息率 =
+VAR Chosen = SELECTEDVALUE(Scenarios[ScenarioId], "base") RETURN CALCULATE(MAX(EconomicAssumptions[InterestRate]), REMOVEFILTERS(Scenarios), EconomicAssumptions[ScenarioId] = Chosen)
+
+-- Table: EconomicAssumptions
+假设违约损失率 =
+VAR Chosen = SELECTEDVALUE(Scenarios[ScenarioId], "base") RETURN CALCULATE(MAX(EconomicAssumptions[LossGivenDefault]), REMOVEFILTERS(Scenarios), EconomicAssumptions[ScenarioId] = Chosen)
+
+-- Table: EconomicAssumptions
+当前经济假设 =
+SELECTEDVALUE(Scenarios[Scenario], "基准假设（默认）")
+
+-- Table: Calibration
+收益零差误报率 =
+VAR A = SELECTEDVALUE(AlphaLevels[Alpha], 0.05) RETURN CALCULATE(MAX(Calibration[FalsePositiveRate]), Calibration[Alpha] = A, Calibration[Endpoint] = "收益零差")
+
+-- Table: Calibration
+违约零差误报率 =
+VAR A = SELECTEDVALUE(AlphaLevels[Alpha], 0.05) RETURN CALCULATE(MAX(Calibration[FalsePositiveRate]), Calibration[Alpha] = A, Calibration[Endpoint] = "违约零差")
+
+-- Table: Peeking
+固定查看双侧误报 =
+MAX(Peeking[FixedLookFPR])
+
+-- Table: Peeking
+任一次查看双侧误报 =
+MAX(Peeking[AnyLookFPR])
+
+-- Table: DesignComparison
+冻结方案入组天数 =
+MAX(DesignComparison[EnrollmentDays])
+
+-- Table: ABSimulations
+业务门槛成功频率 =
+MAX(ABSimulations[BusinessSuccessRate])
+
+-- Table: ABSimulations
+零差正向显著频率 =
+MAX(ABSimulations[PositiveZeroRate])
+
+-- Table: ABSimulations
+联合成功频率 =
+MAX(ABSimulations[JointSuccessRate])
+
+-- Table: DashboardState
+冻结收益差 =
+CALCULATE(MAX(DashboardState[ProfitDelta]), REMOVEFILTERS())
+
+-- Table: DashboardState
+冻结收益下界 =
+CALCULATE(MAX(DashboardState[ProfitLow]), REMOVEFILTERS())
+
+-- Table: DashboardState
+冻结收益上界 =
+CALCULATE(MAX(DashboardState[ProfitHigh]), REMOVEFILTERS())
+
+-- Table: DashboardState
+业务收益门槛 =
+CALCULATE(MAX(DashboardState[BusinessThreshold]), REMOVEFILTERS())
+
+-- Table: DashboardState
+冻结分歧样本 =
+CALCULATE(MAX(DashboardState[CurrentSamples]), REMOVEFILTERS())
+
+-- Table: DashboardState
+所需分歧样本 =
+CALCULATE(MAX(DashboardState[RequiredSamples]), REMOVEFILTERS())
+
+-- Table: DashboardState
+完整B模拟风险上界 =
+CALCULATE(MAX(DashboardState[BApprovedRiskUpper]), REMOVEFILTERS())
+
+-- Table: DashboardState
+冻结95%收益区间 =
+IF(OR(ISBLANK([冻结收益下界]), ISBLANK([冻结收益上界])), BLANK(), FORMAT([冻结收益下界], "0.000") & " ~ " & FORMAT([冻结收益上界], "0.000"))
+
+-- Table: DashboardState
+样本完成情况 =
+IF(OR(ISBLANK([冻结分歧样本]), ISBLANK([所需分歧样本])), BLANK(), FORMAT([冻结分歧样本], "#,0") & " / " & FORMAT([所需分歧样本], "#,0"))
+
+-- Table: DashboardState
+当前晋级决定 =
+VAR Ready = CALCULATE(MAX(DashboardState[ProductionReady]), REMOVEFILTERS()) RETURN IF(ISBLANK(Ready), "等待数据刷新", IF(Ready = 1, "需重新审核晋级证据", "保留 Champion / 暂不晋级"))
+
+-- Table: DashboardState
+真实业务状态 =
+"未验证：真实收益、坏账和DPD保持空值"
+
+-- Table: DashboardState
+V2校准通过数 =
+CALCULATE(MAX(DashboardState[MatchedCalibrationChecks]), REMOVEFILTERS())
+
+-- Table: DashboardState
+原A/A压力未认证项 =
+CALCULATE(MAX(DashboardState[AAStressFailures]), REMOVEFILTERS())
+
+-- Table: DashboardState
+假设入组天数 =
+VAR Daily = SELECTEDVALUE(DailyTraffic[DailyApplications], 5000) VAR Cov = SELECTEDVALUE(Coverage[EligibleFraction], 0.20) VAR Exp = SELECTEDVALUE(Exposure[ExposureFraction], 1.0) VAR D = CALCULATE(MAX(DashboardState[DisagreementFraction]), REMOVEFILTERS()) RETURN ROUNDUP(DIVIDE([所需分歧样本], Daily * Cov * Exp * D), 0)
+
+-- Table: DashboardState
+假设成熟天数 =
+CALCULATE(MAX(DashboardState[MaturityDays]), REMOVEFILTERS())
+
+-- Table: DashboardState
+假设宽限天数 =
+CALCULATE(MAX(DashboardState[GraceDays]), REMOVEFILTERS())
+
+-- Table: DashboardState
+假设最终分析天数 =
+[假设入组天数] + [假设成熟天数] + [假设宽限天数]
+
+-- Table: DashboardState
+假设入组可行性 =
+IF([假设入组天数] <= 365, "满足365天入组约束（假设）", "超出365天入组约束（假设）")

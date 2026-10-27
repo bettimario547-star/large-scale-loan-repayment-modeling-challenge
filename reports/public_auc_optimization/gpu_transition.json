@@ -1,0 +1,21 @@
+{
+  "time_unix": 1792917034.7046938,
+  "stopped_owned_pids": [
+    18480,
+    23812,
+    10964,
+    30864,
+    31288,
+    33268,
+    28636,
+    31976
+  ],
+  "completed_cpu_candidates": [
+    "lgbm_drift_tuned_s42",
+    "lgbm_drift_tuned_s2026",
+    "lgbm_drift_tuned_ensemble"
+  ],
+  "next_cpu_threads": 5,
+  "next_gpu_cpu_threads": 5,
+  "reason": "Preserve complete seeds and run binary GPU preparation alongside one CPU fold."
+}

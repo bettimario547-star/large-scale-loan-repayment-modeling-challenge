@@ -1,0 +1,7 @@
+﻿ScenarioId,Scenario
+base,基准假设
+lower_interest,较低利息收益
+full_principal_loss,违约损失100%
+higher_funding,较高资金成本
+smaller_principal,较小本金
+larger_principal,较大本金

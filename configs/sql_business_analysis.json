@@ -1,0 +1,28 @@
+{
+  "protocol_version": 1,
+  "expected_train_rows": 688998,
+  "expected_test_rows": 36324,
+  "threads": 4,
+  "memory_limit": "1GB",
+  "approval_thresholds": [0.0, 0.5, 0.6, 0.7, 0.75, 0.8, 0.85, 0.9, 0.925, 0.95, 0.975, 0.99, 1.0],
+  "models": [
+    {
+      "model_role": "champion",
+      "model_version": "lightgbm_baseline",
+      "artifact_directory": "artifacts/lightgbm_baseline",
+      "report_directory": "reports/lightgbm_baseline",
+      "prediction_column": "p_repay",
+      "seeds": [42],
+      "expected_oof_auc": 0.816569
+    },
+    {
+      "model_role": "challenger",
+      "model_version": "lightgbm_tuned_seed_ensemble",
+      "artifact_directory": "artifacts/hyperparameter_seed_optimization",
+      "report_directory": "reports/hyperparameter_seed_optimization",
+      "prediction_column": "p_repay_ensemble",
+      "seeds": [42, 2026, 3407],
+      "expected_oof_auc": 0.820395
+    }
+  ]
+}

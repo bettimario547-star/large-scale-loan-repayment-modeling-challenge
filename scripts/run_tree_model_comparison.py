@@ -9,9 +9,14 @@ without loading the complete raw matrix. Existing LightGBM artifacts are read-on
 from __future__ import annotations
 
 import argparse
+from concurrent.futures import ProcessPoolExecutor, as_completed
+from contextlib import redirect_stderr, redirect_stdout
 import gc
 import hashlib
 import json
+import multiprocessing as mp
+import os
+import re
 import time
 from pathlib import Path
 
@@ -38,6 +43,27 @@ ENGINES = ("xgboost", "catboost")
 CODE_FILES = ("run_tree_model_comparison.py", "run_lightgbm_baseline.py",
               "run_linear_baselines.py", "id_feature_contract.py")
 METRICS = ("repay_roc_auc", "default_pr_auc_ap", "log_loss", "brier_score")
+PARALLEL_CPU_BUDGET = 10
+PARALLEL_WORKERS = 2
+_WORKER_CONTEXT = None
+_WORKER_CONFIG = None
+
+
+def configure_run(run_name: str):
+    """Keep separate experiments in separate report/artifact directories."""
+    if not re.fullmatch(r"[a-z0-9][a-z0-9_-]{0,63}", run_name) or run_name in {
+        "con", "prn", "aux", "nul", *(f"com{i}" for i in range(1, 10)),
+        *(f"lpt{i}" for i in range(1, 10)),
+    }:
+        raise ValueError("Run name must be a safe lowercase directory name (1-64 characters)")
+    global REPORT, ARTIFACTS
+    REPORT = ROOT / "reports" / run_name
+    ARTIFACTS = ROOT / "artifacts" / run_name
+
+
+def submission_path(engine):
+    suffix = "" if REPORT.name == "tree_model_comparison" else f"_{REPORT.name}"
+    return ROOT / "submissions" / f"{engine}_baseline{suffix}.csv"
 
 
 def sha256(path: Path) -> str:
@@ -268,7 +294,9 @@ def save_checkpoint(engine, fold, stage, model, params, names, record, predictio
 def run_fold(context, engine, fold, config):
     _, _, _, labels, fold_id, names, values, test_values, _ = context
     experiment, signature = config["experiment"], config["training_signature"]
-    threads, batch = experiment["threads"], experiment["batch_rows"]
+    execution = config.get("execution", {})
+    threads = execution.get("threads_per_worker", experiment["threads"])
+    batch = experiment["batch_rows"]
     inner, stop, valid = base.split_outer_fit(labels, fold_id, fold, 0.15)
     all_fit = np.flatnonzero(fold_id != fold)
     split = ARTIFACTS / "inner_splits" / f"fold_{fold}.npz"
@@ -322,7 +350,9 @@ def run_fold(context, engine, fold, config):
                      "inner_auc": score, "evaluated_rounds": len(curve),
                      "hit_round_cap": len(curve) >= experiment["max_rounds"],
                      "inner_fit_rows": len(inner), "early_stop_rows": len(stop),
-                     "elapsed_seconds": time.perf_counter() - started}
+                     "elapsed_seconds": time.perf_counter() - started,
+                     "training_threads": threads, "execution_mode": execution.get("mode", "single"),
+                     "worker_pid": os.getpid()}
         np.savez_compressed(inner_predictions, early_stop_index=stop, p_repay=p_stop)
         base.json_write(REPORT / "inner_curves" / f"{engine}_fold_{fold}.json", {"auc": curve})
         save_checkpoint(engine, fold, "inner", model, params, names, selection, inner_predictions, signature, borders)
@@ -356,7 +386,9 @@ def run_fold(context, engine, fold, config):
     np.savez_compressed(predictions, outer_valid_index=valid, p_repay_valid=p_valid, p_repay_test=p_test)
     record = {"engine": engine, "fold": fold, "refit_rounds": model_rounds(engine, model),
               "fit_rows": len(all_fit), **base.metrics(labels[valid], p_valid),
-              "elapsed_seconds": time.perf_counter() - started}
+              "elapsed_seconds": time.perf_counter() - started,
+              "training_threads": threads, "execution_mode": execution.get("mode", "single"),
+              "worker_pid": os.getpid()}
     save_checkpoint(engine, fold, "refit", model, params, names, record, predictions, signature, borders)
     print(f"Finished {engine} fold {fold}: AUC={record['repay_roc_auc']:.6f}, "
           f"default AP={record['default_pr_auc_ap']:.6f}, logloss={record['log_loss']:.6f}", flush=True)
@@ -375,28 +407,50 @@ class XGBProgress(xgb.callback.TrainingCallback):
         return False
 
 
-def load_context(batch_rows):
+def readonly_feature_cache(path, names):
+    """Workers may only open a cache prepared by the parent; never rebuild it."""
+    import pyarrow.parquet as pq
+    cache = base.LINEAR_ARTIFACTS / "cache"
+    array_path = cache / f"{path.stem}_features.npy"
+    manifest_path = cache / f"{path.stem}_features.json"
+    expected = {"source": base.source_signature(path), "features": names,
+                "shape": [pq.ParquetFile(path).metadata.num_rows, len(names)], "dtype": "float32"}
+    if not array_path.is_file() or not manifest_path.is_file():
+        raise RuntimeError("Parent must prepare feature caches before starting workers")
+    if json.loads(manifest_path.read_text(encoding="utf-8")) != expected:
+        raise RuntimeError("Feature cache changed after parent preparation")
+    values = BatchedFeatureFile(array_path)
+    if list(values.shape) != expected["shape"]:
+        raise RuntimeError("Invalid feature cache shape")
+    return values
+
+
+def load_context(batch_rows, readonly_cache=False):
     import pyarrow.parquet as pq
     names = base.model_feature_columns(pq.read_schema(base.TRAIN).names, pq.read_schema(base.TEST).names)
-    meta = pd.read_parquet(base.TRAIN, columns=["id", "label"])
-    test_meta = pd.read_parquet(base.TEST, columns=["id"])
-    folds = base.align_validation_folds(meta.id, pd.read_parquet(base.FOLDS))
+    meta = pd.read_parquet(base.TRAIN, columns=["id", "label"], use_threads=False)
+    test_meta = pd.read_parquet(base.TEST, columns=["id"], use_threads=False)
+    folds = base.align_validation_folds(meta.id, pd.read_parquet(base.FOLDS, use_threads=False))
     if set(folds.fold.unique()) != set(range(5)) or not meta.label.isin([0, 1]).all():
         raise RuntimeError("Invalid labels/folds")
-    original = pd.read_parquet(base.ARTIFACTS / "oof_predictions.parquet")
-    tuned = pd.read_parquet(TUNED / "oof_predictions.parquet")
+    original = pd.read_parquet(base.ARTIFACTS / "oof_predictions.parquet", use_threads=False)
+    tuned = pd.read_parquet(TUNED / "oof_predictions.parquet", use_threads=False)
     for frame in (original, tuned):
         pd.testing.assert_frame_equal(frame[["id", "label"]], meta, check_dtype=False)
         pd.testing.assert_frame_equal(frame[list(folds.columns)], folds, check_dtype=False)
     references = {"lightgbm_baseline": original.p_repay.to_numpy(),
                   "lightgbm_tuned_seed_42": tuned.p_repay_seed_42.to_numpy(),
                   "lightgbm_tuned_ensemble": tuned.p_repay_ensemble.to_numpy()}
-    raw_train = base.raw_feature_cache(base.TRAIN, names, batch_rows)
-    raw_test = base.raw_feature_cache(base.TEST, names, batch_rows)
-    train_path, test_path = raw_train.filename, raw_test.filename
-    raw_train._mmap.close()
-    raw_test._mmap.close()
-    values, test_values = BatchedFeatureFile(train_path), BatchedFeatureFile(test_path)
+    if readonly_cache:
+        values = readonly_feature_cache(base.TRAIN, names)
+        test_values = readonly_feature_cache(base.TEST, names)
+    else:
+        raw_train = base.raw_feature_cache(base.TRAIN, names, batch_rows)
+        raw_test = base.raw_feature_cache(base.TEST, names, batch_rows)
+        train_path, test_path = raw_train.filename, raw_test.filename
+        raw_train._mmap.close()
+        raw_test._mmap.close()
+        values, test_values = BatchedFeatureFile(train_path), BatchedFeatureFile(test_path)
     return meta, test_meta, folds, meta.label.to_numpy(dtype=np.int8), folds.fold.to_numpy(), names, values, test_values, references
 
 
@@ -455,7 +509,8 @@ def checked_config():
         raise RuntimeError("Configuration changed")
     for name, expected in experiment["code_sha256"].items():
         if sha256(ROOT / "scripts" / name) != expected:
-            raise RuntimeError(f"Training source changed: {name}")
+            raise RuntimeError(f"Training source changed: {name}. Keep existing artifacts and initialize "
+                               "a new experiment with --run-name, e.g. tree_model_comparison_parallel10.")
     for path, expected in experiment["reference_sha256"].items():
         if sha256(Path(path)) != expected:
             raise RuntimeError(f"Reference changed: {path}")
@@ -465,6 +520,136 @@ def checked_config():
     if experiment["versions"] != {"xgboost": xgb.__version__, "catboost": cb.__version__, "numpy": np.__version__}:
         raise RuntimeError("Runtime changed")
     return config
+
+
+def pending_tasks(engines, folds, signature):
+    """Check completed work before allocating large worker contexts."""
+    pending = []
+    for engine in engines:
+        for fold in folds:
+            _, inner_meta = model_paths(engine, fold, "inner")
+            _, final_meta = model_paths(engine, fold, "refit")
+            chosen = checkpoint(inner_meta, ARTIFACTS / "inner_predictions" / f"{engine}_fold_{fold}.npz", signature)
+            record = checkpoint(final_meta, ARTIFACTS / "fold_predictions" / f"{engine}_fold_{fold}.npz", signature)
+            if record is None:
+                pending.append((engine, fold))
+            elif chosen is None or chosen["selected_rounds"] != record["refit_rounds"]:
+                raise RuntimeError(f"Inconsistent completed checkpoint: {engine} fold {fold}")
+            else:
+                print(f"Reuse {engine} fold {fold}: AUC={record['repay_roc_auc']:.6f}", flush=True)
+    return pending
+
+
+def parallel_plan(context, task_count):
+    """Limit concurrent model threads to 10 logical CPUs; estimate RAM first."""
+    if task_count < 1:
+        raise ValueError("Need at least one pending task")
+    available_cpus = psutil.cpu_count() or 1
+    if available_cpus < PARALLEL_CPU_BUDGET:
+        raise RuntimeError(f"--parallel requires at least {PARALLEL_CPU_BUDGET} logical CPUs; detected {available_cpus}")
+    workers = min(PARALLEL_WORKERS, task_count)
+    threads = PARALLEL_CPU_BUDGET // workers
+    _, _, _, _, fold_id, names, _, _, _ = context
+    max_fit_rows = max(int(np.sum(fold_id != fold)) for fold in range(5))
+    # Conservative planning allowance for quantized rows, sketches, histograms
+    # and native-library overhead. This is an estimate, not an OS memory limit.
+    per_worker = max_fit_rows * len(names) * 4 * 1.25 + 1024**3
+    required = workers * per_worker + 1024**3  # Reserve for the parent/OS.
+    available = psutil.virtual_memory().available
+    if available < required:
+        raise RuntimeError(f"Insufficient available RAM for {workers} parallel workers: "
+                           f"estimated {required / 1024**3:.1f} GiB, available {available / 1024**3:.1f} GiB. "
+                           "Close memory-heavy applications and retry, or use single-process training.")
+    return {"mode": "parallel", "workers": workers, "threads_per_worker": threads,
+            "cpu_budget": PARALLEL_CPU_BUDGET, "estimated_required_memory_bytes": int(required),
+            "available_memory_bytes": int(available)}
+
+
+def prepare_splits(context, tasks):
+    """The parent owns shared split files; workers only read them."""
+    labels, fold_id = context[3], context[4]
+    for fold in sorted({fold for _, fold in tasks}):
+        inner, stop, valid = base.split_outer_fit(labels, fold_id, fold, 0.15)
+        path = ARTIFACTS / "inner_splits" / f"fold_{fold}.npz"
+        arrays = {"inner_fit_index": inner, "early_stop_index": stop, "outer_valid_index": valid}
+        if path.exists():
+            with np.load(path) as saved:
+                for key, rows in arrays.items():
+                    np.testing.assert_array_equal(saved[key], rows)
+        else:
+            np.savez_compressed(path, **arrays)
+
+
+def worker_paths():
+    # Only paths and small configuration objects cross the spawn boundary.
+    return {"ROOT": str(ROOT), "REPORT": str(REPORT), "ARTIFACTS": str(ARTIFACTS),
+            "TUNED": str(TUNED), "TRAIN": str(base.TRAIN), "TEST": str(base.TEST),
+            "FOLDS": str(base.FOLDS), "BASELINE_ARTIFACTS": str(base.ARTIFACTS),
+            "LINEAR_ARTIFACTS": str(base.LINEAR_ARTIFACTS)}
+
+
+def initialize_worker(paths, config):
+    global ROOT, REPORT, ARTIFACTS, TUNED, _WORKER_CONTEXT, _WORKER_CONFIG
+    ROOT, REPORT, ARTIFACTS, TUNED = (Path(paths[key]) for key in ("ROOT", "REPORT", "ARTIFACTS", "TUNED"))
+    base.TRAIN, base.TEST, base.FOLDS = (Path(paths[key]) for key in ("TRAIN", "TEST", "FOLDS"))
+    base.ARTIFACTS = Path(paths["BASELINE_ARTIFACTS"])
+    base.LINEAR_ARTIFACTS = Path(paths["LINEAR_ARTIFACTS"])
+    _WORKER_CONFIG = config
+    # The parent already built caches and splits. A child cannot rewrite them.
+    with threadpool_limits(limits=config["execution"]["threads_per_worker"]):
+        _WORKER_CONTEXT = load_context(config["experiment"]["batch_rows"], readonly_cache=True)
+
+
+def train_worker(engine, fold, log_path):
+    if _WORKER_CONTEXT is None or _WORKER_CONFIG is None:
+        raise RuntimeError("Worker was not initialized")
+    with Path(log_path).open("w", encoding="utf-8", buffering=1) as log:
+        with redirect_stdout(log), redirect_stderr(log), threadpool_limits(
+            limits=_WORKER_CONFIG["execution"]["threads_per_worker"]
+        ):
+            return run_fold(_WORKER_CONTEXT, engine, fold, _WORKER_CONFIG)
+
+
+def train_parallel(context, tasks, config):
+    execution = parallel_plan(context, len(tasks))
+    prepare_splits(context, tasks)
+    log_directory = ROOT / "logs" / REPORT.name / f"parallel_{time.time_ns()}"
+    log_directory.mkdir(parents=True)
+    execution["log_directory"] = str(log_directory)
+    config = {**config, "execution": execution}
+    base.json_write(REPORT / "run_config.json", config)
+    print(f"Parallel training: {execution['workers']} processes x {execution['threads_per_worker']} threads "
+          f"= {PARALLEL_CPU_BUDGET} logical CPUs; {len(tasks)} pending tasks. Logs: {log_directory}", flush=True)
+    # Set limits before spawn imports NumPy/native libraries. Restore the
+    # parent's environment after all children finish, including on failure.
+    variables = ("OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS",
+                 "NUMEXPR_NUM_THREADS", "BLIS_NUM_THREADS", "VECLIB_MAXIMUM_THREADS")
+    previous = {name: os.environ.get(name) for name in variables}
+    try:
+        for name in variables:
+            os.environ[name] = str(execution["threads_per_worker"])
+        with ProcessPoolExecutor(max_workers=execution["workers"], mp_context=mp.get_context("spawn"),
+                                 initializer=initialize_worker, initargs=(worker_paths(), config)) as pool:
+            futures = {pool.submit(train_worker, engine, fold, str(log_directory / f"{engine}_fold_{fold}.log")):
+                       (engine, fold) for engine, fold in tasks}
+            for future in as_completed(futures):
+                engine, fold = futures[future]
+                try:
+                    record = future.result()
+                except Exception as error:
+                    for other in futures:
+                        other.cancel()
+                    raise RuntimeError(f"Parallel task failed: {engine} fold {fold}; see "
+                                       f"{log_directory / f'{engine}_fold_{fold}.log'}. "
+                                       "Completed checkpoints are retained.") from error
+                print(f"Completed {engine} fold {fold}: AUC={record['repay_roc_auc']:.6f} "
+                      f"(PID {record['worker_pid']})", flush=True)
+    finally:
+        for name, value in previous.items():
+            if value is None:
+                os.environ.pop(name, None)
+            else:
+                os.environ[name] = value
 
 
 def group_metrics(labels, folds, predictions):
@@ -507,7 +692,7 @@ def collect(context, config):
         oof[f"p_repay_{engine}"] = prediction
         test[f"p_repay_{engine}"] = test_prediction
         submission = base.build_submission(test[["id", f"p_repay_{engine}"]].rename(columns={f"p_repay_{engine}": "p_repay"}), template)
-        submission.to_csv(ROOT / "submissions" / f"{engine}_baseline.csv", index=False)
+        submission.to_csv(submission_path(engine), index=False)
     comparison = pd.DataFrame([{"model": model, **row} for model, p in scores.items() for row in group_metrics(labels, folds, p)])
     paired = []
     for fold in range(5):
@@ -555,25 +740,46 @@ def main():
     parser.add_argument("--patience", type=int, default=60)
     parser.add_argument("--threads", type=int, default=4)
     parser.add_argument("--batch-rows", type=int, default=4096)
+    parser.add_argument("--parallel", action="store_true",
+                        help="Train independent folds with 2 processes x 5 threads (10 logical CPUs); train stage only")
+    parser.add_argument("--run-name", default="tree_model_comparison",
+                        help="Separate report/artifact directory name; default: tree_model_comparison")
     args = parser.parse_args()
     if args.max_rounds < 1 or args.patience < 1 or args.threads < 1 or args.batch_rows < 1 or any(f not in range(5) for f in args.folds):
         parser.error("Invalid positive setting or fold")
     if len(set(args.folds)) != len(args.folds) or len(set(args.engines)) != len(args.engines):
         parser.error("Duplicate engine/fold")
+    if args.parallel and args.stage != "train":
+        parser.error("--parallel applies only to --stage train")
+    try:
+        configure_run(args.run_name)
+    except ValueError as error:
+        parser.error(str(error))
     if args.stage == "init":
         initialize(args)
         return
     config = checked_config()
     with threadpool_limits(limits=config["experiment"]["threads"]):
-        context = load_context(config["experiment"]["batch_rows"])
         if args.stage == "train":
-            # A single worker avoids competing large quantization buffers.
-            for engine in args.engines:
-                for fold in args.folds:
+            tasks = pending_tasks(args.engines, args.folds, config["training_signature"])
+            if not tasks:
+                print("All requested folds already completed; no training needed", flush=True)
+                return
+            context = load_context(config["experiment"]["batch_rows"])
+            if args.parallel:
+                train_parallel(context, tasks, config)
+            else:
+                config = {**config, "execution": {"mode": "single", "workers": 1,
+                          "threads_per_worker": config["experiment"]["threads"],
+                          "cpu_budget": config["experiment"]["threads"]}}
+                base.json_write(REPORT / "run_config.json", config)
+                for engine, fold in tasks:
                     run_fold(context, engine, fold, config)
         else:
+            context = load_context(config["experiment"]["batch_rows"])
             collect(context, config)
 
 
 if __name__ == "__main__":
+    mp.freeze_support()
     main()

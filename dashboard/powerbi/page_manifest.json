@@ -1,0 +1,38 @@
+[
+  {
+    "name": "decision",
+    "title": "01 决策总览",
+    "visuals": 12,
+    "rendered_in_powerbi": false
+  },
+  {
+    "name": "models",
+    "title": "02 模型历史表现",
+    "visuals": 10,
+    "rendered_in_powerbi": false
+  },
+  {
+    "name": "policy",
+    "title": "03 审批策略与经济假设",
+    "visuals": 12,
+    "rendered_in_powerbi": false
+  },
+  {
+    "name": "aa",
+    "title": "04 A/A 校验与停止规则",
+    "visuals": 10,
+    "rendered_in_powerbi": false
+  },
+  {
+    "name": "feasibility",
+    "title": "05 A/B 可行性与周期假设",
+    "visuals": 14,
+    "rendered_in_powerbi": false
+  },
+  {
+    "name": "value",
+    "title": "06 收益区间、晋级与真实数据缺口",
+    "visuals": 12,
+    "rendered_in_powerbi": false
+  }
+]

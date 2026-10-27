@@ -1,0 +1,3 @@
+﻿Arm,ModelVersion,Threshold,ApprovalBudget
+A,lightgbm_baseline,0.92479384236194317,0.69999999999999996
+B,lightgbm_tuned_seed_ensemble,0.92568117265504046,0.69999999999999996

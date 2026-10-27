@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "small_fixture": true,
+  "rows": 500,
+  "rounds": 600,
+  "spawned_cpu_models": 5,
+  "models_reloaded": 5,
+  "cached_feature_file_unchanged": true,
+  "controller_defers_shared_exports": true,
+  "maximum_sampled_prediction_difference": 0,
+  "test": "tests.test_xgboost_drift_fast.XGBoostDriftFastTests.test_spawned_full_folds_defer_exports_and_reproduce_predictions"
+}

@@ -1,0 +1,4026 @@
+{
+  "compatibilityLevel": 1606,
+  "model": {
+    "annotations": [
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"ModelMetrics\",\"Models\",\"RiskBands\",\"ScoreDrift\",\"PolicyCurves\",\"SelectedPolicies\",\"PolicyDefinitions\",\"EconomicAssumptions\",\"Scenarios\",\"Calibration\",\"Peeking\",\"DurationGrid\",\"DesignComparison\",\"ABSimulations\",\"DashboardState\",\"ProfitIntervals\",\"PromotionGates\",\"MissingData\",\"DailyTraffic\",\"Coverage\",\"Exposure\",\"AlphaLevels\",\"Phase\",\"DataFolder\"]"
+      },
+      {
+        "name": "EvidenceBoundary",
+        "value": "No live experiment; historical OOF / simulated assumptions / pending real business validation separated"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "zh-CN",
+    "cultures": [
+      {
+        "name": "zh-CN",
+        "linguisticMetadata": {
+          "content": {
+            "Entities": {
+              "absimulations.column": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "ABSimulations",
+                    "ConceptualProperty": "业务门槛成功频率"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "业务门槛成功频率": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "absimulations.column1": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "ABSimulations",
+                    "ConceptualProperty": "零差正向显著频率"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "零差正向显著频率": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "absimulations.scenario": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "ABSimulations",
+                    "ConceptualProperty": "Scenario"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "模拟情景": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "alphalevels.alpha": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "AlphaLevels",
+                    "ConceptualProperty": "Alpha"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Alpha": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "calibration.alpha": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Calibration",
+                    "ConceptualProperty": "Alpha"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "检验水平": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "calibration.case": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Calibration",
+                    "ConceptualProperty": "Case"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "校准场景": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "calibration.caseid": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Calibration",
+                    "ConceptualProperty": "CaseId"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "场景": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "calibration.column": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Calibration",
+                    "ConceptualProperty": "收益零差误报率"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "收益零差误报率": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "calibration.column1": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Calibration",
+                    "ConceptualProperty": "违约零差误报率"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "违约零差误报率": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "calibration.endpoint": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Calibration",
+                    "ConceptualProperty": "Endpoint"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "端点": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "calibration.falsepositiverate": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Calibration",
+                    "ConceptualProperty": "FalsePositiveRate"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "误报率": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "calibration.interval": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Calibration",
+                    "ConceptualProperty": "Interval"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "同时区间": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "calibration.pipeline": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Calibration",
+                    "ConceptualProperty": "Pipeline"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "管线": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "calibration.status": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Calibration",
+                    "ConceptualProperty": "Status"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "认证": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "coverage.eligiblefraction": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Coverage",
+                    "ConceptualProperty": "EligibleFraction"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "EligibleFraction": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "dailytraffic.dailyapplications": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "DailyTraffic",
+                    "ConceptualProperty": "DailyApplications"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "DailyApplications": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "dashboardstate.a_a": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "DashboardState",
+                    "ConceptualProperty": "原A/A压力未认证项"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "原A/A压力未认证项": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "dashboardstate.b": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "DashboardState",
+                    "ConceptualProperty": "完整B模拟风险上界"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "完整B模拟风险上界": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "dashboardstate.column": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "DashboardState",
+                    "ConceptualProperty": "当前晋级决定"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "当前晋级决定": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "dashboardstate.column1": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "DashboardState",
+                    "ConceptualProperty": "冻结收益差"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "冻结收益差": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "dashboardstate.column10": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "DashboardState",
+                    "ConceptualProperty": "冻结收益上界"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "冻结收益上界": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "dashboardstate.column11": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "DashboardState",
+                    "ConceptualProperty": "冻结收益下界"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "冻结收益下界": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "dashboardstate.column2": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "DashboardState",
+                    "ConceptualProperty": "样本完成情况"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "样本完成情况": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "dashboardstate.column3": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "DashboardState",
+                    "ConceptualProperty": "假设入组天数"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "假设入组天数": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "dashboardstate.column4": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "DashboardState",
+                    "ConceptualProperty": "假设入组可行性"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "假设入组可行性": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "dashboardstate.column5": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "DashboardState",
+                    "ConceptualProperty": "假设最终分析天数"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "假设最终分析天数": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "dashboardstate.column6": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "DashboardState",
+                    "ConceptualProperty": "所需分歧样本"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "所需分歧样本": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "dashboardstate.column7": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "DashboardState",
+                    "ConceptualProperty": "假设成熟天数"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "假设成熟天数": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "dashboardstate.column8": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "DashboardState",
+                    "ConceptualProperty": "假设宽限天数"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "假设宽限天数": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "dashboardstate.column9": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "DashboardState",
+                    "ConceptualProperty": "业务收益门槛"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "业务收益门槛": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "dashboardstate.column95": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "DashboardState",
+                    "ConceptualProperty": "冻结95%收益区间"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "冻结95%收益区间": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "dashboardstate.v2": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "DashboardState",
+                    "ConceptualProperty": "V2校准通过数"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "V2校准通过数": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "designcomparison.changeddecisionfraction": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "DesignComparison",
+                    "ConceptualProperty": "ChangedDecisionFraction"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "合格申请决策改变暴露": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "designcomparison.column": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "DesignComparison",
+                    "ConceptualProperty": "冻结方案入组天数"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "冻结方案入组天数": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "designcomparison.design": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "DesignComparison",
+                    "ConceptualProperty": "Design"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "方案": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "designcomparison.enrollmentdays": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "DesignComparison",
+                    "ConceptualProperty": "EnrollmentDays"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "冻结入组天数": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "designcomparison.exposure": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "DesignComparison",
+                    "ConceptualProperty": "Exposure"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "分歧入组比例": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "designcomparison.randomizedrequired": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "DesignComparison",
+                    "ConceptualProperty": "RandomizedRequired"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "所需随机样本": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "economicassumptions.column": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "EconomicAssumptions",
+                    "ConceptualProperty": "假设利息率"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "假设利息率": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "economicassumptions.column1": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "EconomicAssumptions",
+                    "ConceptualProperty": "假设违约损失率"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "假设违约损失率": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "economicassumptions.column2": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "EconomicAssumptions",
+                    "ConceptualProperty": "假设本金"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "假设本金": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "exposure.exposurefraction": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Exposure",
+                    "ConceptualProperty": "ExposureFraction"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "ExposureFraction": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "missingdata.datagroup": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "MissingData",
+                    "ConceptualProperty": "DataGroup"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "数据组": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "missingdata.purpose": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "MissingData",
+                    "ConceptualProperty": "Purpose"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "用途": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "missingdata.requiredfields": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "MissingData",
+                    "ConceptualProperty": "RequiredFields"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "缺失字段/证据": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "modelmetrics.column": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "ModelMetrics",
+                    "ConceptualProperty": "历史样本数"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "历史样本数": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "modelmetrics.ks": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "ModelMetrics",
+                    "ConceptualProperty": "历史 KS"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "KS": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "modelmetrics.prauc": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "ModelMetrics",
+                    "ConceptualProperty": "违约 PR-AUC"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "违约 PR-AUC": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "modelmetrics.rocauc": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "ModelMetrics",
+                    "ConceptualProperty": "还款 ROC-AUC"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "还款 ROC-AUC": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "models.model": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Models",
+                    "ConceptualProperty": "Model"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Model": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  },
+                  {
+                    "模型": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "peeking.column": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Peeking",
+                    "ConceptualProperty": "固定查看双侧误报"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "固定查看双侧误报": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "peeking.column1": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Peeking",
+                    "ConceptualProperty": "任一次查看双侧误报"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "任一次查看双侧误报": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "peeking.lookfraction": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Peeking",
+                    "ConceptualProperty": "LookFraction"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "入组进度": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "phase.plan": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Phase",
+                    "ConceptualProperty": "Plan"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Plan": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "policycurves.approvalbudget": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "PolicyCurves",
+                    "ConceptualProperty": "ApprovalBudget"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "开发审批预算": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "policycurves.column": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "PolicyCurves",
+                    "ConceptualProperty": "评价模拟净收益"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "评价模拟净收益": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "policycurves.column1": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "PolicyCurves",
+                    "ConceptualProperty": "评价获批历史坏账率"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "评价获批历史坏账率": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "profitintervals.estimate": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "ProfitIntervals",
+                    "ConceptualProperty": "Estimate"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "估计（元）": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "profitintervals.interval": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "ProfitIntervals",
+                    "ConceptualProperty": "Interval"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "95%区间（元）": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "profitintervals.randomizedsamples": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "ProfitIntervals",
+                    "ConceptualProperty": "RandomizedSamples"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "随机样本": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "profitintervals.version": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "ProfitIntervals",
+                    "ConceptualProperty": "Version"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "方案": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "promotiongates.condition": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "PromotionGates",
+                    "ConceptualProperty": "Condition"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "条件": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "promotiongates.criterion": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "PromotionGates",
+                    "ConceptualProperty": "Criterion"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "门槛": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "promotiongates.currentevidence": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "PromotionGates",
+                    "ConceptualProperty": "CurrentEvidence"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "当前证据": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "promotiongates.evidencecategory": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "PromotionGates",
+                    "ConceptualProperty": "EvidenceCategory"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "证据类型": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "promotiongates.status": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "PromotionGates",
+                    "ConceptualProperty": "Status"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "状态": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "riskbands.column": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "RiskBands",
+                    "ConceptualProperty": "训练历史分箱坏账率"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "训练历史分箱坏账率": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "riskbands.column1": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "RiskBands",
+                    "ConceptualProperty": "测试分箱人群占比"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "测试分箱人群占比": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "riskbands.riskdecile": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "RiskBands",
+                    "ConceptualProperty": "RiskDecile"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "风险分箱": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "scenarios.scenario": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Scenarios",
+                    "ConceptualProperty": "Scenario"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Scenario": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "scoredrift.psi": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "ScoreDrift",
+                    "ConceptualProperty": "分数 PSI"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "分数 PSI": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "selectedpolicies.cohortlabel": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "SelectedPolicies",
+                    "ConceptualProperty": "CohortLabel"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "人群": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "selectedpolicies.column": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "SelectedPolicies",
+                    "ConceptualProperty": "选中策略审批率"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "选中策略审批率": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "selectedpolicies.column1": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "SelectedPolicies",
+                    "ConceptualProperty": "选中策略历史坏账率"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "选中策略历史坏账率": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "selectedpolicies.column2": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "SelectedPolicies",
+                    "ConceptualProperty": "选中策略模拟收益"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "选中策略模拟收益": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "selectedpolicies.threshold": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "SelectedPolicies",
+                    "ConceptualProperty": "Threshold"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "冻结阈值": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              }
+            },
+            "Language": "en-US",
+            "Version": "2.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "expressions": [
+      {
+        "name": "DataFolder",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Text"
+          }
+        ],
+        "expression": "\"D:\\large-scale-loan-repayment-modeling-challenge\\dashboard\\powerbi\\data\" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]",
+        "kind": "m",
+        "lineageTag": "f1f0c0ee-9b08-4cb6-9f06-8cbb85ca15f6"
+      }
+    ],
+    "relationships": [
+      {
+        "name": "Models_ModelMetrics",
+        "fromColumn": "ModelVersion",
+        "fromTable": "ModelMetrics",
+        "toColumn": "ModelVersion",
+        "toTable": "Models"
+      },
+      {
+        "name": "Models_RiskBands",
+        "fromColumn": "ModelVersion",
+        "fromTable": "RiskBands",
+        "toColumn": "ModelVersion",
+        "toTable": "Models"
+      },
+      {
+        "name": "Models_ScoreDrift",
+        "fromColumn": "ModelVersion",
+        "fromTable": "ScoreDrift",
+        "toColumn": "ModelVersion",
+        "toTable": "Models"
+      },
+      {
+        "name": "Models_PolicyCurves",
+        "fromColumn": "ModelVersion",
+        "fromTable": "PolicyCurves",
+        "toColumn": "ModelVersion",
+        "toTable": "Models"
+      },
+      {
+        "name": "Models_SelectedPolicies",
+        "fromColumn": "ModelVersion",
+        "fromTable": "SelectedPolicies",
+        "toColumn": "ModelVersion",
+        "toTable": "Models"
+      },
+      {
+        "name": "Models_PolicyDefinitions",
+        "fromColumn": "ModelVersion",
+        "fromTable": "PolicyDefinitions",
+        "toColumn": "ModelVersion",
+        "toTable": "Models"
+      },
+      {
+        "name": "Scenarios_PolicyCurves",
+        "fromColumn": "ScenarioId",
+        "fromTable": "PolicyCurves",
+        "toColumn": "ScenarioId",
+        "toTable": "Scenarios"
+      },
+      {
+        "name": "Scenarios_SelectedPolicies",
+        "fromColumn": "ScenarioId",
+        "fromTable": "SelectedPolicies",
+        "toColumn": "ScenarioId",
+        "toTable": "Scenarios"
+      },
+      {
+        "name": "Scenarios_EconomicAssumptions",
+        "fromColumn": "ScenarioId",
+        "fromTable": "EconomicAssumptions",
+        "toColumn": "ScenarioId",
+        "toTable": "Scenarios"
+      }
+    ],
+    "sourceQueryCulture": "zh-CN",
+    "tables": [
+      {
+        "name": "ModelMetrics",
+        "columns": [
+          {
+            "name": "ModelVersion",
+            "dataType": "string",
+            "lineageTag": "11268ddc-0555-458e-8c16-348afc564005",
+            "sourceColumn": "ModelVersion",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ModelRole",
+            "dataType": "string",
+            "lineageTag": "36ef3ffc-203f-4c31-86d4-02f6702be22c",
+            "sourceColumn": "ModelRole",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ROCAUC",
+            "dataType": "double",
+            "formatString": "0.0000",
+            "lineageTag": "3c2eb491-58f3-4016-8841-3a0a75f9f17c",
+            "sourceColumn": "ROCAUC",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "DefaultPRAUC",
+            "dataType": "double",
+            "formatString": "0.0000",
+            "lineageTag": "86db7931-c4ca-4fb1-b4bf-b3ab5072378e",
+            "sourceColumn": "DefaultPRAUC",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "KS",
+            "dataType": "double",
+            "formatString": "0.0000",
+            "lineageTag": "2e99bdbd-fdbb-48bc-b0d1-806bf445b2ef",
+            "sourceColumn": "KS",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Rows",
+            "dataType": "int64",
+            "lineageTag": "a888760e-4b90-4ee6-8c18-c378114db77c",
+            "sourceColumn": "Rows",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "HistoricalDefaultRate",
+            "dataType": "double",
+            "formatString": "0.00%",
+            "lineageTag": "19e7603d-19cd-4eed-ba32-94d89e061ed8",
+            "sourceColumn": "HistoricalDefaultRate",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "LogLoss",
+            "dataType": "double",
+            "lineageTag": "bd1e569d-89d7-4042-b5ca-3f1c6edb361f",
+            "sourceColumn": "LogLoss",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "BrierScore",
+            "dataType": "double",
+            "lineageTag": "8d29ea72-a662-488d-aab3-8ba0dd4df848",
+            "sourceColumn": "BrierScore",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Model",
+            "dataType": "string",
+            "lineageTag": "8890e40c-bd4e-473a-ac74-4c84bdcaf501",
+            "sourceColumn": "Model",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EvidenceCategory",
+            "dataType": "string",
+            "lineageTag": "5e2e0064-2a6c-414f-a407-25df5b45a62a",
+            "sourceColumn": "EvidenceCategory",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EvidenceBasis",
+            "dataType": "string",
+            "lineageTag": "bbe53dd2-acb2-45e1-b332-98a7b2c29cb7",
+            "sourceColumn": "EvidenceBasis",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PopulationScope",
+            "dataType": "string",
+            "lineageTag": "42f68b9c-57e5-4451-b2be-1509f9b7c1a2",
+            "sourceColumn": "PopulationScope",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "71d368a6-c3c8-4363-9987-262801839736",
+        "measures": [
+          {
+            "name": "还款 ROC-AUC",
+            "expression": "MAX(ModelMetrics[ROCAUC])",
+            "formatString": "0.0000",
+            "lineageTag": "9c906e32-412c-4d21-833f-740cd33fba62"
+          },
+          {
+            "name": "违约 PR-AUC",
+            "expression": "MAX(ModelMetrics[DefaultPRAUC])",
+            "formatString": "0.0000",
+            "lineageTag": "8364b2d6-d060-4259-9d05-64e128bc40ad"
+          },
+          {
+            "name": "历史 KS",
+            "expression": "MAX(ModelMetrics[KS])",
+            "formatString": "0.0000",
+            "lineageTag": "8bb81cf1-b1c4-40d0-a933-06dcb830bdc8"
+          },
+          {
+            "name": "历史样本数",
+            "expression": "MAX(ModelMetrics[Rows])",
+            "formatString": "#,0",
+            "lineageTag": "0630dcd1-b698-41e4-b59e-2005d3abb1fc"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "ModelMetrics",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(DataFolder & \"\\ModelMetrics.csv\"), [Delimiter=\",\", Columns=13, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Nulls = Table.ReplaceValue(Headers, \"\", null, Replacer.ReplaceValue, {\"ROCAUC\", \"DefaultPRAUC\", \"KS\", \"Rows\", \"HistoricalDefaultRate\", \"LogLoss\", \"BrierScore\"}),",
+                "    Typed = Table.TransformColumnTypes(Nulls, {{\"ModelVersion\", type text}, {\"ModelRole\", type text}, {\"ROCAUC\", type number}, {\"DefaultPRAUC\", type number}, {\"KS\", type number}, {\"Rows\", Int64.Type}, {\"HistoricalDefaultRate\", type number}, {\"LogLoss\", type number}, {\"BrierScore\", type number}, {\"Model\", type text}, {\"EvidenceCategory\", type text}, {\"EvidenceBasis\", type text}, {\"PopulationScope\", type text}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Models",
+        "columns": [
+          {
+            "name": "ModelVersion",
+            "dataType": "string",
+            "lineageTag": "86f83b79-7246-418b-829a-94138460c813",
+            "sourceColumn": "ModelVersion",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ModelRole",
+            "dataType": "string",
+            "lineageTag": "3cd9e0e2-49f1-4364-9fc5-08360c8d577b",
+            "sourceColumn": "ModelRole",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Model",
+            "dataType": "string",
+            "lineageTag": "1fe2fdb6-6c97-422c-9998-b3c809e246f2",
+            "sourceColumn": "Model",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "f91af2d7-cbde-4a92-b572-ac42990213ce",
+        "partitions": [
+          {
+            "name": "Models",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(DataFolder & \"\\Models.csv\"), [Delimiter=\",\", Columns=3, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Nulls = Table.ReplaceValue(Headers, \"\", null, Replacer.ReplaceValue, {}),",
+                "    Typed = Table.TransformColumnTypes(Nulls, {{\"ModelVersion\", type text}, {\"ModelRole\", type text}, {\"Model\", type text}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "RiskBands",
+        "columns": [
+          {
+            "name": "Dataset",
+            "dataType": "string",
+            "lineageTag": "b712ce0a-78d9-4762-bc45-8eb64874be4f",
+            "sourceColumn": "Dataset",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ModelVersion",
+            "dataType": "string",
+            "lineageTag": "5c217c95-7489-4842-8341-df9338206491",
+            "sourceColumn": "ModelVersion",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "RiskDecile",
+            "dataType": "int64",
+            "lineageTag": "cb2fbac5-538f-4228-9412-136b7cc469a6",
+            "sourceColumn": "RiskDecile",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Rows",
+            "dataType": "int64",
+            "lineageTag": "43cccd28-1892-4a9d-92c6-2f1ec83ea3df",
+            "sourceColumn": "Rows",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "LabeledRows",
+            "dataType": "int64",
+            "lineageTag": "5cdc06e2-107a-4dce-a2bf-1fed1b3f26d5",
+            "sourceColumn": "LabeledRows",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "DefaultRows",
+            "dataType": "double",
+            "lineageTag": "b02523e8-2227-434a-ac9d-dc54a29b3682",
+            "sourceColumn": "DefaultRows",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "HistoricalDefaultRate",
+            "dataType": "double",
+            "formatString": "0.00%",
+            "lineageTag": "39c77ef5-5654-4a99-a974-25b6d24edfbd",
+            "sourceColumn": "HistoricalDefaultRate",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PopulationShare",
+            "dataType": "double",
+            "formatString": "0.00%",
+            "lineageTag": "a56fdcc9-a215-4786-a88a-cc6ba4619655",
+            "sourceColumn": "PopulationShare",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "MeanModelDefaultScore",
+            "dataType": "double",
+            "lineageTag": "f2d4b664-6fa8-4b89-858b-c4de8d6b4da2",
+            "sourceColumn": "MeanModelDefaultScore",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EvidenceCategory",
+            "dataType": "string",
+            "lineageTag": "0101a130-a5aa-4a4a-a3fa-6f646c471719",
+            "sourceColumn": "EvidenceCategory",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EvidenceBasis",
+            "dataType": "string",
+            "lineageTag": "69b1961f-7a45-4169-a94c-b1a70a64dd92",
+            "sourceColumn": "EvidenceBasis",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PopulationScope",
+            "dataType": "string",
+            "lineageTag": "550571ad-3e80-4234-9ca3-1f42f2275fc9",
+            "sourceColumn": "PopulationScope",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "b483e8dc-2889-462e-802f-70072a224228",
+        "measures": [
+          {
+            "name": "训练历史分箱坏账率",
+            "expression": "CALCULATE(DIVIDE(SUM(RiskBands[DefaultRows]), SUM(RiskBands[LabeledRows])), RiskBands[Dataset] = \"train\")",
+            "formatString": "0.00%",
+            "lineageTag": "c2cb8dc6-e3d8-4c00-8f88-3b0374e1bc9b"
+          },
+          {
+            "name": "测试分箱人群占比",
+            "expression": "CALCULATE(DIVIDE(SUM(RiskBands[Rows]), CALCULATE(SUM(RiskBands[Rows]), REMOVEFILTERS(RiskBands[RiskDecile]))), RiskBands[Dataset] = \"test\")",
+            "formatString": "0.00%",
+            "lineageTag": "bd575a91-7663-4d09-9454-1dfae7efbaf8"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "RiskBands",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(DataFolder & \"\\RiskBands.csv\"), [Delimiter=\",\", Columns=12, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Nulls = Table.ReplaceValue(Headers, \"\", null, Replacer.ReplaceValue, {\"RiskDecile\", \"Rows\", \"LabeledRows\", \"DefaultRows\", \"HistoricalDefaultRate\", \"PopulationShare\", \"MeanModelDefaultScore\"}),",
+                "    Typed = Table.TransformColumnTypes(Nulls, {{\"Dataset\", type text}, {\"ModelVersion\", type text}, {\"RiskDecile\", Int64.Type}, {\"Rows\", Int64.Type}, {\"LabeledRows\", Int64.Type}, {\"DefaultRows\", type number}, {\"HistoricalDefaultRate\", type number}, {\"PopulationShare\", type number}, {\"MeanModelDefaultScore\", type number}, {\"EvidenceCategory\", type text}, {\"EvidenceBasis\", type text}, {\"PopulationScope\", type text}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "ScoreDrift",
+        "columns": [
+          {
+            "name": "ModelVersion",
+            "dataType": "string",
+            "lineageTag": "5ded6112-18ec-4291-8d79-db2342a204f7",
+            "sourceColumn": "ModelVersion",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ScorePSI",
+            "dataType": "double",
+            "lineageTag": "b55de977-815a-4472-b2a8-4f8932288c2f",
+            "sourceColumn": "ScorePSI",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "TotalVariation",
+            "dataType": "double",
+            "lineageTag": "84de6879-3af9-405c-8b51-b1dee18b807e",
+            "sourceColumn": "TotalVariation",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EvidenceCategory",
+            "dataType": "string",
+            "lineageTag": "cc081cab-9607-4372-a36e-4ecfdd9b990b",
+            "sourceColumn": "EvidenceCategory",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EvidenceBasis",
+            "dataType": "string",
+            "lineageTag": "74ea3750-e7d6-49c9-8af0-f33fc57d3eed",
+            "sourceColumn": "EvidenceBasis",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PopulationScope",
+            "dataType": "string",
+            "lineageTag": "4d3c42fb-c48d-4196-9d35-d2e37ec44dc5",
+            "sourceColumn": "PopulationScope",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "0107d9d5-813a-4c06-b4be-b643c3ae7a56",
+        "measures": [
+          {
+            "name": "分数 PSI",
+            "expression": "MAX(ScoreDrift[ScorePSI])",
+            "formatString": "0.000",
+            "lineageTag": "07009995-572b-436f-a677-555a7a2a597c"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "ScoreDrift",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(DataFolder & \"\\ScoreDrift.csv\"), [Delimiter=\",\", Columns=6, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Nulls = Table.ReplaceValue(Headers, \"\", null, Replacer.ReplaceValue, {\"ScorePSI\", \"TotalVariation\"}),",
+                "    Typed = Table.TransformColumnTypes(Nulls, {{\"ModelVersion\", type text}, {\"ScorePSI\", type number}, {\"TotalVariation\", type number}, {\"EvidenceCategory\", type text}, {\"EvidenceBasis\", type text}, {\"PopulationScope\", type text}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "PolicyCurves",
+        "columns": [
+          {
+            "name": "ModelVersion",
+            "dataType": "string",
+            "lineageTag": "15fed267-1c66-4212-ae13-8f0a61059c10",
+            "sourceColumn": "ModelVersion",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PolicyId",
+            "dataType": "string",
+            "lineageTag": "aa5217f7-da38-4874-b8f8-8cb66cc742ea",
+            "sourceColumn": "PolicyId",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Dataset",
+            "dataType": "string",
+            "lineageTag": "ee488ca3-a88a-4471-9ce2-e262df04a809",
+            "sourceColumn": "Dataset",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Cohort",
+            "dataType": "string",
+            "lineageTag": "34d41b73-0a9c-4d9f-a0fa-2cd234c1bdb8",
+            "sourceColumn": "Cohort",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ScenarioId",
+            "dataType": "string",
+            "lineageTag": "129a5cae-c60d-4ed9-bd7e-d33f985dd870",
+            "sourceColumn": "ScenarioId",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ApprovalBudget",
+            "dataType": "double",
+            "formatString": "0.00%",
+            "lineageTag": "584bb7f4-d748-4778-9a21-b15e4a0ec360",
+            "sourceColumn": "ApprovalBudget",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Threshold",
+            "dataType": "double",
+            "formatString": "0.0000000000",
+            "lineageTag": "f215cfbc-a474-44da-8142-ac7c01589912",
+            "sourceColumn": "Threshold",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Applications",
+            "dataType": "int64",
+            "lineageTag": "924fb052-6269-4d6f-8efe-5ee79253989e",
+            "sourceColumn": "Applications",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Approved",
+            "dataType": "int64",
+            "lineageTag": "84f9b683-993d-416e-8e10-788f0f2fbed9",
+            "sourceColumn": "Approved",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "DefaultRows",
+            "dataType": "double",
+            "lineageTag": "a0d62420-1a6f-4490-a98c-154f4155f127",
+            "sourceColumn": "DefaultRows",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ApprovalRate",
+            "dataType": "double",
+            "formatString": "0.00%",
+            "lineageTag": "427d1548-de88-466a-9367-0ddd9ed554f7",
+            "sourceColumn": "ApprovalRate",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "HistoricalApprovedDefaultRate",
+            "dataType": "double",
+            "formatString": "0.00%",
+            "lineageTag": "e35bd423-ce3e-499d-9d68-41f89f3c8a4b",
+            "sourceColumn": "HistoricalApprovedDefaultRate",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "HistoricalSimulatedProfitPerApplication",
+            "dataType": "double",
+            "lineageTag": "78429db4-d0e8-4a70-8d2d-a42cbb787e26",
+            "sourceColumn": "HistoricalSimulatedProfitPerApplication",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EvidenceCategory",
+            "dataType": "string",
+            "lineageTag": "477f1b17-91c2-4284-acce-f8c6ad21bc92",
+            "sourceColumn": "EvidenceCategory",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EvidenceBasis",
+            "dataType": "string",
+            "lineageTag": "72bb5af3-29a1-4e9c-8be2-1ac5970a607f",
+            "sourceColumn": "EvidenceBasis",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PopulationScope",
+            "dataType": "string",
+            "lineageTag": "ce5a09de-0f9d-46ef-85e9-c5d51947883b",
+            "sourceColumn": "PopulationScope",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "ee90edfa-f35b-4330-9554-b47adf941cbc",
+        "measures": [
+          {
+            "name": "评价模拟净收益",
+            "expression": "VAR Chosen = SELECTEDVALUE(Scenarios[ScenarioId], \"base\") RETURN CALCULATE(MAX(PolicyCurves[HistoricalSimulatedProfitPerApplication]), REMOVEFILTERS(Scenarios), PolicyCurves[ScenarioId] = Chosen, PolicyCurves[Cohort] = \"policy_evaluation\")",
+            "formatString": "0.00",
+            "lineageTag": "f533c929-3302-4340-a13e-41507ff1a8f6"
+          },
+          {
+            "name": "评价审批率",
+            "expression": "VAR Chosen = SELECTEDVALUE(Scenarios[ScenarioId], \"base\") RETURN CALCULATE(MAX(PolicyCurves[ApprovalRate]), REMOVEFILTERS(Scenarios), PolicyCurves[ScenarioId] = Chosen, PolicyCurves[Cohort] = \"policy_evaluation\")",
+            "formatString": "0.00%",
+            "lineageTag": "062a9343-3092-49ce-8f75-7af0953e81e4"
+          },
+          {
+            "name": "评价获批历史坏账率",
+            "expression": "VAR Chosen = SELECTEDVALUE(Scenarios[ScenarioId], \"base\") RETURN CALCULATE(MAX(PolicyCurves[HistoricalApprovedDefaultRate]), REMOVEFILTERS(Scenarios), PolicyCurves[ScenarioId] = Chosen, PolicyCurves[Cohort] = \"policy_evaluation\")",
+            "formatString": "0.00%",
+            "lineageTag": "a53b9f86-26cf-4452-b46a-63621f841c1c"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "PolicyCurves",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(DataFolder & \"\\PolicyCurves.csv\"), [Delimiter=\",\", Columns=16, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Nulls = Table.ReplaceValue(Headers, \"\", null, Replacer.ReplaceValue, {\"ApprovalBudget\", \"Threshold\", \"Applications\", \"Approved\", \"DefaultRows\", \"ApprovalRate\", \"HistoricalApprovedDefaultRate\", \"HistoricalSimulatedProfitPerApplication\"}),",
+                "    Typed = Table.TransformColumnTypes(Nulls, {{\"ModelVersion\", type text}, {\"PolicyId\", type text}, {\"Dataset\", type text}, {\"Cohort\", type text}, {\"ScenarioId\", type text}, {\"ApprovalBudget\", type number}, {\"Threshold\", type number}, {\"Applications\", Int64.Type}, {\"Approved\", Int64.Type}, {\"DefaultRows\", type number}, {\"ApprovalRate\", type number}, {\"HistoricalApprovedDefaultRate\", type number}, {\"HistoricalSimulatedProfitPerApplication\", type number}, {\"EvidenceCategory\", type text}, {\"EvidenceBasis\", type text}, {\"PopulationScope\", type text}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "SelectedPolicies",
+        "columns": [
+          {
+            "name": "Arm",
+            "dataType": "string",
+            "lineageTag": "2cf8e036-cb2d-4079-8bf9-bdafe4ae5f5e",
+            "sourceColumn": "Arm",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ModelVersion",
+            "dataType": "string",
+            "lineageTag": "7ab58bad-d59c-400d-acbe-d22a55d889ae",
+            "sourceColumn": "ModelVersion",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Dataset",
+            "dataType": "string",
+            "lineageTag": "fbfda695-eacc-4347-b073-fcaf06193622",
+            "sourceColumn": "Dataset",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Cohort",
+            "dataType": "string",
+            "lineageTag": "bfc02db8-ac02-4955-a7ee-6a73f74aec25",
+            "sourceColumn": "Cohort",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ScenarioId",
+            "dataType": "string",
+            "lineageTag": "af5f5d2c-3432-4625-9958-9241aa068881",
+            "sourceColumn": "ScenarioId",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Threshold",
+            "dataType": "double",
+            "formatString": "0.0000000000",
+            "lineageTag": "ed02139c-564a-474c-a2b0-f9bee2ca25ed",
+            "sourceColumn": "Threshold",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Applications",
+            "dataType": "int64",
+            "lineageTag": "51366111-0e69-4952-a19d-8a8353a73835",
+            "sourceColumn": "Applications",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ApprovalRate",
+            "dataType": "double",
+            "formatString": "0.00%",
+            "lineageTag": "f61610e9-25bc-465a-b9c7-6136bcba903a",
+            "sourceColumn": "ApprovalRate",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "HistoricalApprovedDefaultRate",
+            "dataType": "double",
+            "formatString": "0.00%",
+            "lineageTag": "6dd3d572-14b5-467f-b3d9-9a941b339ea9",
+            "sourceColumn": "HistoricalApprovedDefaultRate",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "HistoricalSimulatedProfitPerApplication",
+            "dataType": "double",
+            "lineageTag": "ea74a6b9-f749-4101-827e-52fc3c9eb716",
+            "sourceColumn": "HistoricalSimulatedProfitPerApplication",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "CohortLabel",
+            "dataType": "string",
+            "lineageTag": "b22f8241-1eee-4245-b3b3-cd5739e1c7aa",
+            "sourceColumn": "CohortLabel",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EvidenceCategory",
+            "dataType": "string",
+            "lineageTag": "4dd28a7c-75a0-465d-b11b-a1ea20582a8b",
+            "sourceColumn": "EvidenceCategory",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EvidenceBasis",
+            "dataType": "string",
+            "lineageTag": "4f38302c-58e0-427c-8c61-5544a4e0e41c",
+            "sourceColumn": "EvidenceBasis",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PopulationScope",
+            "dataType": "string",
+            "lineageTag": "d2245e20-b170-4827-9b2c-dd0cca75d474",
+            "sourceColumn": "PopulationScope",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "22bf5a66-851f-440d-bced-1370960a4895",
+        "measures": [
+          {
+            "name": "选中策略模拟收益",
+            "expression": "VAR Chosen = SELECTEDVALUE(Scenarios[ScenarioId], \"base\") RETURN CALCULATE(MAX(SelectedPolicies[HistoricalSimulatedProfitPerApplication]), REMOVEFILTERS(Scenarios), SelectedPolicies[ScenarioId] = Chosen)",
+            "formatString": "0.00",
+            "lineageTag": "111badfe-2373-4b6b-92eb-df5181812644"
+          },
+          {
+            "name": "选中策略审批率",
+            "expression": "VAR Chosen = SELECTEDVALUE(Scenarios[ScenarioId], \"base\") RETURN CALCULATE(MAX(SelectedPolicies[ApprovalRate]), REMOVEFILTERS(Scenarios), SelectedPolicies[ScenarioId] = Chosen)",
+            "formatString": "0.00%",
+            "lineageTag": "1e93cc03-92b6-495f-83b6-09a301e506eb"
+          },
+          {
+            "name": "选中策略历史坏账率",
+            "expression": "VAR Chosen = SELECTEDVALUE(Scenarios[ScenarioId], \"base\") RETURN CALCULATE(MAX(SelectedPolicies[HistoricalApprovedDefaultRate]), REMOVEFILTERS(Scenarios), SelectedPolicies[ScenarioId] = Chosen)",
+            "formatString": "0.00%",
+            "lineageTag": "5f8b2550-7a6f-449f-a8e2-c675a41f56c9"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "SelectedPolicies",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(DataFolder & \"\\SelectedPolicies.csv\"), [Delimiter=\",\", Columns=14, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Nulls = Table.ReplaceValue(Headers, \"\", null, Replacer.ReplaceValue, {\"Threshold\", \"Applications\", \"ApprovalRate\", \"HistoricalApprovedDefaultRate\", \"HistoricalSimulatedProfitPerApplication\"}),",
+                "    Typed = Table.TransformColumnTypes(Nulls, {{\"Arm\", type text}, {\"ModelVersion\", type text}, {\"Dataset\", type text}, {\"Cohort\", type text}, {\"ScenarioId\", type text}, {\"Threshold\", type number}, {\"Applications\", Int64.Type}, {\"ApprovalRate\", type number}, {\"HistoricalApprovedDefaultRate\", type number}, {\"HistoricalSimulatedProfitPerApplication\", type number}, {\"CohortLabel\", type text}, {\"EvidenceCategory\", type text}, {\"EvidenceBasis\", type text}, {\"PopulationScope\", type text}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "PolicyDefinitions",
+        "columns": [
+          {
+            "name": "Arm",
+            "dataType": "string",
+            "lineageTag": "068b954a-2a62-4a74-a150-7517eeb92a62",
+            "sourceColumn": "Arm",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ModelVersion",
+            "dataType": "string",
+            "lineageTag": "c79886fa-505e-4d25-8241-6a9516e499ca",
+            "sourceColumn": "ModelVersion",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Threshold",
+            "dataType": "double",
+            "formatString": "0.0000000000",
+            "lineageTag": "3fe5153c-9a3a-4394-831c-0a1b5cd8f55f",
+            "sourceColumn": "Threshold",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ApprovalBudget",
+            "dataType": "double",
+            "formatString": "0.00%",
+            "lineageTag": "8b57d8f8-00ee-4255-8464-7623743bdf03",
+            "sourceColumn": "ApprovalBudget",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "c7b4789e-f9c0-41fc-9eba-1ac8c88a556c",
+        "partitions": [
+          {
+            "name": "PolicyDefinitions",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(DataFolder & \"\\PolicyDefinitions.csv\"), [Delimiter=\",\", Columns=4, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Nulls = Table.ReplaceValue(Headers, \"\", null, Replacer.ReplaceValue, {\"Threshold\", \"ApprovalBudget\"}),",
+                "    Typed = Table.TransformColumnTypes(Nulls, {{\"Arm\", type text}, {\"ModelVersion\", type text}, {\"Threshold\", type number}, {\"ApprovalBudget\", type number}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "EconomicAssumptions",
+        "columns": [
+          {
+            "name": "ScenarioId",
+            "dataType": "string",
+            "lineageTag": "037c6c8c-39e1-4288-9367-78a2796b457d",
+            "sourceColumn": "ScenarioId",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Principal",
+            "dataType": "double",
+            "lineageTag": "53109dc4-9d7b-4ee8-a5fd-ae2d95bf231c",
+            "sourceColumn": "Principal",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "InterestRate",
+            "dataType": "double",
+            "formatString": "0.00%",
+            "lineageTag": "3e794db6-96ef-4511-ae17-0951e4351c59",
+            "sourceColumn": "InterestRate",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "LossGivenDefault",
+            "dataType": "double",
+            "formatString": "0.00%",
+            "lineageTag": "7cb99564-11cf-4007-a60e-9601b960041b",
+            "sourceColumn": "LossGivenDefault",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "FundingRate",
+            "dataType": "double",
+            "formatString": "0.00%",
+            "lineageTag": "08e8c70c-df05-4370-921e-27d59f4bd295",
+            "sourceColumn": "FundingRate",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ServicingCost",
+            "dataType": "double",
+            "lineageTag": "6c27c452-9e64-4c5e-b895-867bcb3c0eb0",
+            "sourceColumn": "ServicingCost",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ApplicationCost",
+            "dataType": "double",
+            "lineageTag": "175bc064-2eec-4b20-a5e0-1a9080050215",
+            "sourceColumn": "ApplicationCost",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EvidenceCategory",
+            "dataType": "string",
+            "lineageTag": "3063f20b-0e2e-4410-8029-f79adc01128c",
+            "sourceColumn": "EvidenceCategory",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EvidenceBasis",
+            "dataType": "string",
+            "lineageTag": "7c039cd2-da3d-4da1-801c-980041389251",
+            "sourceColumn": "EvidenceBasis",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PopulationScope",
+            "dataType": "string",
+            "lineageTag": "5eba7e9e-c701-40b0-89c3-229a34d09f35",
+            "sourceColumn": "PopulationScope",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "bf8e1fd1-a925-4988-ac63-d12c81655d6a",
+        "measures": [
+          {
+            "name": "假设本金",
+            "expression": "VAR Chosen = SELECTEDVALUE(Scenarios[ScenarioId], \"base\") RETURN CALCULATE(MAX(EconomicAssumptions[Principal]), REMOVEFILTERS(Scenarios), EconomicAssumptions[ScenarioId] = Chosen)",
+            "formatString": "#,0",
+            "lineageTag": "b483a102-3b9c-493b-9616-11d1c6498ed7"
+          },
+          {
+            "name": "假设利息率",
+            "expression": "VAR Chosen = SELECTEDVALUE(Scenarios[ScenarioId], \"base\") RETURN CALCULATE(MAX(EconomicAssumptions[InterestRate]), REMOVEFILTERS(Scenarios), EconomicAssumptions[ScenarioId] = Chosen)",
+            "formatString": "0.00%",
+            "lineageTag": "670f42e2-6393-43fa-b626-76e76c885dd5"
+          },
+          {
+            "name": "假设违约损失率",
+            "expression": "VAR Chosen = SELECTEDVALUE(Scenarios[ScenarioId], \"base\") RETURN CALCULATE(MAX(EconomicAssumptions[LossGivenDefault]), REMOVEFILTERS(Scenarios), EconomicAssumptions[ScenarioId] = Chosen)",
+            "formatString": "0.00%",
+            "lineageTag": "f82827e4-eef8-442b-bbec-92bb4a634e90"
+          },
+          {
+            "name": "当前经济假设",
+            "expression": "SELECTEDVALUE(Scenarios[Scenario], \"基准假设（默认）\")",
+            "lineageTag": "f70ffdcf-2fa0-4d80-a76a-2cadbfafbf01"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "EconomicAssumptions",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(DataFolder & \"\\EconomicAssumptions.csv\"), [Delimiter=\",\", Columns=10, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Nulls = Table.ReplaceValue(Headers, \"\", null, Replacer.ReplaceValue, {\"Principal\", \"InterestRate\", \"LossGivenDefault\", \"FundingRate\", \"ServicingCost\", \"ApplicationCost\"}),",
+                "    Typed = Table.TransformColumnTypes(Nulls, {{\"ScenarioId\", type text}, {\"Principal\", type number}, {\"InterestRate\", type number}, {\"LossGivenDefault\", type number}, {\"FundingRate\", type number}, {\"ServicingCost\", type number}, {\"ApplicationCost\", type number}, {\"EvidenceCategory\", type text}, {\"EvidenceBasis\", type text}, {\"PopulationScope\", type text}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Scenarios",
+        "columns": [
+          {
+            "name": "ScenarioId",
+            "dataType": "string",
+            "lineageTag": "084225d9-4cb6-418e-90ca-80449dbc711f",
+            "sourceColumn": "ScenarioId",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Scenario",
+            "dataType": "string",
+            "lineageTag": "104e88dc-7327-4f17-a42f-55f096a2331b",
+            "sourceColumn": "Scenario",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "4f2e9303-b79a-4c38-818e-a3c3b57e27c3",
+        "partitions": [
+          {
+            "name": "Scenarios",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(DataFolder & \"\\Scenarios.csv\"), [Delimiter=\",\", Columns=2, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Nulls = Table.ReplaceValue(Headers, \"\", null, Replacer.ReplaceValue, {}),",
+                "    Typed = Table.TransformColumnTypes(Nulls, {{\"ScenarioId\", type text}, {\"Scenario\", type text}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Calibration",
+        "columns": [
+          {
+            "name": "CaseId",
+            "dataType": "string",
+            "lineageTag": "02b4d98a-91b7-45b3-a172-9b6345a140bb",
+            "sourceColumn": "CaseId",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EndpointId",
+            "dataType": "string",
+            "lineageTag": "1107d790-96bd-45bd-9205-d1f7f5002a66",
+            "sourceColumn": "EndpointId",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Alpha",
+            "dataType": "double",
+            "formatString": "0.00%",
+            "lineageTag": "74c9ccae-f035-43e4-8108-f5db0d4454ef",
+            "sourceColumn": "Alpha",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Required",
+            "dataType": "int64",
+            "lineageTag": "f7c22ce3-eceb-46f4-a84d-114cc72398cd",
+            "sourceColumn": "Required",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Repetitions",
+            "dataType": "int64",
+            "lineageTag": "b2a1f729-806d-49a2-a9ed-4bbc728530be",
+            "sourceColumn": "Repetitions",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "FalsePositiveRate",
+            "dataType": "double",
+            "formatString": "0.00%",
+            "lineageTag": "69e572d5-aa91-40ec-946b-025284c44233",
+            "sourceColumn": "FalsePositiveRate",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "CILow",
+            "dataType": "double",
+            "lineageTag": "55e8ffd5-1112-4139-bd43-8331bfce6349",
+            "sourceColumn": "CILow",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "CIHigh",
+            "dataType": "double",
+            "lineageTag": "2729b56d-4266-4972-8f8e-d0bded679e11",
+            "sourceColumn": "CIHigh",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Passed",
+            "dataType": "int64",
+            "lineageTag": "b2588376-2a4a-48fd-af75-6fbf97e723f8",
+            "sourceColumn": "Passed",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Pipeline",
+            "dataType": "string",
+            "lineageTag": "f9ea800f-d368-407b-a5ad-a6f7ecc9cb0b",
+            "sourceColumn": "Pipeline",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "AcceptanceLow",
+            "dataType": "double",
+            "lineageTag": "ade5537c-0b81-450a-825a-dbf760385f64",
+            "sourceColumn": "AcceptanceLow",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "AcceptanceHigh",
+            "dataType": "double",
+            "lineageTag": "f9b66b4c-6453-48f0-bc12-cf56deac7a24",
+            "sourceColumn": "AcceptanceHigh",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Endpoint",
+            "dataType": "string",
+            "lineageTag": "154e0c36-4241-4f2f-92bb-69dadddb2aba",
+            "sourceColumn": "Endpoint",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Case",
+            "dataType": "string",
+            "lineageTag": "0af689bf-8ab1-4dab-b1e1-be31b590392e",
+            "sourceColumn": "Case",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Status",
+            "dataType": "string",
+            "lineageTag": "99edd3e8-b4c4-49a1-b084-7d8f333378ab",
+            "sourceColumn": "Status",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Interval",
+            "dataType": "string",
+            "lineageTag": "dfc7e682-3880-4c27-af16-7acb86d7d268",
+            "sourceColumn": "Interval",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EvidenceCategory",
+            "dataType": "string",
+            "lineageTag": "452c4535-9788-4dfb-b41b-133063c41c46",
+            "sourceColumn": "EvidenceCategory",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EvidenceBasis",
+            "dataType": "string",
+            "lineageTag": "df41126e-f2bb-4f29-b9d5-6d6bc3829ec5",
+            "sourceColumn": "EvidenceBasis",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PopulationScope",
+            "dataType": "string",
+            "lineageTag": "8c7996b8-8bb9-41e5-97cf-c74dd9bfe7c2",
+            "sourceColumn": "PopulationScope",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "3fa6ad99-87e2-40c8-8a18-b6e6087652ba",
+        "measures": [
+          {
+            "name": "收益零差误报率",
+            "expression": "VAR A = SELECTEDVALUE(AlphaLevels[Alpha], 0.05) RETURN CALCULATE(MAX(Calibration[FalsePositiveRate]), Calibration[Alpha] = A, Calibration[Endpoint] = \"收益零差\")",
+            "formatString": "0.00%",
+            "lineageTag": "e080bb1a-af90-471e-9e85-707bdc513094"
+          },
+          {
+            "name": "违约零差误报率",
+            "expression": "VAR A = SELECTEDVALUE(AlphaLevels[Alpha], 0.05) RETURN CALCULATE(MAX(Calibration[FalsePositiveRate]), Calibration[Alpha] = A, Calibration[Endpoint] = \"违约零差\")",
+            "formatString": "0.00%",
+            "lineageTag": "c888dfe9-48d7-4d1b-8a45-f1d7b2d08e25"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Calibration",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(DataFolder & \"\\Calibration.csv\"), [Delimiter=\",\", Columns=19, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Nulls = Table.ReplaceValue(Headers, \"\", null, Replacer.ReplaceValue, {\"Alpha\", \"Required\", \"Repetitions\", \"FalsePositiveRate\", \"CILow\", \"CIHigh\", \"Passed\", \"AcceptanceLow\", \"AcceptanceHigh\"}),",
+                "    Typed = Table.TransformColumnTypes(Nulls, {{\"CaseId\", type text}, {\"EndpointId\", type text}, {\"Alpha\", type number}, {\"Required\", Int64.Type}, {\"Repetitions\", Int64.Type}, {\"FalsePositiveRate\", type number}, {\"CILow\", type number}, {\"CIHigh\", type number}, {\"Passed\", Int64.Type}, {\"Pipeline\", type text}, {\"AcceptanceLow\", type number}, {\"AcceptanceHigh\", type number}, {\"Endpoint\", type text}, {\"Case\", type text}, {\"Status\", type text}, {\"Interval\", type text}, {\"EvidenceCategory\", type text}, {\"EvidenceBasis\", type text}, {\"PopulationScope\", type text}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Peeking",
+        "columns": [
+          {
+            "name": "LookFraction",
+            "dataType": "double",
+            "formatString": "0.00%",
+            "lineageTag": "9e268fa8-612e-487c-8481-728d60fab1c4",
+            "sourceColumn": "LookFraction",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "SamplesAtLook",
+            "dataType": "int64",
+            "lineageTag": "9276f66c-8dd7-4cb9-8af9-7622ee8f49e3",
+            "sourceColumn": "SamplesAtLook",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "FixedLookFPR",
+            "dataType": "double",
+            "lineageTag": "d5f1f4fb-6ad4-40a9-b2e4-b2d11f89fe42",
+            "sourceColumn": "FixedLookFPR",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "AnyLookFPR",
+            "dataType": "double",
+            "lineageTag": "1f8f8a13-6f70-4862-9241-ef439e5a99d9",
+            "sourceColumn": "AnyLookFPR",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EvidenceCategory",
+            "dataType": "string",
+            "lineageTag": "079ebaea-2e90-452c-96b7-7d19118cf9dc",
+            "sourceColumn": "EvidenceCategory",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EvidenceBasis",
+            "dataType": "string",
+            "lineageTag": "56f81656-5012-4c2b-ab69-ad26aed7f2be",
+            "sourceColumn": "EvidenceBasis",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PopulationScope",
+            "dataType": "string",
+            "lineageTag": "8726bd64-4b8e-4447-8047-7ca14f02e88f",
+            "sourceColumn": "PopulationScope",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "f6abedf0-0f35-407c-a272-b3c882be1a75",
+        "measures": [
+          {
+            "name": "固定查看双侧误报",
+            "expression": "MAX(Peeking[FixedLookFPR])",
+            "formatString": "0.00%",
+            "lineageTag": "41601e3c-fd95-43a0-a204-670bfa1fa36a"
+          },
+          {
+            "name": "任一次查看双侧误报",
+            "expression": "MAX(Peeking[AnyLookFPR])",
+            "formatString": "0.00%",
+            "lineageTag": "e5313d25-e369-4704-87c6-f445d799cb0e"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Peeking",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(DataFolder & \"\\Peeking.csv\"), [Delimiter=\",\", Columns=7, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Nulls = Table.ReplaceValue(Headers, \"\", null, Replacer.ReplaceValue, {\"LookFraction\", \"SamplesAtLook\", \"FixedLookFPR\", \"AnyLookFPR\"}),",
+                "    Typed = Table.TransformColumnTypes(Nulls, {{\"LookFraction\", type number}, {\"SamplesAtLook\", Int64.Type}, {\"FixedLookFPR\", type number}, {\"AnyLookFPR\", type number}, {\"EvidenceCategory\", type text}, {\"EvidenceBasis\", type text}, {\"PopulationScope\", type text}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "DurationGrid",
+        "columns": [
+          {
+            "name": "CoverageSource",
+            "dataType": "string",
+            "lineageTag": "320aa0a8-d6d7-4c2e-ab64-10d526a58148",
+            "sourceColumn": "CoverageSource",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "DailyApplications",
+            "dataType": "int64",
+            "lineageTag": "80f6d798-f607-4598-9204-4652dd000ad7",
+            "sourceColumn": "DailyApplications",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EligibleFraction",
+            "dataType": "double",
+            "formatString": "0.00%",
+            "lineageTag": "7700aebb-0500-4855-8fbc-91c28b15c023",
+            "sourceColumn": "EligibleFraction",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Exposure",
+            "dataType": "double",
+            "formatString": "0.00%",
+            "lineageTag": "d890815e-fae8-49c2-b414-d62cd95e87ee",
+            "sourceColumn": "Exposure",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EnrollmentDays",
+            "dataType": "int64",
+            "lineageTag": "36c0ae1c-ac98-46c8-91e3-a7da35c4326a",
+            "sourceColumn": "EnrollmentDays",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "MaturityDays",
+            "dataType": "int64",
+            "lineageTag": "53ca50e5-2a1e-4aaa-bd3c-9d62753c7704",
+            "sourceColumn": "MaturityDays",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "GraceDays",
+            "dataType": "int64",
+            "lineageTag": "8077c133-2b64-46e3-ac49-a4e161722301",
+            "sourceColumn": "GraceDays",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "FinalDays",
+            "dataType": "int64",
+            "lineageTag": "72b1d538-5868-4d61-bd90-4f60f4df7992",
+            "sourceColumn": "FinalDays",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Feasible",
+            "dataType": "int64",
+            "lineageTag": "82ad7c0e-572a-4e6f-b1d2-b1ee72f77b7a",
+            "sourceColumn": "Feasible",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EvidenceCategory",
+            "dataType": "string",
+            "lineageTag": "e8b12c7e-580d-432a-a474-7769c9ff0964",
+            "sourceColumn": "EvidenceCategory",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EvidenceBasis",
+            "dataType": "string",
+            "lineageTag": "6762ab7a-5f57-4081-9935-ce8d9027792a",
+            "sourceColumn": "EvidenceBasis",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PopulationScope",
+            "dataType": "string",
+            "lineageTag": "e09b3595-4212-44af-81af-ef228d44658f",
+            "sourceColumn": "PopulationScope",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "08620d31-cabc-42c2-800e-b3c19b021da8",
+        "partitions": [
+          {
+            "name": "DurationGrid",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(DataFolder & \"\\DurationGrid.csv\"), [Delimiter=\",\", Columns=12, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Nulls = Table.ReplaceValue(Headers, \"\", null, Replacer.ReplaceValue, {\"DailyApplications\", \"EligibleFraction\", \"Exposure\", \"EnrollmentDays\", \"MaturityDays\", \"GraceDays\", \"FinalDays\", \"Feasible\"}),",
+                "    Typed = Table.TransformColumnTypes(Nulls, {{\"CoverageSource\", type text}, {\"DailyApplications\", Int64.Type}, {\"EligibleFraction\", type number}, {\"Exposure\", type number}, {\"EnrollmentDays\", Int64.Type}, {\"MaturityDays\", Int64.Type}, {\"GraceDays\", Int64.Type}, {\"FinalDays\", Int64.Type}, {\"Feasible\", Int64.Type}, {\"EvidenceCategory\", type text}, {\"EvidenceBasis\", type text}, {\"PopulationScope\", type text}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "DesignComparison",
+        "columns": [
+          {
+            "name": "DesignId",
+            "dataType": "string",
+            "lineageTag": "4ad30f0c-c769-43c6-a304-2723bc84515a",
+            "sourceColumn": "DesignId",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Exposure",
+            "dataType": "double",
+            "formatString": "0.00%",
+            "lineageTag": "9e690bbc-d692-481c-9c12-cbe7e3c510c6",
+            "sourceColumn": "Exposure",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "RandomizedRequired",
+            "dataType": "int64",
+            "lineageTag": "c2b7f9c4-9af7-4468-97e6-6aedd74761f2",
+            "sourceColumn": "RandomizedRequired",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EnrollmentDays",
+            "dataType": "int64",
+            "lineageTag": "86908e2e-d6f0-4ebb-9008-283e916e900e",
+            "sourceColumn": "EnrollmentDays",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Feasible",
+            "dataType": "int64",
+            "lineageTag": "93c447ea-0e20-4371-b144-a28f6c2f549e",
+            "sourceColumn": "Feasible",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ChangedDecisionFraction",
+            "dataType": "double",
+            "formatString": "0.00%",
+            "lineageTag": "30b32739-8943-48a8-a9ac-bdbaf90368ce",
+            "sourceColumn": "ChangedDecisionFraction",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Design",
+            "dataType": "string",
+            "lineageTag": "71f9a970-206c-4b2a-8c96-08e17528f989",
+            "sourceColumn": "Design",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EvidenceCategory",
+            "dataType": "string",
+            "lineageTag": "ca086c46-2335-4aa0-b160-c259dec9d32f",
+            "sourceColumn": "EvidenceCategory",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EvidenceBasis",
+            "dataType": "string",
+            "lineageTag": "bebfd234-88a4-4473-ba74-2b38545e0e63",
+            "sourceColumn": "EvidenceBasis",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PopulationScope",
+            "dataType": "string",
+            "lineageTag": "ce293c74-fbe4-4684-9d1f-7292bdfc736f",
+            "sourceColumn": "PopulationScope",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "036c1719-8360-41b9-9fcd-0f608363bc27",
+        "measures": [
+          {
+            "name": "冻结方案入组天数",
+            "expression": "MAX(DesignComparison[EnrollmentDays])",
+            "formatString": "#,0",
+            "lineageTag": "d0c9abd5-83b7-4ccb-b5cb-2946f59a7e03"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DesignComparison",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(DataFolder & \"\\DesignComparison.csv\"), [Delimiter=\",\", Columns=10, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Nulls = Table.ReplaceValue(Headers, \"\", null, Replacer.ReplaceValue, {\"Exposure\", \"RandomizedRequired\", \"EnrollmentDays\", \"Feasible\", \"ChangedDecisionFraction\"}),",
+                "    Typed = Table.TransformColumnTypes(Nulls, {{\"DesignId\", type text}, {\"Exposure\", type number}, {\"RandomizedRequired\", Int64.Type}, {\"EnrollmentDays\", Int64.Type}, {\"Feasible\", Int64.Type}, {\"ChangedDecisionFraction\", type number}, {\"Design\", type text}, {\"EvidenceCategory\", type text}, {\"EvidenceBasis\", type text}, {\"PopulationScope\", type text}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "ABSimulations",
+        "columns": [
+          {
+            "name": "CaseId",
+            "dataType": "string",
+            "lineageTag": "9003183e-b3bd-474e-8310-9959f922df8b",
+            "sourceColumn": "CaseId",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "DisagreementSamples",
+            "dataType": "int64",
+            "lineageTag": "071323d2-b866-47e3-b226-aebc0e1f1c3e",
+            "sourceColumn": "DisagreementSamples",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "AssumedUnderlyingProfit",
+            "dataType": "double",
+            "lineageTag": "332af1dd-45e5-4f5d-ae3f-5b8628ddb349",
+            "sourceColumn": "AssumedUnderlyingProfit",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Synthetic",
+            "dataType": "int64",
+            "lineageTag": "aaa44e85-daef-469a-8e04-f99ac308c0fe",
+            "sourceColumn": "Synthetic",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "BusinessSuccessRate",
+            "dataType": "double",
+            "formatString": "0.00%",
+            "lineageTag": "711c6ea3-7273-46eb-81af-b2b9e19b279c",
+            "sourceColumn": "BusinessSuccessRate",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PositiveZeroRate",
+            "dataType": "double",
+            "formatString": "0.00%",
+            "lineageTag": "3b611b88-278a-468c-a661-489ec15d8b7c",
+            "sourceColumn": "PositiveZeroRate",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "JointSuccessRate",
+            "dataType": "double",
+            "formatString": "0.00%",
+            "lineageTag": "3cac3389-5ddb-4bab-97fe-b2292304395d",
+            "sourceColumn": "JointSuccessRate",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "JointMCLow",
+            "dataType": "double",
+            "lineageTag": "c3a99195-4fb7-4d7b-86e1-a91afee96881",
+            "sourceColumn": "JointMCLow",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "JointMCHigh",
+            "dataType": "double",
+            "lineageTag": "d21fb63f-5b08-4641-8fd1-b96ab030dd41",
+            "sourceColumn": "JointMCHigh",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Scenario",
+            "dataType": "string",
+            "lineageTag": "dc3ef6ce-fdc2-44d7-b630-f5c67c61ecae",
+            "sourceColumn": "Scenario",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Basis",
+            "dataType": "string",
+            "lineageTag": "a9d4d943-967c-487a-9e7c-c7da5a421f36",
+            "sourceColumn": "Basis",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EvidenceCategory",
+            "dataType": "string",
+            "lineageTag": "cdfd14ad-9b33-4d8c-8955-981aa8b7e04b",
+            "sourceColumn": "EvidenceCategory",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EvidenceBasis",
+            "dataType": "string",
+            "lineageTag": "8b70a018-f001-4d0d-b99a-fe5a499e1f7c",
+            "sourceColumn": "EvidenceBasis",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PopulationScope",
+            "dataType": "string",
+            "lineageTag": "5ae98d46-e2cd-44b0-ac98-8fd5d1cab10c",
+            "sourceColumn": "PopulationScope",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "fec88b5a-0dbf-457b-aaa8-5bf84bdbf601",
+        "measures": [
+          {
+            "name": "业务门槛成功频率",
+            "expression": "MAX(ABSimulations[BusinessSuccessRate])",
+            "formatString": "0.00%",
+            "lineageTag": "a39a60f0-9a6c-43c5-87b1-83dcd73c68bd"
+          },
+          {
+            "name": "零差正向显著频率",
+            "expression": "MAX(ABSimulations[PositiveZeroRate])",
+            "formatString": "0.00%",
+            "lineageTag": "1d1b07c7-c7f6-426f-939d-d4b3bb20aa05"
+          },
+          {
+            "name": "联合成功频率",
+            "expression": "MAX(ABSimulations[JointSuccessRate])",
+            "formatString": "0.00%",
+            "lineageTag": "dc356c11-2b44-4440-ba8f-1cd42108d3b7"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "ABSimulations",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(DataFolder & \"\\ABSimulations.csv\"), [Delimiter=\",\", Columns=14, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Nulls = Table.ReplaceValue(Headers, \"\", null, Replacer.ReplaceValue, {\"DisagreementSamples\", \"AssumedUnderlyingProfit\", \"Synthetic\", \"BusinessSuccessRate\", \"PositiveZeroRate\", \"JointSuccessRate\", \"JointMCLow\", \"JointMCHigh\"}),",
+                "    Typed = Table.TransformColumnTypes(Nulls, {{\"CaseId\", type text}, {\"DisagreementSamples\", Int64.Type}, {\"AssumedUnderlyingProfit\", type number}, {\"Synthetic\", Int64.Type}, {\"BusinessSuccessRate\", type number}, {\"PositiveZeroRate\", type number}, {\"JointSuccessRate\", type number}, {\"JointMCLow\", type number}, {\"JointMCHigh\", type number}, {\"Scenario\", type text}, {\"Basis\", type text}, {\"EvidenceCategory\", type text}, {\"EvidenceBasis\", type text}, {\"PopulationScope\", type text}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "DashboardState",
+        "columns": [
+          {
+            "name": "Key",
+            "dataType": "int64",
+            "lineageTag": "c81a9ee7-6644-454b-8520-af55fe9e14c1",
+            "sourceColumn": "Key",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ProfitDelta",
+            "dataType": "double",
+            "lineageTag": "b047bc51-0399-4698-b009-26f8f7b5ac3b",
+            "sourceColumn": "ProfitDelta",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ProfitLow",
+            "dataType": "double",
+            "lineageTag": "3ec0a9d9-f42c-4db8-ac15-f222d16da28d",
+            "sourceColumn": "ProfitLow",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ProfitHigh",
+            "dataType": "double",
+            "lineageTag": "0667f175-f5cb-486c-b130-4d14b0e9fbf7",
+            "sourceColumn": "ProfitHigh",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "BusinessThreshold",
+            "dataType": "double",
+            "lineageTag": "32148cb3-1612-4308-ae77-1def1c47e1b4",
+            "sourceColumn": "BusinessThreshold",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "DefaultDeltaPP",
+            "dataType": "double",
+            "lineageTag": "96566581-4f8e-4e46-ace8-0fb5ac84037a",
+            "sourceColumn": "DefaultDeltaPP",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "DefaultUpperPP",
+            "dataType": "double",
+            "lineageTag": "4c7ed22a-4ba7-409c-a05d-23cb95b24bc6",
+            "sourceColumn": "DefaultUpperPP",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ApprovalDeltaPP",
+            "dataType": "double",
+            "lineageTag": "c6e4fa61-f41c-4d63-9b6d-3f3ece5dc624",
+            "sourceColumn": "ApprovalDeltaPP",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "BApprovedRiskUpper",
+            "dataType": "double",
+            "lineageTag": "4ff6f4cd-4b77-4f57-a1c5-f45fa0ef2416",
+            "sourceColumn": "BApprovedRiskUpper",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "CurrentSamples",
+            "dataType": "int64",
+            "lineageTag": "a61851e6-c615-4c0c-8391-172f3c25b6b4",
+            "sourceColumn": "CurrentSamples",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "RequiredSamples",
+            "dataType": "int64",
+            "lineageTag": "b1b6f403-894b-452b-b27b-87905b30b981",
+            "sourceColumn": "RequiredSamples",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "TargetEligible",
+            "dataType": "int64",
+            "lineageTag": "cf57d6c7-b555-478f-b4f9-5c1c8fc96bd8",
+            "sourceColumn": "TargetEligible",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "DisagreementFraction",
+            "dataType": "double",
+            "formatString": "0.00%",
+            "lineageTag": "37a8fd6a-ff0c-412a-a943-31c1c8ab366f",
+            "sourceColumn": "DisagreementFraction",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "MaturityDays",
+            "dataType": "int64",
+            "lineageTag": "adc7269d-6bc8-4b7d-bdc5-488a93780a57",
+            "sourceColumn": "MaturityDays",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "GraceDays",
+            "dataType": "int64",
+            "lineageTag": "200c9dba-507f-4f79-a370-c9f67c71f9e0",
+            "sourceColumn": "GraceDays",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ProfitPassed",
+            "dataType": "int64",
+            "lineageTag": "ccd24869-8acc-4f91-a96c-f7dc483b24f1",
+            "sourceColumn": "ProfitPassed",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "GuardrailsPassed",
+            "dataType": "int64",
+            "lineageTag": "0ca42eb7-9dd1-450b-b470-4831a15ab9d6",
+            "sourceColumn": "GuardrailsPassed",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "CalibrationPassed",
+            "dataType": "int64",
+            "lineageTag": "31595dbc-6b76-43e7-ad21-3571ccb2e80d",
+            "sourceColumn": "CalibrationPassed",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "QualityPassed",
+            "dataType": "int64",
+            "lineageTag": "6e1dc79f-fa27-4edd-aa96-0246e8715c2b",
+            "sourceColumn": "QualityPassed",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "SampleReached",
+            "dataType": "int64",
+            "lineageTag": "efdb6ee6-0126-4dbd-9ae5-a6ff71762e2b",
+            "sourceColumn": "SampleReached",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "LiveMaturityValidated",
+            "dataType": "int64",
+            "lineageTag": "79da6fe6-4388-44ee-a22b-67c791ed933f",
+            "sourceColumn": "LiveMaturityValidated",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ProductionReady",
+            "dataType": "int64",
+            "lineageTag": "0808d65f-2125-47f8-bf3c-a448a4b47c2b",
+            "sourceColumn": "ProductionReady",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ChampionRetained",
+            "dataType": "int64",
+            "lineageTag": "83330173-d144-4b5d-b902-7c4dd3f22ddd",
+            "sourceColumn": "ChampionRetained",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ChampionAUC",
+            "dataType": "double",
+            "lineageTag": "ada5d566-7181-4b35-86f4-1d40b36e5f67",
+            "sourceColumn": "ChampionAUC",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ChallengerAUC",
+            "dataType": "double",
+            "lineageTag": "55a64ff9-3f40-48dd-b283-bb743d6eca1e",
+            "sourceColumn": "ChallengerAUC",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "AAStressFailures",
+            "dataType": "int64",
+            "lineageTag": "18f95a44-444d-4633-a9c1-fd19bdd5f95a",
+            "sourceColumn": "AAStressFailures",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "MatchedCalibrationChecks",
+            "dataType": "int64",
+            "lineageTag": "41fdcbe5-cd0e-4030-9cbc-6f7fc45462fd",
+            "sourceColumn": "MatchedCalibrationChecks",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "AAFixedTerminalFPR",
+            "dataType": "double",
+            "lineageTag": "75119d46-4390-49b9-8bbc-864df3ff6e94",
+            "sourceColumn": "AAFixedTerminalFPR",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "AAPeekingTerminalFPR",
+            "dataType": "double",
+            "lineageTag": "0cd94cca-e910-4ff7-b18a-21c5642fabb2",
+            "sourceColumn": "AAPeekingTerminalFPR",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "LiveDefaultRate",
+            "dataType": "double",
+            "formatString": "0.00%",
+            "lineageTag": "c28a1ec4-efd2-4c87-add8-08b5f89ca9d1",
+            "sourceColumn": "LiveDefaultRate",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "LiveProfitDelta",
+            "dataType": "double",
+            "lineageTag": "ceae0118-2f41-4f2d-8489-ff1c25688507",
+            "sourceColumn": "LiveProfitDelta",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "LiveDPD30Rate",
+            "dataType": "double",
+            "formatString": "0.00%",
+            "lineageTag": "4f8d95f4-97f5-4843-9741-5fd939f9c663",
+            "sourceColumn": "LiveDPD30Rate",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EvidenceCategory",
+            "dataType": "string",
+            "lineageTag": "647c3b7e-b6b8-46c3-bc9f-79c988f3267f",
+            "sourceColumn": "EvidenceCategory",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EvidenceBasis",
+            "dataType": "string",
+            "lineageTag": "197dd3c4-727c-4085-8cd1-760cc4f1a268",
+            "sourceColumn": "EvidenceBasis",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PopulationScope",
+            "dataType": "string",
+            "lineageTag": "25c2c4df-1658-4571-bb07-a9ceff3a3a9b",
+            "sourceColumn": "PopulationScope",
+            "summarizeBy": "none"
+          }
+        ],
+        "description": "真实未知结果保持NULL；所有晋级状态均为固定证据，不允许用交互假设替代。",
+        "lineageTag": "0e505953-f95c-4846-820a-9d855dae914c",
+        "measures": [
+          {
+            "name": "冻结收益差",
+            "description": "固定V2证据，不随页面选择变成新实验结果",
+            "expression": "CALCULATE(MAX(DashboardState[ProfitDelta]), REMOVEFILTERS())",
+            "formatString": "+0.000;-0.000;0.000",
+            "lineageTag": "fc35f05c-cdfa-4fc6-9ebd-dc801b75042c"
+          },
+          {
+            "name": "冻结收益下界",
+            "description": "固定V2证据，不随页面选择变成新实验结果",
+            "expression": "CALCULATE(MAX(DashboardState[ProfitLow]), REMOVEFILTERS())",
+            "formatString": "+0.000;-0.000;0.000",
+            "lineageTag": "ca27b2e8-378c-4ce8-8e09-112b3883445a"
+          },
+          {
+            "name": "冻结收益上界",
+            "description": "固定V2证据，不随页面选择变成新实验结果",
+            "expression": "CALCULATE(MAX(DashboardState[ProfitHigh]), REMOVEFILTERS())",
+            "formatString": "+0.000;-0.000;0.000",
+            "lineageTag": "46b2d7d3-90af-4d75-b3ec-40aa3783fcc3"
+          },
+          {
+            "name": "业务收益门槛",
+            "description": "固定V2证据，不随页面选择变成新实验结果",
+            "expression": "CALCULATE(MAX(DashboardState[BusinessThreshold]), REMOVEFILTERS())",
+            "formatString": "0.000",
+            "lineageTag": "98402939-e7c1-44a8-8584-bcbf22596619"
+          },
+          {
+            "name": "冻结分歧样本",
+            "description": "固定V2证据，不随页面选择变成新实验结果",
+            "expression": "CALCULATE(MAX(DashboardState[CurrentSamples]), REMOVEFILTERS())",
+            "formatString": "#,0",
+            "lineageTag": "487c052f-152b-4655-b7dc-b0301335c58e"
+          },
+          {
+            "name": "所需分歧样本",
+            "description": "固定V2证据，不随页面选择变成新实验结果",
+            "expression": "CALCULATE(MAX(DashboardState[RequiredSamples]), REMOVEFILTERS())",
+            "formatString": "#,0",
+            "lineageTag": "da3559a6-21c5-43ad-b31b-80702bcab9ee"
+          },
+          {
+            "name": "完整B模拟风险上界",
+            "description": "固定V2证据，不随页面选择变成新实验结果",
+            "expression": "CALCULATE(MAX(DashboardState[BApprovedRiskUpper]), REMOVEFILTERS())",
+            "formatString": "0.00%",
+            "lineageTag": "b27f67f3-576d-411b-b9f8-1ee96439360a"
+          },
+          {
+            "name": "冻结95%收益区间",
+            "expression": "IF(OR(ISBLANK([冻结收益下界]), ISBLANK([冻结收益上界])), BLANK(), FORMAT([冻结收益下界], \"0.000\") & \" ~ \" & FORMAT([冻结收益上界], \"0.000\"))",
+            "lineageTag": "dfe6bb85-3304-4cec-a4c1-51343aee8717"
+          },
+          {
+            "name": "样本完成情况",
+            "expression": "IF(OR(ISBLANK([冻结分歧样本]), ISBLANK([所需分歧样本])), BLANK(), FORMAT([冻结分歧样本], \"#,0\") & \" / \" & FORMAT([所需分歧样本], \"#,0\"))",
+            "lineageTag": "ea276896-cd26-405e-8880-8a5b65dc7d2c"
+          },
+          {
+            "name": "当前晋级决定",
+            "description": "依据固定审计状态；筛选器不能绕过成熟、安全、样本或收益门槛",
+            "expression": "VAR Ready = CALCULATE(MAX(DashboardState[ProductionReady]), REMOVEFILTERS()) RETURN IF(ISBLANK(Ready), \"等待数据刷新\", IF(Ready = 1, \"需重新审核晋级证据\", \"保留 Champion / 暂不晋级\"))",
+            "lineageTag": "a93a53db-e829-4632-8ca3-9b8a512b0c9a"
+          },
+          {
+            "name": "真实业务状态",
+            "expression": "\"未验证：真实收益、坏账和DPD保持空值\"",
+            "lineageTag": "3b9c769c-3020-40d4-bd76-c2100fb018fd"
+          },
+          {
+            "name": "V2校准通过数",
+            "expression": "CALCULATE(MAX(DashboardState[MatchedCalibrationChecks]), REMOVEFILTERS())",
+            "formatString": "#,0",
+            "lineageTag": "39e37785-458e-4e72-a9e3-542bb9021925"
+          },
+          {
+            "name": "原A/A压力未认证项",
+            "expression": "CALCULATE(MAX(DashboardState[AAStressFailures]), REMOVEFILTERS())",
+            "formatString": "#,0",
+            "lineageTag": "cd6ecc38-af19-40d2-b9b1-9a939cbc07da"
+          },
+          {
+            "name": "假设入组天数",
+            "expression": "VAR Daily = SELECTEDVALUE(DailyTraffic[DailyApplications], 5000) VAR Cov = SELECTEDVALUE(Coverage[EligibleFraction], 0.20) VAR Exp = SELECTEDVALUE(Exposure[ExposureFraction], 1.0) VAR D = CALCULATE(MAX(DashboardState[DisagreementFraction]), REMOVEFILTERS()) RETURN ROUNDUP(DIVIDE([所需分歧样本], Daily * Cov * Exp * D), 0)",
+            "formatString": "#,0",
+            "lineageTag": "59146758-5a67-4808-ba54-3016caabe5ec"
+          },
+          {
+            "name": "假设成熟天数",
+            "expression": "CALCULATE(MAX(DashboardState[MaturityDays]), REMOVEFILTERS())",
+            "formatString": "#,0",
+            "lineageTag": "0ece594a-e9af-431b-baa0-78aaa45df43f"
+          },
+          {
+            "name": "假设宽限天数",
+            "expression": "CALCULATE(MAX(DashboardState[GraceDays]), REMOVEFILTERS())",
+            "formatString": "#,0",
+            "lineageTag": "7bfea8e3-0094-4777-9b17-cee3a441220c"
+          },
+          {
+            "name": "假设最终分析天数",
+            "expression": "[假设入组天数] + [假设成熟天数] + [假设宽限天数]",
+            "formatString": "#,0",
+            "lineageTag": "f24f705e-9a2a-43bf-92a8-57065236fb76"
+          },
+          {
+            "name": "假设入组可行性",
+            "expression": "IF([假设入组天数] <= 365, \"满足365天入组约束（假设）\", \"超出365天入组约束（假设）\")",
+            "lineageTag": "e2358e9b-81e6-410e-ac35-aeca03058d07"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DashboardState",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(DataFolder & \"\\DashboardState.csv\"), [Delimiter=\",\", Columns=35, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Nulls = Table.ReplaceValue(Headers, \"\", null, Replacer.ReplaceValue, {\"Key\", \"ProfitDelta\", \"ProfitLow\", \"ProfitHigh\", \"BusinessThreshold\", \"DefaultDeltaPP\", \"DefaultUpperPP\", \"ApprovalDeltaPP\", \"BApprovedRiskUpper\", \"CurrentSamples\", \"RequiredSamples\", \"TargetEligible\", \"DisagreementFraction\", \"MaturityDays\", \"GraceDays\", \"ProfitPassed\", \"GuardrailsPassed\", \"CalibrationPassed\", \"QualityPassed\", \"SampleReached\", \"LiveMaturityValidated\", \"ProductionReady\", \"ChampionRetained\", \"ChampionAUC\", \"ChallengerAUC\", \"AAStressFailures\", \"MatchedCalibrationChecks\", \"AAFixedTerminalFPR\", \"AAPeekingTerminalFPR\", \"LiveDefaultRate\", \"LiveProfitDelta\", \"LiveDPD30Rate\"}),",
+                "    Typed = Table.TransformColumnTypes(Nulls, {{\"Key\", Int64.Type}, {\"ProfitDelta\", type number}, {\"ProfitLow\", type number}, {\"ProfitHigh\", type number}, {\"BusinessThreshold\", type number}, {\"DefaultDeltaPP\", type number}, {\"DefaultUpperPP\", type number}, {\"ApprovalDeltaPP\", type number}, {\"BApprovedRiskUpper\", type number}, {\"CurrentSamples\", Int64.Type}, {\"RequiredSamples\", Int64.Type}, {\"TargetEligible\", Int64.Type}, {\"DisagreementFraction\", type number}, {\"MaturityDays\", Int64.Type}, {\"GraceDays\", Int64.Type}, {\"ProfitPassed\", Int64.Type}, {\"GuardrailsPassed\", Int64.Type}, {\"CalibrationPassed\", Int64.Type}, {\"QualityPassed\", Int64.Type}, {\"SampleReached\", Int64.Type}, {\"LiveMaturityValidated\", Int64.Type}, {\"ProductionReady\", Int64.Type}, {\"ChampionRetained\", Int64.Type}, {\"ChampionAUC\", type number}, {\"ChallengerAUC\", type number}, {\"AAStressFailures\", Int64.Type}, {\"MatchedCalibrationChecks\", Int64.Type}, {\"AAFixedTerminalFPR\", type number}, {\"AAPeekingTerminalFPR\", type number}, {\"LiveDefaultRate\", type number}, {\"LiveProfitDelta\", type number}, {\"LiveDPD30Rate\", type number}, {\"EvidenceCategory\", type text}, {\"EvidenceBasis\", type text}, {\"PopulationScope\", type text}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "ProfitIntervals",
+        "columns": [
+          {
+            "name": "Version",
+            "dataType": "string",
+            "lineageTag": "9a0a1e6a-e4b1-4dcd-9025-0a9af03d5943",
+            "sourceColumn": "Version",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Estimate",
+            "dataType": "double",
+            "lineageTag": "0802807b-07e0-462f-bf02-33152680ca8e",
+            "sourceColumn": "Estimate",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Low",
+            "dataType": "double",
+            "lineageTag": "f7b40687-fe3c-4c8e-b968-697d6ab70ee0",
+            "sourceColumn": "Low",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "High",
+            "dataType": "double",
+            "lineageTag": "97ac851d-a892-4834-b04a-4ace68916c45",
+            "sourceColumn": "High",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "RandomizedSamples",
+            "dataType": "int64",
+            "lineageTag": "9065afc0-28fe-41a6-a73d-ca9cd35d004d",
+            "sourceColumn": "RandomizedSamples",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Interval",
+            "dataType": "string",
+            "lineageTag": "4a124878-9990-4767-bdf2-cc06ff74fc9b",
+            "sourceColumn": "Interval",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EvidenceCategory",
+            "dataType": "string",
+            "lineageTag": "192acd32-0ed8-45a0-88ae-92fc888885ae",
+            "sourceColumn": "EvidenceCategory",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EvidenceBasis",
+            "dataType": "string",
+            "lineageTag": "ccfef6db-16d9-4379-8b12-bffc45d78236",
+            "sourceColumn": "EvidenceBasis",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PopulationScope",
+            "dataType": "string",
+            "lineageTag": "6f70d9c5-3567-4a88-8a25-a23c7389274c",
+            "sourceColumn": "PopulationScope",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "3c795594-c45b-4cfa-88f6-674bc650eef0",
+        "partitions": [
+          {
+            "name": "ProfitIntervals",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(DataFolder & \"\\ProfitIntervals.csv\"), [Delimiter=\",\", Columns=9, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Nulls = Table.ReplaceValue(Headers, \"\", null, Replacer.ReplaceValue, {\"Estimate\", \"Low\", \"High\", \"RandomizedSamples\"}),",
+                "    Typed = Table.TransformColumnTypes(Nulls, {{\"Version\", type text}, {\"Estimate\", type number}, {\"Low\", type number}, {\"High\", type number}, {\"RandomizedSamples\", Int64.Type}, {\"Interval\", type text}, {\"EvidenceCategory\", type text}, {\"EvidenceBasis\", type text}, {\"PopulationScope\", type text}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "PromotionGates",
+        "columns": [
+          {
+            "name": "Order",
+            "dataType": "int64",
+            "lineageTag": "28c5bfa1-b5af-4a40-8e3a-4996f6d4a022",
+            "sourceColumn": "Order",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Condition",
+            "dataType": "string",
+            "lineageTag": "8d3d511f-bc52-4de8-a570-9e047f886d01",
+            "sourceColumn": "Condition",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "CurrentEvidence",
+            "dataType": "string",
+            "lineageTag": "5271e593-d756-4e08-8bc3-346822a29f3c",
+            "sourceColumn": "CurrentEvidence",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Criterion",
+            "dataType": "string",
+            "lineageTag": "c4c064f2-a7d8-4d0e-bb99-fb8ce1c71db3",
+            "sourceColumn": "Criterion",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Status",
+            "dataType": "string",
+            "lineageTag": "f8712298-890a-4612-8c67-df3458f6f641",
+            "sourceColumn": "Status",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PassFlag",
+            "dataType": "double",
+            "lineageTag": "7e4481a8-1590-4bfc-ad96-b3d9cef6f2d5",
+            "sourceColumn": "PassFlag",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EvidenceCategory",
+            "dataType": "string",
+            "lineageTag": "dd9aa560-f840-4bb6-a559-a10eb14a4b2f",
+            "sourceColumn": "EvidenceCategory",
+            "summarizeBy": "none"
+          }
+        ],
+        "description": "真实未知结果保持NULL；所有晋级状态均为固定证据，不允许用交互假设替代。",
+        "lineageTag": "bea90baf-c819-4106-959d-6836ef38e221",
+        "partitions": [
+          {
+            "name": "PromotionGates",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(DataFolder & \"\\PromotionGates.csv\"), [Delimiter=\",\", Columns=7, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Nulls = Table.ReplaceValue(Headers, \"\", null, Replacer.ReplaceValue, {\"Order\", \"PassFlag\"}),",
+                "    Typed = Table.TransformColumnTypes(Nulls, {{\"Order\", Int64.Type}, {\"Condition\", type text}, {\"CurrentEvidence\", type text}, {\"Criterion\", type text}, {\"Status\", type text}, {\"PassFlag\", type number}, {\"EvidenceCategory\", type text}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "MissingData",
+        "columns": [
+          {
+            "name": "DataGroup",
+            "dataType": "string",
+            "lineageTag": "5738f032-4ba4-48a1-84f2-673cc9c9b3e1",
+            "sourceColumn": "DataGroup",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "RequiredFields",
+            "dataType": "string",
+            "lineageTag": "f6521570-47a1-43cb-8591-4a5e48cfaa48",
+            "sourceColumn": "RequiredFields",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Purpose",
+            "dataType": "string",
+            "lineageTag": "67b94aaa-c504-42de-a2d1-4070b38cc157",
+            "sourceColumn": "Purpose",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EvidenceCategory",
+            "dataType": "string",
+            "lineageTag": "1e47cd74-22ba-49cf-ab59-b202fff40461",
+            "sourceColumn": "EvidenceCategory",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "EvidenceBasis",
+            "dataType": "string",
+            "lineageTag": "9152b4f3-2209-4f97-b72c-ab3067cc4813",
+            "sourceColumn": "EvidenceBasis",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PopulationScope",
+            "dataType": "string",
+            "lineageTag": "f10a72a4-213d-4b3d-bd13-3e2f38443a17",
+            "sourceColumn": "PopulationScope",
+            "summarizeBy": "none"
+          }
+        ],
+        "description": "真实未知结果保持NULL；所有晋级状态均为固定证据，不允许用交互假设替代。",
+        "lineageTag": "7346827e-f3d0-48a4-887f-d66dc3abfdec",
+        "partitions": [
+          {
+            "name": "MissingData",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(DataFolder & \"\\MissingData.csv\"), [Delimiter=\",\", Columns=6, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Nulls = Table.ReplaceValue(Headers, \"\", null, Replacer.ReplaceValue, {}),",
+                "    Typed = Table.TransformColumnTypes(Nulls, {{\"DataGroup\", type text}, {\"RequiredFields\", type text}, {\"Purpose\", type text}, {\"EvidenceCategory\", type text}, {\"EvidenceBasis\", type text}, {\"PopulationScope\", type text}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "DailyTraffic",
+        "columns": [
+          {
+            "name": "DailyApplications",
+            "dataType": "int64",
+            "lineageTag": "8cef55ff-fa1d-4d68-824d-f3118eacbae9",
+            "sourceColumn": "DailyApplications",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "df288676-c25e-41c2-974c-603cb53b22d6",
+        "partitions": [
+          {
+            "name": "DailyTraffic",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(DataFolder & \"\\DailyTraffic.csv\"), [Delimiter=\",\", Columns=1, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Nulls = Table.ReplaceValue(Headers, \"\", null, Replacer.ReplaceValue, {\"DailyApplications\"}),",
+                "    Typed = Table.TransformColumnTypes(Nulls, {{\"DailyApplications\", Int64.Type}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Coverage",
+        "columns": [
+          {
+            "name": "EligibleFraction",
+            "dataType": "double",
+            "formatString": "0.00%",
+            "lineageTag": "b4748762-d452-464b-8fb7-9c1b88270c1b",
+            "sourceColumn": "EligibleFraction",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "a69f6b5b-3b09-452c-91f6-ab5e5b0d1449",
+        "partitions": [
+          {
+            "name": "Coverage",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(DataFolder & \"\\Coverage.csv\"), [Delimiter=\",\", Columns=1, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Nulls = Table.ReplaceValue(Headers, \"\", null, Replacer.ReplaceValue, {\"EligibleFraction\"}),",
+                "    Typed = Table.TransformColumnTypes(Nulls, {{\"EligibleFraction\", type number}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Exposure",
+        "columns": [
+          {
+            "name": "ExposureFraction",
+            "dataType": "double",
+            "formatString": "0.00%",
+            "lineageTag": "4b042947-5dd9-48df-a697-f3e19303548f",
+            "sourceColumn": "ExposureFraction",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "1db82e29-328b-4bcb-9057-5c2a345d7496",
+        "partitions": [
+          {
+            "name": "Exposure",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(DataFolder & \"\\Exposure.csv\"), [Delimiter=\",\", Columns=1, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Nulls = Table.ReplaceValue(Headers, \"\", null, Replacer.ReplaceValue, {\"ExposureFraction\"}),",
+                "    Typed = Table.TransformColumnTypes(Nulls, {{\"ExposureFraction\", type number}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "AlphaLevels",
+        "columns": [
+          {
+            "name": "Alpha",
+            "dataType": "double",
+            "formatString": "0.00%",
+            "lineageTag": "3e9232e2-e780-4aff-9545-20c716561269",
+            "sourceColumn": "Alpha",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "79ad4e55-fc36-4ce8-814a-6150add89d99",
+        "partitions": [
+          {
+            "name": "AlphaLevels",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(DataFolder & \"\\AlphaLevels.csv\"), [Delimiter=\",\", Columns=1, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Nulls = Table.ReplaceValue(Headers, \"\", null, Replacer.ReplaceValue, {\"Alpha\"}),",
+                "    Typed = Table.TransformColumnTypes(Nulls, {{\"Alpha\", type number}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Phase",
+        "columns": [
+          {
+            "name": "Plan",
+            "dataType": "string",
+            "lineageTag": "eb5bb98f-0c6d-4c90-a00f-584040c011b9",
+            "sourceColumn": "Plan",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "94fb480c-b21a-4802-a5bf-c6229cfb4c7c",
+        "partitions": [
+          {
+            "name": "Phase",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(DataFolder & \"\\Phase.csv\"), [Delimiter=\",\", Columns=1, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Nulls = Table.ReplaceValue(Headers, \"\", null, Replacer.ReplaceValue, {}),",
+                "    Typed = Table.TransformColumnTypes(Nulls, {{\"Plan\", type text}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

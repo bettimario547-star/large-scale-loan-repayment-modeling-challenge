@@ -1,0 +1,188 @@
+{
+  "completed_folds": 25,
+  "completed_candidates": [
+    "lgbm_drift_tuned_s42",
+    "lgbm_drift_tuned_s2026",
+    "lgbm_drift_tuned_s3407",
+    "lgbm_drift_tuned_ensemble",
+    "lgbm_drift_available_s42",
+    "lgbm_drift_bins255_s42"
+  ],
+  "completed_jobs": [
+    {
+      "variant": "lgbm_drift_tuned",
+      "seed": 42,
+      "fold": 0,
+      "backend": "CPU",
+      "elapsed_seconds": 532.4698625000001
+    },
+    {
+      "variant": "lgbm_drift_tuned",
+      "seed": 42,
+      "fold": 1,
+      "backend": "CPU",
+      "elapsed_seconds": 517.2726369000011
+    },
+    {
+      "variant": "lgbm_drift_tuned",
+      "seed": 42,
+      "fold": 2,
+      "backend": "CPU",
+      "elapsed_seconds": 575.5510632999994
+    },
+    {
+      "variant": "lgbm_drift_tuned",
+      "seed": 42,
+      "fold": 3,
+      "backend": "CPU",
+      "elapsed_seconds": 457.57924959999946
+    },
+    {
+      "variant": "lgbm_drift_tuned",
+      "seed": 42,
+      "fold": 4,
+      "backend": "CPU",
+      "elapsed_seconds": 365.1674492000002
+    },
+    {
+      "variant": "lgbm_drift_tuned",
+      "seed": 2026,
+      "fold": 0,
+      "backend": "CPU",
+      "elapsed_seconds": 547.4204725
+    },
+    {
+      "variant": "lgbm_drift_tuned",
+      "seed": 2026,
+      "fold": 1,
+      "backend": "CPU",
+      "elapsed_seconds": 514.8072840000004
+    },
+    {
+      "variant": "lgbm_drift_tuned",
+      "seed": 2026,
+      "fold": 2,
+      "backend": "CPU",
+      "elapsed_seconds": 590.2213200000006
+    },
+    {
+      "variant": "lgbm_drift_tuned",
+      "seed": 2026,
+      "fold": 3,
+      "backend": "CPU",
+      "elapsed_seconds": 461.73447189999933
+    },
+    {
+      "variant": "lgbm_drift_tuned",
+      "seed": 2026,
+      "fold": 4,
+      "backend": "CPU",
+      "elapsed_seconds": 439.43914570000015
+    },
+    {
+      "variant": "lgbm_drift_tuned",
+      "seed": 3407,
+      "fold": 0,
+      "backend": "CPU",
+      "elapsed_seconds": 554.8945589000014
+    },
+    {
+      "variant": "lgbm_drift_tuned",
+      "seed": 3407,
+      "fold": 1,
+      "backend": "CPU",
+      "elapsed_seconds": 398.3166365999987
+    },
+    {
+      "variant": "lgbm_drift_tuned",
+      "seed": 3407,
+      "fold": 2,
+      "backend": "CPU",
+      "elapsed_seconds": 547.0734460000003
+    },
+    {
+      "variant": "lgbm_drift_tuned",
+      "seed": 3407,
+      "fold": 3,
+      "backend": "CPU",
+      "elapsed_seconds": 428.58940489999986
+    },
+    {
+      "variant": "lgbm_drift_tuned",
+      "seed": 3407,
+      "fold": 4,
+      "backend": "CPU",
+      "elapsed_seconds": 364.18837209999947
+    },
+    {
+      "variant": "lgbm_drift_available",
+      "seed": 42,
+      "fold": 0,
+      "backend": "CPU",
+      "elapsed_seconds": 691.641588800001
+    },
+    {
+      "variant": "lgbm_drift_available",
+      "seed": 42,
+      "fold": 1,
+      "backend": "CPU",
+      "elapsed_seconds": 682.1662940999995
+    },
+    {
+      "variant": "lgbm_drift_available",
+      "seed": 42,
+      "fold": 2,
+      "backend": "CPU",
+      "elapsed_seconds": 730.2417554999993
+    },
+    {
+      "variant": "lgbm_drift_available",
+      "seed": 42,
+      "fold": 3,
+      "backend": "CPU",
+      "elapsed_seconds": 586.5678533000009
+    },
+    {
+      "variant": "lgbm_drift_available",
+      "seed": 42,
+      "fold": 4,
+      "backend": "CPU",
+      "elapsed_seconds": 445.00891840000077
+    },
+    {
+      "variant": "lgbm_drift_bins255",
+      "seed": 42,
+      "fold": 0,
+      "backend": "CPU",
+      "elapsed_seconds": 485.17149370000334
+    },
+    {
+      "variant": "lgbm_drift_bins255",
+      "seed": 42,
+      "fold": 1,
+      "backend": "CPU",
+      "elapsed_seconds": 440.0630409000005
+    },
+    {
+      "variant": "lgbm_drift_bins255",
+      "seed": 42,
+      "fold": 2,
+      "backend": "CPU",
+      "elapsed_seconds": 516.1535657000022
+    },
+    {
+      "variant": "lgbm_drift_bins255",
+      "seed": 42,
+      "fold": 3,
+      "backend": "CPU",
+      "elapsed_seconds": 397.38887359999717
+    },
+    {
+      "variant": "lgbm_drift_bins255",
+      "seed": 42,
+      "fold": 4,
+      "backend": "CPU",
+      "elapsed_seconds": 390.73526459999994
+    }
+  ]
+}

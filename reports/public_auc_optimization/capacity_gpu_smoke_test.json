@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "small_fixture": true,
+  "rows": 500,
+  "depth": 8,
+  "backend": "GPU",
+  "models_reloaded": 1,
+  "certified_binary_pools_reused_unchanged": true
+}

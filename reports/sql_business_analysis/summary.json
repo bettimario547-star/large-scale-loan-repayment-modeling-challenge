@@ -1,0 +1,28 @@
+{
+  "status": "completed",
+  "prediction_rows": 1450644,
+  "overall_metrics": [
+    {
+      "model_role": "challenger",
+      "repay_roc_auc": 0.8203947878125023,
+      "default_pr_auc_ap": 0.39536674796325766,
+      "ks": 0.47946101701671506,
+      "log_loss": 0.2242255884060048,
+      "brier_score": 0.06211354182653168
+    },
+    {
+      "model_role": "champion",
+      "repay_roc_auc": 0.8165694476373496,
+      "default_pr_auc_ap": 0.3889124300624185,
+      "ks": 0.4721555713744122,
+      "log_loss": 0.2258498247925911,
+      "brier_score": 0.06250003730588435
+    }
+  ],
+  "challenger_auc_delta": 0.0038253401751526805,
+  "test_labels_available": false,
+  "probability_calibrated": false,
+  "approval_policy_selected": false,
+  "economic_simulation_completed": false,
+  "randomized_experiment_completed": false
+}

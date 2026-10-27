@@ -1,0 +1,42 @@
+{
+  "snapshot_unix": 1792925461.7043805,
+  "training_cpu_thread_budget": 10,
+  "xgboost_nthread": 8,
+  "catboost_thread_count": 2,
+  "gpu_cpu_affinity_limited_to_two_processors": true,
+  "processes": [
+    {
+      "role": "gpu",
+      "pid": 34672,
+      "affinity": [
+        0,
+        1
+      ],
+      "rss_gib": 0.92
+    },
+    {
+      "role": "cpu",
+      "pid": 33916,
+      "affinity": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "rss_gib": 7.28
+    }
+  ],
+  "available_ram_gib": 1.63
+}

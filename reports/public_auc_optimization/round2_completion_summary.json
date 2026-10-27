@@ -1,0 +1,71 @@
+{
+  "status": "complete",
+  "observed_champion": {
+    "filename": "public_auc/blend_catboost_diverse25_xgb75_01c3571821.csv",
+    "sha256": "01c35718217aaa322852f3f18981a86f6901fe3d4ff6dc9aa282494f79651539",
+    "public_auc": 0.74065,
+    "evidence": "用户最新 Kaggle 提交截图，2026-10-25；文件名与公榜分数清晰可见"
+  },
+  "reference_weights": {
+    "catboost_gpu_capacity_ensemble": 0.1875,
+    "catboost_gpu_depth9_s42": 0.0625,
+    "xgboost": 0.75
+  },
+  "reference_blend_method": "probability_average",
+  "reference_oof_auc": {
+    "overall": 0.8214257583893487,
+    "feature_492_upper_tail": 0.7700798540093914,
+    "feature_1039_observed": 0.7869793955433657,
+    "joint_drift_stress": 0.770227362002336
+  },
+  "reference_fold_auc": {
+    "0": 0.8238861186842553,
+    "1": 0.8206365553276562,
+    "2": 0.81907926994768,
+    "3": 0.8210573521071962,
+    "4": 0.822503481244997
+  },
+  "recommended_order": [
+    {
+      "candidate": "existing_xgboost",
+      "submission": "submissions\\public_auc\\existing_xgboost_f133b11c17.csv",
+      "public_auc": null,
+      "blend_method": "probability_average",
+      "overall_rows": 688998,
+      "overall_oof_auc": 0.8197745424302628,
+      "feature_492_upper_tail_rows": 70711,
+      "feature_492_upper_tail_oof_auc": 0.7676195877870337,
+      "feature_1039_observed_rows": 123163,
+      "feature_1039_observed_oof_auc": 0.78467533601044,
+      "joint_drift_stress_rows": 69582,
+      "joint_drift_stress_oof_auc": 0.7677974695505867,
+      "default_ap": 0.3941794750214007,
+      "test_rank_correlation_to_public_best": 0.963085900949847,
+      "test_rank_correlation_to_best_observed_submission": 0.9975667937759328,
+      "fold_auc_mean": 0.8197790149922863,
+      "fold_auc_min": 0.8171084790604249,
+      "fold_auc_std": 0.001710070133867908,
+      "sha256": "f133b11c1732f5b8d4c51d59e836510bc861618b3121d2afcf20bb85b87355d3",
+      "weights": {
+        "xgboost": 1.0
+      },
+      "positive_class": 1,
+      "calibrated_probability": "not_assessed",
+      "scope": "development OOF; public AUC pending submission",
+      "best_observed_submission_sha256": "01c35718217aaa322852f3f18981a86f6901fe3d4ff6dc9aa282494f79651539",
+      "source_sha256": {
+        "xgboost": {
+          "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_0.npz": "b1aaf60264fb69e3a07f4d052f3126e47415af8f0ef9e6992872a7227953acbc",
+          "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_1.npz": "02cad7e2b87c339481bc295cce4b234fa2845eeeb4cb9768537219b2bc56a586",
+          "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_2.npz": "0584f850b71dc68463383a59958c7ebc390880ed76287411879df2424759ac28",
+          "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_3.npz": "3cd507e765a4ad24d4befc3a192c2445c31be841721c88fc4ab46326121198cd",
+          "artifacts\\tree_model_comparison\\fold_predictions\\xgboost_fold_4.npz": "40da423dc1c8f8e4cf390a708a62634295b5bd422031c0c892e95884fb985055"
+        }
+      }
+    }
+  ],
+  "verified_candidate_count": 56,
+  "scope": "last existing verified submission after public feedback; no additional model training or new candidate generation",
+  "new_experiments_stopped_by_user": true,
+  "remaining_submission_opportunities": 1
+}

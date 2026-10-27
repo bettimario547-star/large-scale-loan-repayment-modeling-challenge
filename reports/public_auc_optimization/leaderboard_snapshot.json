@@ -1,0 +1,13 @@
+{
+  "observation_date": "2026-10-25",
+  "user_public_auc": 0.74009,
+  "user_rank": 2,
+  "leader_public_auc": 0.74111,
+  "gap_to_observed_leader": 0.00102,
+  "improvement_over_previous_best": 0.00508,
+  "user_entries_shown": 4,
+  "final_selection_limit_shown": 3,
+  "evidence": "用户提供的两张 Kaggle 截图；不是实时排行榜查询",
+  "latest_incremental_improvement": 0.0006,
+  "latest_score_evidence": "User reported 0.74009 for the exact CatBoost/XGBoost submission; leader score and rank remain from the earlier screenshot"
+}

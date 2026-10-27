@@ -1,5 +1,6 @@
 """Replay inner stopping and reload all 20 native models and their predictions."""
 
+import argparse
 import json
 from pathlib import Path
 
@@ -44,7 +45,9 @@ def verify():
             selection = study.checkpoint(metadata_path, inner_path, signature)
             assert selection is not None
             metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
-            assert metadata["params"] == study.params_for(engine, fold, experiment["threads"])
+            threads = metadata["record"].get("training_threads", experiment["threads"])
+            assert isinstance(threads, int) and threads > 0
+            assert metadata["params"] == study.params_for(engine, fold, threads)
             assert metadata["features"] == names and metadata["positive_class"] == 1
             assert Path(metadata["model_path"]).resolve() == path.resolve()
             curve = json.loads((study.REPORT / "inner_curves" / f"{engine}_fold_{fold}.json").read_text())["auc"]
@@ -89,7 +92,9 @@ def verify():
             record = study.checkpoint(metadata_path, predictions_path, signature)
             assert record is not None
             metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
-            assert metadata["params"] == study.params_for(engine, fold, experiment["threads"])
+            threads = metadata["record"].get("training_threads", experiment["threads"])
+            assert isinstance(threads, int) and threads > 0
+            assert metadata["params"] == study.params_for(engine, fold, threads)
             assert metadata["features"] == names and metadata["positive_class"] == 1
             model = study.load_model(engine, path)
             if engine == "xgboost":
@@ -120,7 +125,7 @@ def verify():
         maximum_oof = max(maximum_oof, float(np.max(np.abs(score - saved_oof[f"p_repay_{engine}"]))))
         maximum_test = max(maximum_test, float(np.max(np.abs(test_score - saved_test[f"p_repay_{engine}"]))))
         scores[engine] = score
-        submission = pd.read_csv(study.ROOT / "submissions" / f"{engine}_baseline.csv")
+        submission = pd.read_csv(study.submission_path(engine))
         assert submission.columns.tolist() == ["id", "prediction"] and len(submission) == len(test_meta)
         pd.testing.assert_series_equal(submission.id, template.id, check_names=False)
         aligned = pd.Series(test_score, index=test_meta.id).loc[template.id].to_numpy()
@@ -173,5 +178,9 @@ def verify():
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--run-name", default="tree_model_comparison")
+    args = parser.parse_args()
+    study.configure_run(args.run_name)
     with threadpool_limits(limits=4):
         verify()

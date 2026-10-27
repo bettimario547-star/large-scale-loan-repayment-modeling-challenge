@@ -1,0 +1,95 @@
+{
+  "status": "completed",
+  "run_name": "approval_policy_simulation",
+  "duckdb_version": "2.0.0",
+  "analysis_code_sha256": {
+    "scripts/run_approval_policy_simulation.py": "2280505b88f1f316b29e9a3c4db6e3449280dbb821807c7e40457000a860903c",
+    "configs/approval_policy_simulation.json": "a4e56002dac34013968236ae7d2470e159a397afb95957e26f0b51923def5015",
+    "sql/04_policy_simulation/01_economic_results.sql": "d9cc852d977fccd48c0eada9dc8c6305ba279c7a54208cc706517778bed96d5a",
+    "sql/04_policy_simulation/02_selected_policies.sql": "f44ab0e51aa244ccb6d2df7a750c8ead97ad5ae21c2a25fa5a49c5b5f0d033c0",
+    "scripts/policy_simulation_common.py": "e53df861bbc3dcf80483a9a9747ef9c2a7a55128f3f925b2f32deac7ece7a430",
+    "scripts/verify_approval_policy_simulation.py": "f43d8489b606cc97740b81dd767c24809923da7fdc0e69abf90a23687f12c0b1"
+  },
+  "policy_manifest_sha256": "ba426ae22164dc3fdd81a8f394561a9004e38319eee90b52f7400fd72c622df0",
+  "config": {
+    "protocol_version": 1,
+    "parent_run_name": "sql_business_analysis",
+    "threads": 4,
+    "memory_limit": "1GB",
+    "policy_split": {
+      "evaluation_fraction": 0.4,
+      "random_seed": 20261025,
+      "stratify_label": true
+    },
+    "target_approval_rates": [
+      0.0,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      1.0
+    ],
+    "constraints": {
+      "max_development_default_rate": 0.05,
+      "min_development_approval_rate": 0.5
+    },
+    "economics": {
+      "currency": "CNY_assumed",
+      "horizon_months": 12,
+      "principal": 10000.0,
+      "interest_rate_for_horizon": 0.12,
+      "loss_given_default": 0.8,
+      "funding_rate_for_horizon": 0.04,
+      "servicing_cost_per_approved": 100.0,
+      "application_cost_per_application": 10.0
+    },
+    "sensitivity_scenarios": [
+      {
+        "scenario_id": "base",
+        "overrides": {}
+      },
+      {
+        "scenario_id": "lower_interest",
+        "overrides": {
+          "interest_rate_for_horizon": 0.08
+        }
+      },
+      {
+        "scenario_id": "full_principal_loss",
+        "overrides": {
+          "loss_given_default": 1.0
+        }
+      },
+      {
+        "scenario_id": "higher_funding",
+        "overrides": {
+          "funding_rate_for_horizon": 0.06
+        }
+      },
+      {
+        "scenario_id": "smaller_principal",
+        "overrides": {
+          "principal": 5000.0
+        }
+      },
+      {
+        "scenario_id": "larger_principal",
+        "overrides": {
+          "principal": 20000.0
+        }
+      }
+    ],
+    "selection_rule": "base_scenario_policy_development_only_maximize_realized_profit_per_application_subject_to_constraints_then_lower_default_rate_lower_approval_rate_policy_id",
+    "probability_calibration": "none_use_raw_score_implied_profit_as_diagnostic_only",
+    "offline_outcome_assumption": "historical_repayment_label_unchanged_by_approval_decision_and_loan_terms"
+  },
+  "elapsed_seconds": 48.4712516999989,
+  "database_sha256": "85e0ab4214e0c2ee5f37a282f49f16acf155a8836fd136973f40fd8b5882bf0b",
+  "application_outcomes_sha256": "793772a14e6d50adaee83c46ea423692e9369084c76b238f6f4927d5955558c5"
+}

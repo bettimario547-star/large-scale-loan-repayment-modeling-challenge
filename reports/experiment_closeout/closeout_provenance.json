@@ -1,0 +1,36 @@
+{
+  "status": "passed",
+  "page_count": 1,
+  "format": "A4",
+  "created_at_utc": "2026-10-25T09:41:31.508758+00:00",
+  "source_stage": "ab_feasibility_v2",
+  "input_sha256": {
+    "reports/ab_feasibility_v2/summary.json": "737534ce8a593c0533e04d0810b2330eea1b4bf894bdab45c84a98e9acad4cc5",
+    "reports/ab_feasibility_v2/design_candidates.csv": "49b4875a83a75eb2cbbf6afc05e8e917cc9fed90fda26923c6bd8d070e80940f",
+    "reports/ab_feasibility_v2/tables/eligibility_summary.csv": "7a728e8ed735a77589a87d7ac7e972f6b74afb389b3e6a34c44951726fadfb09",
+    "reports/ab_feasibility_v2/tables/matched_calibration.csv": "a04e0aa2c49b19f22ed674142973c2cc1b73ef8d640e9881ade06a97a30d9d36",
+    "reports/ab_feasibility_v2/tables/ab_simulation_results.csv": "68a58748fe78c43aaf99433d99edf472f32c03f4c937775cbbda63a3c6083afb",
+    "reports/ab_feasibility_v2/artifact_verification.json": "590d235b417d04fce370a57d1c4845b13f5a56980230b0b229b7192b65f050b9",
+    "reports/ab_feasibility_v2/run_config.json": "1c486d3df4dfa0f3d182bcd9af9db0c47671455c31b74572fb29318629ac388e",
+    "artifacts/ab_feasibility_v2/feasibility_freeze_manifest.json": "befecd343b4dee19a688eadccd9a823234dd9595c013ce71693540b289065739",
+    "configs/ab_feasibility_v2.json": "afc62fc1f67410ebd32509844acb1679ab2430f7a4a4b0ec9b526e2b2748bd04"
+  },
+  "output_sha256": {
+    "docs/experiment_closeout_decision_memo.md": "c593a664eca61b0fbf475f0f114c158146b4971ed4185ae2b718fe4d6ec4ffcd",
+    "output/pdf/experiment_closeout_decision_memo.pdf": "4bf471888bfa775fb20ee4057b17a5e843eabb9809a9e78e139114a59e6fac56"
+  },
+  "champion_retained": true,
+  "challenger_promoted": false,
+  "real_experiment_completed": false,
+  "frozen_experiment_outputs_modified": false,
+  "visual_review_passed": true,
+  "visual_review_checks": [
+    "one_A4_page",
+    "legible_Chinese_glyphs",
+    "no_clipping_or_overlap",
+    "all_six_sections_visible"
+  ],
+  "render_engine": "Poppler pdftoppm 160 dpi",
+  "preview_sha256": "2097ccfe20d5eb2fa3d27237158438be984be370dfa1c1a18d5011cf6da9f1a8",
+  "generator_sha256": "76ad4a92fd5adf2d83f8a1d185df74902905e5d3448430395dbbb2734ef072b6"
+}
